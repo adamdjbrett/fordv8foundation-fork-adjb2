@@ -1,0 +1,38 @@
+---
+layout: base.njk
+---
+{% include "partials/header.njk" %}
+
+<div class="container mt-5">
+
+<div id="gallery-container">
+{% for post in pagination.items %}
+<div class="gallery-item">
+<div class="card h-100">
+<img src="{{ post.data.image or metadata.image }}" width="100%" height="100%" alt="{{ post.data.title }}" class="card-img-top gallery-image" data-index="{{ loop.index0 }}">
+<p class="d-none">{{post.data.description or post.data.title}}</p>
+</div>
+</div>
+{% endfor %}
+</div>
+
+<div class="row mt-5 mb-5">
+<div class="col-md-6 mb-3 mb-md-0">
+{% if pagination.href.previous %}<a class="btn btn-primary text-uppercase w-100 p-3" href="{{ pagination.href.previous }}">← Previous</a>{% endif %}
+</div>
+<div class="col-md-6">
+{% if pagination.href.next %}<a class="btn btn-primary text-uppercase w-100 p-3" href="{{ pagination.href.next }}">Next →</a>{% endif %}
+</div>
+</div>
+
+</div>
+
+
+{% include "design/gallery/image_detail.njk" %}
+{% include "design/gallery/style.njk" %}
+{% include "design/gallery/script.njk" %}
+
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

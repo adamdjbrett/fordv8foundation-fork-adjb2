@@ -1,0 +1,8 @@
+<div class="row mt-5 mb-5">
+<div class="col-md-6 mb-3 mb-md-0">
+{% if pagination.href.previous %}<a class="btn btn-primary text-uppercase w-100 p-3" href="{{ pagination.href.previous }}">← Previous</a>{% endif %}
+</div>
+<div class="col-md-6">
+{% if pagination.href.next %}<a class="btn btn-primary text-uppercase w-100 p-3" href="{{ pagination.href.next }}">Next →</a>{% endif %}
+</div>
+</div>

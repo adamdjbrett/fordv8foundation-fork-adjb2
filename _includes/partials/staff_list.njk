@@ -1,0 +1,9 @@
+<ul class="staff-list">
+{% for staffMember in staff | getStaff %}
+  <li>
+    <h3>{{ staffMember.name }}</h3>
+    <p>{{ staffMember.role }}</p>
+    <p>{{ staffMember.bio }}</p>
+  </li>
+{% endfor %}
+</ul>

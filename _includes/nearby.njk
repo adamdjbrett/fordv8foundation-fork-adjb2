@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+<header class="container-fluid bb">
+<div class="row">
+<div class="col-md-11 p-3 p-md-5 mt-3 position-relative mt-5 mb-3">
+  <div class="header-content">
+    <p class="sub_hero">{{metadata.title}}</p>
+    <h1 class="hero_text"><a href="{{page.url}}" class="text-white">{{title}}</a></h1>
+    <p class="lead">{{description}}</p>
+  </div>
+</div>
+</div>
+</header>
+
+<section class="container-fluid trucks lazy-background" data-bg="{{metadata.news.background}}">
+<div class="row mt-3 mb-3 justify-content-center">
+
+<div class="col-md-12 p-3 p-md-5">
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{metadata.url}}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+  </ol>
+</nav>
+</div>
+
+{% for n in metadata.nearby %}
+<div class="col-md-4 p-3 zoom">
+<img class="img-fluid lazy img-ev mb-3" width="100%" height="100%" alt="{{n.title}}" data-src="{{n.image or metadata.image}}"/>
+<div class="p-3">
+<h3>{{n.title}}</h3>
+<p>{{n.text}}</p>
+<ul>
+{% if n.address %}<li>{{n.address}}</li>{% endif %}
+{% if n.phone %}<li>{{n.phone}}</li>{% endif %}
+{% if n.email %}<li><a href="mailto:{{n.email}}">{{n.email}}</a></li>{% endif %}
+</ul>
+<p><a href="{{n.url}}" class="btn btn-primary col-12 btn-lg">Learn More</a></p>
+</div>
+</div>
+{% endfor %}
+
+</div>
+</section>
+
+{% include "partials/motors.njk" %}
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}

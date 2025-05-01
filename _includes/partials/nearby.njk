@@ -1,0 +1,25 @@
+{% if show_nearby %}<section class="container">
+<div class="row justify-content-center mb-5">
+<div class="col-md-12 p-3 p-md-5 text-center">
+<h3 class="promo_text mb-3">{{metadata.nearby_header.title}}</h3>
+<p><a class="btn btn-primary" href="{{metadata.nearby_header.url}}">{{metadata.nearby_header.button}}</a></p>
+</div>
+{% for n in metadata.nearby | limit(4) %}
+<div class="col-md-3 p-3">
+<img class="img-fluid lazy img-ev mb-3" width="100%" height="100%" alt="{{n.title}}" data-src="{{n.image or metadata.image}}"/>
+<div class="p-1">
+<p>{{n.title}}</p>
+<!--<p class="small"><small>{{n.text}}</small></p> -->
+<ul class="small"l>
+{% if n.address %}<li><small>{{n.address}}</small></li>{% endif %}
+{% if n.phone %}<li><small>{{n.phone}}</small></li>{% endif %}
+{% if n.email %}<li><a href="mailto:{{n.email}}"><small>{{n.email}}</small></a></li>{% endif %}
+</ul>
+<p><a href="{{n.url}}" title="{{n.title}}" class="btn btn-primary col-12">{{n.title}} →</a></p>
+<!--<p><a href="{{n.url}}" title="{{n.title}}" class="btn btn-primary col-12">Learn More</a></p>-->
+</div>
+</div>
+{% endfor %}
+<div class="p-3 p-md-3"></div>
+</div>
+</section>{% endif %}

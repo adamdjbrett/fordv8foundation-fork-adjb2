@@ -1,0 +1,258 @@
+{% set images = getImages('/img/museum-select-motors') %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<style>
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  margin-top: 30px;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: none;
+  background-color: rgba(0,0,0,0.9);
+  max-height: none;
+}
+
+
+.close, .prev, .next {
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  user-select: none;
+  z-index: 1001;
+}
+
+.close {
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  transform: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.close:hover, .close:focus,
+.prev:hover, .prev:focus,
+.next:hover, .next:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  background-color: rgba(0,0,0,0.9);
+  }
+
+  .close {
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+  }
+
+  .prev, .next {
+    font-size: 30px;
+    padding: 10px;
+  }
+}
+.swiper-pagination {
+  bottom: -8x !important;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 5px;
+}
+
+.swiper {
+  padding-bottom: 80px;
+}
+</style>
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    {% for item in images %}
+      {% if item.type === 'directory' %}
+        {% for subitem in item.children %}
+          {% if subitem.type === 'file' %}
+            <div class="swiper-slide">
+              <img src="{{ subitem.path }}" alt="{{ subitem.name }}" loading="lazy" onclick="openModal(this)">
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <div class="swiper-slide">
+          <img src="{{ item.path }}" alt="{{ item.name }}" loading="lazy" onclick="openModal(this)">
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<!-- The Modal -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+  <a class="next" onclick="changeImage(1)">&#10095;</a>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+  let swiper;
+  let currentIndex;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+
+  // Modal functions
+  function openModal(img) {
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    currentIndex = Array.from(swiper.slides).findIndex(slide => slide.contains(img));
+    adjustModalImage();
+  }
+
+  function closeModal() {
+    var modal = document.getElementById("imageModal");
+    modal.style.display = "none";
+  }
+
+  function changeImage(step) {
+    currentIndex += step;
+    if (currentIndex >= swiper.slides.length) {
+      currentIndex = 0;
+    } else if (currentIndex < 0) {
+      currentIndex = swiper.slides.length - 1;
+    }
+    var newImg = swiper.slides[currentIndex].querySelector('img');
+    var modalImg = document.getElementById("modalImage");
+    modalImg.src = newImg.src;
+    adjustModalImage();
+  }
+
+  function adjustModalImage() {
+    var modalImg = document.getElementById("modalImage");
+    if (window.innerWidth <= 768) {
+      modalImg.style.width = "100%";
+      modalImg.style.height = "100%";
+      modalImg.style.objectFit = "contain";
+    } else {
+      modalImg.style.width = "100%";
+      modalImg.style.height = "auto";
+      modalImg.style.maxWidth = "90%";
+      modalImg.style.maxHeight = "90%";
+      modalImg.style.objectFit = "contain";
+    }
+  }
+
+  // Close the modal when clicking outside the image
+  window.onclick = function(event) {
+    var modal = document.getElementById("imageModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Adjust image size on window resize
+  window.addEventListener('resize', adjustModalImage);
+
+  // Add touch swipe functionality for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  document.getElementById("imageModal").addEventListener('touchstart', function(event) {
+    touchStartX = event.changedTouches[0].screenX;
+  }, false);
+
+  document.getElementById("imageModal").addEventListener('touchend', function(event) {
+    touchEndX = event.changedTouches[0].screenX;
+    handleSwipe();
+  }, false);
+
+  function handleSwipe() {
+    if (touchEndX < touchStartX) {
+      changeImage(1); // Swipe left, next image
+    }
+    if (touchEndX > touchStartX) {
+      changeImage(-1); // Swipe right, previous image
+    }
+  }
+</script>

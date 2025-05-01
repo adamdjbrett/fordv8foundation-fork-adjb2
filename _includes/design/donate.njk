@@ -1,0 +1,48 @@
+---
+layout: base.njk
+---
+{% include "partials/header.njk" %}
+<section class="container-fluid">
+<div class="row justify-content-center">
+<div class="col-md-7 p-3 p-md-5">
+<h2>{{description or metadata.description}}</h2>
+<heading-anchors>{{content|safe}}</heading-anchors>
+</div>
+<div class="col-md-5 p-3 p-md-5">
+<img class="img-fluid lazy rounder" alt="{{title or metadata.title}}" data-src="{{image or metadata.image}}"/>
+<p><a href="{{button.url}}" class="btn btn-primary btn-lg mt-3 col-12"><i class="fab fa-paypal me-1"></i> {{button.text}}</a></p>
+</div>
+
+{% for post in pagination.items %}
+<div class="p-3 col-md-4 text-center">
+<a href="{{post.url}}" class="bg-light rounder shadow-sm opacity-95 row zoom non">
+<img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/>
+<div class="p-3">
+<h3 class="text-dark">{{post.data.title}}</h3>
+{% if post.data.author %}
+  {% set authorData = post.data.author.split('___') %}
+  <p class="text-secondary">By 
+<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
+{{ authorData[1] if authorData[1] else authorData[0] }}</p>
+{% endif %}
+<p class="text-secondary small"><small>{{post.data.description}}</small></p>
+</div>
+</a>
+</div>
+{% endfor %}
+
+<div class="row p-3 mt-3 mb-3">
+<div class="col-md-6 p-3">
+{% if pagination.href.previous %}<a class="btn btn-primary text-uppercase col-12 p-3" href="{{ pagination.href.previous }}">← Previous</a>{% endif %}
+</div>
+<div class="col-md-6 p-3 text-end">
+{% if pagination.href.next %}<a class="btn btn-primary text-uppercase col-12 p-3" href="{{ pagination.href.next }}">Next →</a>{% endif %}
+</div>
+</div>
+</div>
+</section>
+{% include "partials/motors.njk" %}
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

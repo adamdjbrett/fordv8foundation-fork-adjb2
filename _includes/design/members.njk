@@ -1,0 +1,58 @@
+---
+layout: base.njk
+---
+<header class="container-fluid bb">
+<div class="row">
+<div class="col-md-11 p-3 p-md-5 mt-3 position-relative mt-5 mb-3">
+  <div class="header-content">
+    <p class="sub_hero">{{metadata.title}}</p>
+    <h1 class="hero_text"><a href="{{page.url}}" class="text-white">{{title}}</a></h1>
+    <p class="lead">{{description}}</p>
+  </div>
+</div>
+</div>
+</header>
+
+<section class="container-fluid trucks lazy-background" data-bg="{{metadata.news.background}}">
+<div class="row mt-5 mb-5">
+
+<div class="col-md-6 p-3 p-md-5">
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{metadata.url}}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Membership</li>
+  </ol>
+</nav>
+
+<h3 class="promo_text mb-5">{{header.title}}</h3>
+{% if author %}
+  {% set authorData = author.split('___') %}
+  <p>By 
+<a href="/staff/{{ authorData[0] }}" class="non">
+<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
+{{ authorData[1] if authorData[1] else authorData[0] }}</a></p>
+{% endif %}
+{% for text in header.info %}<p>{{text.text}}</p>{% endfor %}
+<p><a href="{{header.button.url}}" class="btn btn-primary">{{header.button.text}}</a></p>
+</div>
+<div class="col-md-6 bl shadow lazy-background" data-bg="{{header.image}}"></div>
+</div>
+</section>
+
+<section class="container-fluid">
+<div class="row mt-5 mb-5">
+<div class="col-md-6 br shadow lazy-background" data-bg="{{article_image or metadata.image}}"></div>
+<div class="col-md-6 p-3 p-md-5">
+<heading-anchors>{{content|safe}}</heading-anchors>
+<p><a href="{{header.button.url}}" class="btn btn-primary">{{header.button.text}}</a></p>
+</div>
+
+</div>
+</section>
+
+{% include "partials/motors.njk" %}
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

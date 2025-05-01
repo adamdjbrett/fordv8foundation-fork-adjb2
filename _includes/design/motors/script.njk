@@ -1,0 +1,58 @@
+ <script>
+        const images = [
+{% for s in gallery %}'  {{ s.image }}'{% if not loop.last %}, {% endif %}{% endfor %}
+        ];
+
+
+        let currentIndex = 0;
+
+        const gallery = document.getElementById('imageGallery');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+
+        images.forEach((src, index) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `Image ${index + 1}`;
+            img.onclick = () => openModal(index);
+            gallery.appendChild(img);
+        });
+
+        function openModal(index) {
+            modal.style.display = 'block';
+            showImage(index);
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        function showImage(index) {
+            currentIndex = index;
+            modalImage.src = images[currentIndex];
+        }
+
+        function changeImage(step) {
+            currentIndex = (currentIndex + step + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Menambahkan event listener untuk tombol keyboard
+        document.addEventListener('keydown', (e) => {
+            if (modal.style.display === 'block') {
+                if (e.key === 'ArrowLeft') {
+                    changeImage(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changeImage(1);
+                } else if (e.key === 'Escape') {
+                    closeModal();
+                }
+            }
+        });
+
+        window.onclick = (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>

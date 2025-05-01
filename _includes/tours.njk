@@ -1,0 +1,104 @@
+---
+layout: base.njk
+---
+<header class="container-fluid bb">
+<div class="row">
+<div class="col-md-11 p-3 p-md-5 mt-3 position-relative">
+  <div class="header-content mt-5 mb-5">
+    <p class="sub_hero mt-5">
+     {{metadata.title}}
+    </p>
+    <h1>
+    <a href="{{page.url or metadata.url}}" class="text-white">{{title}}</a>
+    </h1>
+  </div>
+</div>
+</div>
+</header>
+
+<section class="container-fluid trucks lazy-background" data-bg="{{metadata.news.background}}">
+<div class="row mt-5 mb-5">
+
+<div class="col-md-12 p-3 p-md-5">
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/tours">Tours</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+  </ol>
+</nav>
+</div>
+
+<div class="col-md-7 p-3 p-md-5">
+<h3 class="mb-3">
+{{description}}
+</h3>
+<style>lite-youtube{background-color:#000;position:relative;display:block;contain:content;background-position:center center;background-size:cover;cursor:pointer;max-width:720px}lite-youtube::before{content:'';display:block;position:absolute;top:0;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==);background-position:top;background-repeat:repeat-x;height:60px;padding-bottom:50px;width:100%;transition:all .2s cubic-bezier(0, 0, .2, 1)}lite-youtube::after{content:"";display:block;padding-bottom:calc(100% / (16 / 9))}lite-youtube>iframe{width:100%;height:100%;position:absolute;top:0;left:0;border:0}lite-youtube>.lty-playbtn{display:block;width:68px;height:48px;position:absolute;cursor:pointer;transform:translate3d(-50%,-50%,0);top:50%;left:50%;z-index:1;background-color:transparent;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24 27 14v20" fill="white"/></svg>');filter:grayscale(100%);transition:filter .1s cubic-bezier(0, 0, .2, 1);border:none}lite-youtube .lty-playbtn:focus,lite-youtube:hover>.lty-playbtn{filter:none}lite-youtube.lyt-activated{cursor:unset}lite-youtube.lyt-activated::before,lite-youtube.lyt-activated>.lty-playbtn{opacity:0;pointer-events:none}.lyt-visually-hidden{clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px}</style>
+<script defer="defer">class LiteYTEmbed extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.style.backgroundImage=`url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}e.removeAttribute("href"),this.addEventListener("pointerover",LiteYTEmbed.warmConnections,{once:!0}),this.addEventListener("click",this.addIframe),this.needsYTApiForAutoplay=navigator.vendor.includes("Apple")||navigator.userAgent.includes("Mobi")}static addPrefetch(e,t,i){const a=document.createElement("link");a.rel=e,a.href=t,i&&(a.as=i),document.head.append(a)}static warmConnections(){LiteYTEmbed.preconnected||(LiteYTEmbed.addPrefetch("preconnect","https://www.youtube-nocookie.com"),LiteYTEmbed.addPrefetch("preconnect","https://www.google.com"),LiteYTEmbed.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),LiteYTEmbed.addPrefetch("preconnect","https://static.doubleclick.net"),LiteYTEmbed.preconnected=!0)}fetchYTPlayerApi(){window.YT||window.YT&&window.YT.Player||(this.ytApiPromise=new Promise(((e,t)=>{var i=document.createElement("script");i.src="https://www.youtube.com/iframe_api",i.async=!0,i.onload=t=>{YT.ready(e)},i.onerror=t,this.append(i)})))}async addYTPlayerIframe(e){this.fetchYTPlayerApi(),await this.ytApiPromise;const t=document.createElement("div");this.append(t);const i=Object.fromEntries(e.entries());new YT.Player(t,{width:"100%",videoId:this.videoId,playerVars:i,events:{onReady:e=>{e.target.playVideo()}}})}async addIframe(){if(this.classList.contains("lyt-activated"))return;this.classList.add("lyt-activated");const e=new URLSearchParams(this.getAttribute("params")||[]);if(e.append("autoplay","1"),e.append("playsinline","1"),this.needsYTApiForAutoplay)return this.addYTPlayerIframe(e);const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),t.focus()}}customElements.define("lite-youtube",LiteYTEmbed);</script>
+<div id="{{video}}" class="ratio ratio-16x9">
+<lite-youtube 
+videoid="{{video}}" 
+title="{{title}}"
+style="background-image: url('https://wsrv.nl/?url=https://i.ytimg.com/vi/{{video}}/hqdefault.jpg&output=webp');">
+<div class="lty-playbtn"></div></lite-youtube></div>
+{% if author %}
+  {% set authorData = author.split('___') %}
+</div>
+
+
+<div class="col-md-5 p-3 p-md-5">
+  <p>By 
+<a href="/staff/{{ authorData[0] }}" class="non">
+<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
+{{ authorData[1] if authorData[1] else authorData[0] }}</a></p>
+{% endif %}
+<heading-anchors>{{content|safe}}</heading-anchors>
+
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style mt-5" 
+data-a2a-url="{{metadata.url}}{{page.url}}" data-a2a-title="{{title}}">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_whatsapp"></a>
+    <a class="a2a_button_mastodon"></a>
+    <a class="a2a_button_x"></a>
+    <a class="a2a_button_linkedin"></a>
+    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script defer src="https://static.addtoany.com/menu/page.js"></script>
+
+</div>
+
+</div>
+</section>
+
+{%- if collections.tours %}
+{%- set previousPost = collections.tours | getPreviousCollectionItem %}
+{%- set nextPost = collections.tours | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<section class="container-fluid">
+<div class="row mt-5 mb-5">
+<div class="col-md-6 p-3 p-md-5">{%- if previousPost %}
+<h3 class="promo_text mb-3 text-descs"><a href="{{ previousPost.url }}">
+{{ previousPost.data.title }}
+</a></h3>
+<p><a href="{{ previousPost.url }}">
+← Previous Video Tour
+</a></p>{% endif %}
+</div>
+<div class="col-md-6 p-3 p-md-5">{%- if nextPost %}
+<h3 class="promo_text mb-3  text-descs"><a href="{{ nextPost.url }}">
+{{ nextPost.data.title }}
+</a></h3>
+<p><a href="{{ nextPost.url }}">
+Next Video Tour →
+</a></p>{% endif %}
+</div>
+</div>
+</section>
+{%- endif %}
+{%- endif %}
+
+{% include "partials/motors.njk" %}
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

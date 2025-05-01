@@ -1,0 +1,24 @@
+---
+layout: base
+---
+<div class="mt-5 mb-5">
+<h1>{{title}}</h1>
+
+{% for dev in staff.user %}
+<div class="col-md-4 author_list mt-3 mb-3 col-10">
+<a href="/staff/{{dev.key}}" title="About {{dev.name}}"><img class="img_author profile_list bg-body-secondary p-1 shadow-sm" width="100%" height="100%" alt="{{dev.name}}"
+src="{{dev.image | default('/path/to/default-image.jpg')}}"/></a>
+<div class="p-1 bg-body-secondary shadow-sm rounded">
+<div class="p-3 bg-body-tertiary rounded">
+<h3 class="mt-3"><a href="/staff/{{dev.key}}" class="non">{{dev.name}}</a></h3>
+<p class="small">{{dev.bio}}</p>
+<p class="text-center">{% for s in dev.social %}
+<a href="{{s.url}}" title="{{s.title}}" class="p-1"><i class="{{s.icon}}"></i></a>{% endfor %}
+</p>
+</div>
+</div>
+</div>
+{% endfor %}
+
+</div>
+

@@ -1,0 +1,93 @@
+---
+layout: base.njk
+---
+<header class="container-fluid bb">
+<div class="row">
+<div class="col-md-11 p-3 p-md-5 mt-3 position-relative mt-5 mb-3">
+  <div class="header-content">
+    <p class="sub_hero">{{metadata.title}}</p>
+    <h1 class="hero_text"><a href="{{page.url}}" class="text-white">{{title}}</a></h1>
+    <p class="lead">{{description}}</p>
+  </div>
+</div>
+</div>
+</header>
+
+<section class="container-fluid">
+<div class="row mt-5 mb-3">
+
+<!--
+<div class="col-md-6 p-3 p-md-5">
+<img class="lazy img-fluid mb-3" width="100%" height="100%" data-src="{{image or metadata.image}}">
+</div>
+-->
+
+<div class="col-md-8 mx-auto p-3 p-md-5">
+<h3>{{event_title}}</h3>
+<form action="{{formspree_id}}" method="POST">
+<div class="row">
+
+
+
+<select class="form-select form-select-md p-1 mt-5" aria-label="Event type">
+<option selected>{{event_title_form}}</option>
+{% for e in event %}
+<option value="{{e.title}}">{{e.title}} <span class="ms-5"><strong>{{e.price}}</strong></span></option>
+{% endfor %}
+</select>
+<label class="form-label small mt-1 text-end">
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#selecteventModal">
+<i class="fas  fa-circle-info me-3"></i> {{event_information}}
+</button>
+</label>
+
+<div class="modal fade" id="selecteventModal" tabindex="-1" aria-labelledby="selecteventModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h1 class="modal-title fs-5" id="selecteventModalLabel">{{event_information}}</h1>
+        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-3">
+        <div class="row">
+        {% for e in event %}
+        <div class="col-md-12 p-3 border-bottom">
+        <p class="small"><strong>{{e.title}} <span class="float-end p-2 text-white rounded bg-primary">{{e.price}}</span></strong></p>
+            <div class="row">{% for i in e.item %}<div class="col-7 col-md-8 small">
+              {{i.text}} </div><div class="col-5 col-md-4 small"><strong>{{i.price}}</strong></div>
+            {% endfor %}</div>
+        </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% for n in form %}
+<label for="{{n.info}}" class="form-label  mt-1 mb-1 p-1">
+{{n.info}}
+</label>
+<input type="text" name="{{n.info}}" class="form-control  mt-1 mb-1" required>
+{% endfor %}
+
+
+<label for="message" class="form-label  mt-1 mb-1 p-1">
+Message
+</label>
+<textarea class="form-control mt-1 mb-1" rows="3" name="message"></textarea>
+<p class="small text-secondary mt-3">{% for es in note %}*<i> {{es.text}} </i>*<br/>{% endfor %}</p>
+<button class="btn btn-primary btn-lg mt-5 mb-3" type="submit">{{button}}</button>
+</div>
+</form>
+</div>
+
+</div>
+</div>
+</section>
+
+{% include "partials/motors.njk" %}
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

@@ -1,0 +1,42 @@
+---
+layout: base.njk
+---
+<header class="container-fluid bb">
+<div class="row">
+<div class="col-md-11 p-3 p-md-5 mt-3 position-relative mt-5 mb-3">
+  <div class="header-content">
+    <p class="sub_hero">{{metadata.title}}</p>
+    <h1 class="hero_text"><a href="{{page.url}}" class="text-white">{{title}}</a></h1>
+    <p class="lead">{{description}}</p>
+  </div>
+</div>
+</div>
+</header>
+
+<section class="container-fluid trucks lazy-background" data-bg="{{metadata.news.background}}">
+<div class="row mt-5 mb-5">
+
+<div class="col-md-10 mx-auto p-3 p-md-5">
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{metadata.url}}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+  </ol>
+</nav>
+
+<h3 class="promo_text mb-3">{{title}}</h3>
+<img class="img-fluid mb-5 img-shop lazy" alt="{{title}}" width="100%" height="100%" data-src="{{image}}">
+<heading-anchors>
+{{content|safe}}
+</heading-anchors>
+<p><a href="{{button.url}}" class="btn btn-primary">{{button.text}}</a></p>
+</div>
+</div>
+</section>
+
+{% include "partials/motors.njk" %}
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

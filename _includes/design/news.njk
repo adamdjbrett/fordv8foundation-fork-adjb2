@@ -1,0 +1,41 @@
+---
+layout: base.njk
+---
+{% include "partials/header.njk" %}
+<section class="container-fluid">
+<div class="row">
+<h2 class="p-3 p-md-5">{{description or metadata.description}}</h2>
+{% for post in pagination.items %}
+<div class="p-3 p-md-5 col-md-6">
+<a href="{{post.url}}" class="bg-light rounder shadow-sm opacity-95 row zoom non">
+<div class="col-md-5 lazy-background blr" data-bg="{{post.data.image or metadata.image}}"></div>
+<div class="col-md-7 p-3">
+<div class="me-3">
+<h3 class="text-desc">{{post.data.title}}</h3>
+{% if post.data.author %}
+  {% set authorData = post.data.author.split('___') %}
+  <p class="text-dark">By 
+<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
+{{ authorData[1] if authorData[1] else authorData[0] }}</p>
+{% endif %}
+<p class="text-secondary text-desc">{{post.data.description}}</p>
+<p class="text-dark"><small>Publish : <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></small></p>
+</div>
+</div>
+</a>
+</div>
+{% endfor %}
+<div class="row p-3 mt-3 mb-3">
+<div class="col-md-6 p-3">
+{% if pagination.href.previous %}<a class="btn btn-primary text-uppercase col-12 p-3" href="{{ pagination.href.previous }}">← Previous</a>{% endif %}
+</div>
+<div class="col-md-6 p-3 text-end">
+{% if pagination.href.next %}<a class="btn btn-primary text-uppercase col-12 p-3" href="{{ pagination.href.next }}">Next →</a>{% endif %}
+</div>
+</div>
+</div>
+</section>
+{% include "partials/motors.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

@@ -1,0 +1,73 @@
+---
+layout: base.njk
+---
+<header class="container-fluid bb">
+<div class="row">
+<div class="col-md-11 p-3 p-md-5 mt-3 position-relative mt-5 mb-3">
+  <div class="header-content">
+    <p class="sub_hero">{{metadata.title}}</p>
+    <h1 class="hero_text"><a href="{{page.url}}" class="text-white">{{title}}</a></h1>
+    <p class="lead">{{description}}</p>
+  </div>
+</div>
+</div>
+</header>
+
+<section class="container-fluid">
+<div class="row mt-5 mb-3">
+
+<div class="col-md-6 p-3 p-md-5">
+<img class="lazy img-fluid mb-3" width="100%" height="100%" data-src="{{image or metadata.image}}">
+<heading-anchors>{{content|safe}}</heading-anchors>
+</div>
+
+<div class="col-md-6 p-3 p-md-5">
+<h3>Contact Form</h3>
+<form action="{{formspree_id}}" method="POST">
+<div class="row">
+{% for n in form %}
+<label for="{{n.info}}" class="form-label  mt-1 mb-1 p-1">
+{{n.info}}
+</label>
+<input type="text" name="{{n.info}}" class="form-control  mt-1 mb-1" required>
+{% endfor %}
+
+<label for="message" class="form-label  mt-1 mb-1 p-1">
+Message
+</label>
+<textarea class="form-control mt-1 mb-1" rows="3" name="message"></textarea>
+<button class="btn btn-primary btn-lg mt-5" type="submit">{{button}}</button>
+</div>
+</form>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="container-fluid">
+<div class="row mt-3 mb-3">
+<div class="col-md-4 p-3 p-md-5">
+<p>{{visit.title}}</p>
+<h3>{{visit.sub_title}}</h3>
+<p>{% for i in visit.info %}{{i.text}}<br/>{% endfor %}
+<strong>{{visit.open}}</strong></p>
+<p>
+<a href="{{visit.apple_button.url}}" target="_blank" class="btn btn-primary">{{visit.apple_button.text}}</a>
+</p>
+<p>
+<a href="{{visit.button.url}}" target="_blank" class="btn btn-primary">{{visit.button.text}}</a>
+</p>
+</div>
+<div class="col-md-8 p-3 p-md-5">
+<div class="ratio ratio-16x9">
+{{visit.embed_map |safe}}
+</div>
+</div>
+</div>
+</section>
+{% include "partials/motors.njk" %}
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

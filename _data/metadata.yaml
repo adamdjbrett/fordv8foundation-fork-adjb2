@@ -1,0 +1,381 @@
+title: "Early Ford V-8 Foundation Museum"
+description: "Preserving Ford Motor History"
+language: "en"
+locale: en_US
+image: /img/logofull.webp
+favicon: /img/logofull.webp
+#url: "http://localhost:8080"
+url: "https://fv8f.fyi"
+
+metasocial: 
+ facebook: "https://www.facebook.com/earlyfordv8museum"
+ twitteruser: "@user"
+ twitter: "https://x.com/user"
+
+nav_logo: "/img/logofull.webp"
+nav_button: 
+ title: Tickets
+ url: /
+nav_donate: 
+ title: Donate
+ url: https://www.paypal.com/donate/?hosted_button_id=NP2EGFG5NSJA4
+
+nav_museum:
+  nav: Museum Select Motors
+  url: https://www.museumselectmotors.com/
+
+nav1:
+  nav: Home
+  url: /
+
+nav2:
+  title: News & Events
+  nav2_1: Events
+  nav2_2: What News
+  nav2_3:
+    title: Others
+    item: 
+      - nav: Education
+        url: /education/
+      - nav: Video Tour
+        url: /tours/
+      - nav: Nearby Attractions
+        url: /nearby-attractions/
+      - nav: Adopt A Ford
+        url: /adopt-a-ford/
+
+
+#nav3:
+#  nav: Museum Select Motos
+#  url: https://www.museumselectmotors.com/
+#  nav: Collections
+#  url: /collections/
+
+nav3:
+  title: Donate
+  nav3_1:
+   title: Donate
+   item: 
+      - nav: Planned Giving
+        url: /donate/planned-giving/
+      - nav: Memorial Fund
+        url: /donate/memorial-fund/
+      - nav: Donate A Vehicle
+        url: /donate/donate-a-vehicle/
+      - nav: Brick Campaign
+        url: /donate/brick-campaign/
+      - nav: 'Capital Campaign "Building the Future"'
+        url: /donate/capital-campaign-2/
+   button: Visit Donate Page
+   link: /donate/
+  nav3_2:
+   title: Museum Select Motors
+   button: Visit Museum Select Motors
+   link: https://www.museumselectmotors.com/
+
+nav4:
+  title: About
+  nav4_1:
+   title: About Us
+   item: 
+      - nav: About
+        url: /about/
+      - nav: Staff
+        url: /staff/
+      - nav: Partners
+        url: /partners/
+      - nav: Links
+        url: /links/
+  nav4_2:
+   title: Collections
+   item: 
+      - nav: 1930s
+        url: /collections/1930s/
+      - nav: 1940s
+        url: /collections/1940s/
+      - nav: 1950s
+        url: /collections/1950s/
+      - nav: V8 Engines
+        url: /collections/v8-engines/
+      - nav: View All
+        url: /collections/all/
+      - nav: Collections Page
+        url: /collections/
+  nav4_3:
+   title: J. Windle Event Center
+   item: 
+      - nav: Event Center
+        url: /event-center/
+      - nav: Reservation Form
+        url: /event-center/reservation/
+      - nav: Photo Gallery
+        url: /event-center/gallery/
+
+nav5:
+  title: Members
+  item: 
+   - nav: Membership
+     url: /membership/
+#   - nav: Become a Member
+#     url: /pdf/Membership-App.pdf
+   - nav: New Member Form
+     url: /membership-form/
+   - nav: Group Ticket Form
+     url: /group-ticket-form/
+#   - nav: Become a Member
+#     url: /new-member/
+
+#nav6:
+#  title: About
+#  item: 
+#   - nav: About Us
+#     url: /about/
+#   - nav: Staff
+#     url: /staff/
+#   - nav: Partners
+#     url: /partners/
+#   - nav: Links
+#     url: /links/
+
+nav6:
+  nav: Contact
+  url: /contact/
+
+# Widgets
+
+search: "Search"
+
+open_hours:
+ nav: "Monday - Saturday 09.00 - 05.00 | Sunday: 11.00 - 03.00"
+ title: Open Hours
+ button: 
+  text: Buy Tickets 
+  url: /
+ info: 
+  - day: Monday
+    time: 9:00-5:00
+  - day: Tuesday
+    time: 9:00-5:00
+  - day: Wednesday
+    time: 9:00-5:00
+  - day: Thursday
+    time: 9:00-5:00
+  - day: Friday
+    time: 9:00-5:00
+  - day: Saturday
+    time: 9:00-5:00
+  - day: Sunday
+    time: 11:00-3:00 
+  - day: Holidays
+    time: check this website before planning your visit on a holiday. 
+
+
+event: 
+    title: Upcoming Event
+    button: Explore All Event
+    url: /events/
+
+nearby_header: 
+    title: Nearby Attractions
+    button: Explore All Nearby Attractions
+    url: /nearby-attractions/
+
+nearby:
+ - title: Auburn Cord Duesenberg Museum
+   image: /img/page/image-placeholder-title.jpg
+   text: "Features more than 100 classic and antique vehicles from the 19th century to the present era, with emphasis on Auburns, Cords & Duesenbergs."
+   address: "1600 S Wayne St. Auburn, IN 46706" 
+   phone: "(260)-925-1444"
+   email: "info@automobilemuseum.org"
+   url: "https://automobilemuseum.org/"
+ - title: "National Auto & Truck Museum"
+   image: "/img/page/National.png"
+   text: "The National Auto & Truck Museum’s mission is to enrich lives and educate all generations through acquiring and preserving America’s automobile and truck history with buildings, vehicles, artifacts, and literature."
+   address: "1000 Gordon M. Buehrig Place, Auburn, IN 46706"
+   phone: "(260)-925-9100"
+   email: "info@natmus.org"
+   url: "https://natmus.org/"
+ - title: "DeKalb County Visitors Bureau"
+   image: "/img/page/DeKalb.png"
+   text: "Visit the DeKalb County Visitors Bureau for more information on Northeast Indiana."
+   address: "1601 S Van Buren St Auburn, IN 46706"
+   phone: "(260)-927-1499"
+   email: "creative@dekalbcvb.org"
+   url: "https://dekalbcvb.org/"
+ - title: "International Monster Truck Museum Hall of Fame"
+   image: "/img/page/179473259_4169403496414937_1687000495230275177_n.png"
+   text: "The International Monster Truck Museum & Hall of Fame was established in 2010 to collect and archive the history of the monster truck sport."
+   address: "541 W. Main St. Butler, IN 46721"
+   phone: "(260)-837-2435"
+   email: "info@monstermuseum.org"
+   url: "http://monstermuseum.org/"
+ - title: "Kruse Plaza"
+   image: "/img/page/kruse-plaza.png"
+   text: "Event Center with a variety of services and interactive displays."
+   address: "5634 Opportunity Blvd. Auburn, IN 46706"
+   phone: "(260)-927-9144"
+   email: 
+   url: "https://kruseplaza.com/"
+
+news:
+    title: News Article
+    background: "/img/fordes.webp"
+    button: Explore All Article
+    url: /news/
+
+motors:
+    ford1930: Ford 1930 Motors
+    ford1940: Ford 1940 Motors
+    ford1950: Ford 1950 Motors
+    others: Others Motors
+    title: Museum Select Motors
+    button: Visit Museum Select Motors
+    url: https://www.museumselectmotors.com/
+
+
+museum_display: 
+ - title: 1930s
+   description: Ford 1930s
+   image: /img/collections/1938.webp
+   link: https://www.museumselectmotors.com/view-inventory
+ - title: 1940s
+   description: 1940s
+   image: /img/collections/237130222_6122516417822747_7460490696439431887_n.webp
+   link: https://www.museumselectmotors.com/view-inventory
+ - title: 1950s
+   description: 1950s
+   image: /img/collections/1951-Station-Wagon.webp
+   link: https://www.museumselectmotors.com/view-inventory
+ - title: Other
+   description: Other
+   image: /img/collections/1940-Ford-V8-60-Engine-Marine-Version-A001.webp
+   link: https://www.museumselectmotors.com/view-inventory
+
+collections:
+    title: Our Collections
+    bakcground: "/img/ford7.webp"
+    text: "As a member of the Early Ford V-8 Foundation Museum, you will contribute to expanding exhibits and programs highlighting the history of the Ford Flathead V-8 era. As well as the people who designed, built & promoted this great American legacy."
+    button: Visit Collections
+    url: /collections/
+
+store:
+    title: The Ford Store
+    background: /img/lim.webp
+    text: "Featuring museum branded apparel, automobilia, books, automotive literature, archives, and much more!"
+    button: Visit Store
+    url: /shop/
+    item: 
+      - title: Beanie Skull Cap, Sock Hat V-8 Logo
+        image: /img/shop1.webp
+        price: $10
+        url: /shop/
+      - title: Logo Magnet
+        image: /img/shop2.webp
+        price: $6
+        url: /shop/
+      - title: "It's Ford for '40 Restoration Manual"
+        image: /img/shop3.webp
+        price: $50
+        url: /shop/
+
+partners:
+  title: Our Partners
+  item: 
+   - title: Heny Ford
+     image: /img/henryford.jpeg
+     url: http://hfha.org/
+   - title: Benson Ford
+     image: /img/Benson.jpeg
+     url: https://www.thehenryford.org/collections-and-research/about/
+   - title: Ford Plex
+     image: /img/t-plexlogo3.gif
+     url: https://www.fordpiquetteplant.org/
+   - title: Ford House
+     image: /img/ford-house.png
+     url: https://www.fordhouse.org/
+   - title: Fair Lane
+     image: /img/fairlane.jpeg
+     url: http://www.henryfordfairlane.org/
+   - title: Winter Estates
+     image: /img/winter-estates.png
+     url: https://www.edisonfordwinterestates.org/
+   - title: Richmond Hill
+     image: /img/richmond-hill.jpeg
+     url: http://www.richmondhillhistoricalsociety.com/
+   - title: Yankee Air Museum
+     image: /img/yankee-air-museum.png
+     url: https://yankeeairmuseum.org/
+   - title: Berry College
+     image: /img/berry-college.png
+     url: https://berry.edu/
+   - title: Motor Cities
+     image: /img/motorcities.jpeg
+     url: https://www.motorcities.org/
+   - title: High Land
+     image: /img/highland.png
+     url: https://www.fohravolunteers.org/
+   - title: Dennis Carpenter
+     image: /img/dennis-carpenter.png
+     url: https://www.dennis-carpenter.com/
+
+
+footer:
+ title: "Ford V8 Foundation"
+ logo: "/img/logofull.webp"
+ item: 
+  - nav: Home
+    url: /
+  - nav: About
+    url: /about/
+  - nav: Collections
+    url: /collections/  
+  - nav: Donation
+    url: /donate/
+  - nav: Shop
+    url: /shop/
+  - nav: Ebay
+    url: https://www.ebay.com/str/fordv8foundation
+  - nav: Paypal
+    url: https://www.paypal.com/donate/?hosted_button_id=NP2EGFG5NSJA4    
+ address: 
+  - text: "P.O. Box 284, 2081 Rotunda Drive, Auburn, IN, 46706"
+ phone: 
+  text: "Phone"
+  number: "(260) 927-8022"
+  url: "tel:+12609278022"
+ email: 
+  text: "info@fordv8foundation.org"
+  url: "mailto:info@fordv8foundation.org"
+ social: 
+  - icon: fab fa-facebook
+    title: Ford Museum Facebook
+    url: https://www.facebook.com/earlyfordv8museum
+  - icon: fab fa-instagram
+    title: Ford Museum Instagram
+    url: https://www.instagram.com/earlyfordv8museum/
+  - icon: fas fa-location-dot
+    title: Ford Museum Maps
+    url: https://www.google.com/maps/place/Early+Ford+V-8+Foundation+Museum/@41.3352698,-85.0892508,15z/data=!4m2!3m1!1s0x0:0xd407c527d5ed08cb?sa=X&ved=2ahUKEwiXie2Zp_P1AhXrjokEHZmXAl0Q_BJ6BAgyEAU
+  - icon: fab fa-apple
+    title: Ford Museum Apple Map
+    url: https://maps.apple.com/?address=2181%20Rotunda%20Dr,%20Auburn,%20IN%20%2046706,%20United%20States&auid=2400004346339794474&ll=41.334899,-85.089519&lsp=9902&q=Early%20Ford%20V-8%20Foundation%20%26%20Museum&t=m
+ feed: 
+  - nav: Firehose
+    url: /feed/feed.xml
+  - nav: News
+    url: /feed/news.xml
+  - nav: Events
+    url: /feed/events.xml
+  - nav: Sitemap
+    url: /sitemap.xml
+
+copyrights: 
+ text1: Official Site 
+ text2: Early Ford v8 Museum
+ text2_url: /
+
+author: 
+ name: "Jan Jones"
+ image: "/img/staff/me.webp"
+ email: "jan@fordv8foundation.org"
+ url: "/staff/jan-jones/"

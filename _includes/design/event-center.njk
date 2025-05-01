@@ -1,0 +1,265 @@
+---
+layout: base.njk
+---
+{% include "partials/header.njk" %}
+
+<section class="container-fluid">
+<div class="row mt-5 mb-5">
+<div class="col-md-6 br shadow lazy-background" data-bg="{{about.image}}"></div>
+<div class="col-md-6 p-3 p-md-5">
+<h3 class="promo_text mb-3"><a href="{{page.url}}">{{about.title}}</a></h3>
+{% for info in about.text %}<p>{{info.info}}</p>{% endfor %}
+<p><a href="{{about.url}}" class="btn btn-primary">{{about.button}}</a></p>
+</div>
+</div>
+</section>
+
+<section class="container-fluid">
+<div class="row mt-5 mb-5">
+
+<div class="col-md-12 p-3 p-md-5">
+<img class="lazy img-fluid img-ev mb-5" alt="{{title}}" width="100%" height="100%" 
+data-src="{{image}}"/>
+<div class="col-md-10 mx-auto">{{content|safe}}</div>
+</div>
+
+<div class="col-md-12 p-3 p-md-5">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <style>
+        .gallery-container {
+            max-width: 100%;
+            margin: 30px auto;
+            padding: 0 15px;
+            overflow: hidden;
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 80%;
+            max-width: 300px;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .swiper-slide:hover img {
+            transform: scale(1.05);
+        }
+
+        .swiper-slide-active {
+            transform: scale(1.1);
+            z-index: 2;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: #007aff;
+            opacity: 0.5;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #007aff;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        @media (min-width: 576px) {
+            .swiper-slide {
+                height: 270px;
+            }
+
+            .gallery-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .gallery-container {
+                max-width: 720px;
+            }
+
+            .swiper-container {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .swiper-slide {
+                height: 280px;
+            }
+
+            .gallery-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .gallery-container {
+                max-width: 960px;
+            }
+
+            .swiper-container {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .swiper-slide {
+                height: 300px;
+            }
+
+            .swiper-slide-active {
+                transform: scale(1.15);
+            }
+
+            .gallery-title {
+                font-size: 36px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .gallery-container {
+                max-width: 1140px;
+            }
+        }
+    </style>
+
+    <div class="gallery-container">
+        <h3 class="gallery-title">{{gallery.title}}</h3>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for s in collections.eventgalleries | limit(8) %}
+                <div class="swiper-slide">
+                    <img src="{{s.data.image}}" alt="{{s.data.title}}">
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <p class="text-center">
+        <a href="{{gallery.url}}" class="btn btn-primary">{{gallery.button}}</a>
+    </p>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 30,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                992: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 40
+                }
+            }
+        });
+    </script>
+</div>
+
+
+{% for if in intro %}
+<div class="col-md-6 p-3 p-md-5">
+<h3 class="mb-3"><a class="text-dark" href="{{page.url}}">
+{{if.title}}
+</a></h3>
+{% for s in if.text %}<p>
+{{s.info}}
+</p>{% endfor %}
+</div>
+{% endfor %}
+
+
+<div class="col-md-6 p-3 p-md-5">
+<img class="img-fluid lazy" alt="{{title}}" width="100%" height="100%" 
+data-src="/img/event-center/event-center.jpg"/>
+</div>
+
+<div class="col-md-6 p-3 p-md-5">
+{% for j in info %}<p>
+{{j.text}}
+</p>{% endfor %}
+
+<div class="bg-light p-3 rounded">
+{% for k in contact %}<p>
+{{k.text}}
+</p>{% endfor %}
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+{% include "partials/motors.njk" %}
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

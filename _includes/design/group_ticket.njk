@@ -1,0 +1,52 @@
+---
+layout: base.njk
+---
+<header class="container-fluid bb">
+<div class="row">
+<div class="col-md-11 p-3 p-md-5 mt-3 position-relative mt-5 mb-3">
+  <div class="header-content">
+    <p class="sub_hero">{{metadata.title}}</p>
+    <h1 class="hero_text"><a href="{{page.url}}" class="text-white">{{title}}</a></h1>
+    <p class="lead">{{description}}</p>
+  </div>
+</div>
+</div>
+</header>
+
+<section class="container-fluid trucks lazy-background" data-bg="{{metadata.news.background}}">
+<div class="row mt-5 mb-5">
+<heading-anchors>{{content|safe}}</heading-anchors>
+<div class="col-md-8 mx-auto p-3 p-md-5">
+<h3>{{title}}</h3>
+<form action="{{formspree_id}}" method="POST">
+<div class="row">
+{% for n in form %}
+<label for="{{n.info}}" class="form-label  mt-1 mb-1 p-1">
+{{n.info}}
+</label>
+<input type="text" name="{{n.info}}" class="form-control  mt-1 mb-1" required>
+{% endfor %}
+
+<label for="spouse" class="form-label  mt-1 mb-1 p-1">
+Visit Plan
+</label>
+<input type="date" name="visit plan" class="form-control  mt-1 mb-1" required>
+
+
+<label for="message" class="form-label  mt-1 mb-1 p-1">
+Message
+</label>
+<textarea class="form-control mt-1 mb-1" rows="3" name="message"></textarea>
+
+<button class="btn btn-primary btn-lg mt-5 btn-lg p-3" type="submit"><h3>{{button}}</h3></button>
+</div>
+</form>
+</div>
+</div>
+</section>
+
+{% include "partials/motors.njk" %}
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

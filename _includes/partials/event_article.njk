@@ -1,0 +1,49 @@
+{% if show_event_article %}
+<section class="container-fluid mt-5 mb-5">
+<div class="row">
+
+<div class="col-md-12 p-3 p-md-5">
+<h2 class="mb-4">{{metadata.event.title}} <a href="{{metadata.event.url}}" class="float-end btn btn-primary non">{{metadata.event.button}}</a></h2>
+<div class="row">
+{% for e in collections.events | limit (2) | reverse %}
+<div class="col-md-6 p-3">
+<div class="bg-light rounder shadow-sm opacity-95 row zoom">
+<div class="col-md-5 lazy-background blr" data-bg="{{e.data.image or metadata.image}}"></div>
+<div class="col-md-7 col-12 p-3">
+<div class="ms-3">
+<h3 class="text-descs">{{e.data.title}}</h3>
+<p><small>{% if e.data.start_date %}Start : {{e.data.start_date| readableDate}}<br/>
+End : {{e.data.end_date| readableDate}}<br/>{% endif %}
+Venue Location : 
+<br/>{{e.data.venue}}
+</small></p>
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+
+<div class="col-md-12 p-3 p-md-5">
+<h2 class="mb-4">{{metadata.news.title}} <a href="{{metadata.news.url}}" class="float-end btn btn-primary non">{{metadata.news.button}}</a></h2>
+<div class="row">
+{% for n in collections.news | reverse | limit (4) %} 
+<div class="p-3 col-md-6">
+<a href="{{n.url}}" class="bg-light rounder shadow-sm opacity-95 row zoom non">
+<div class="col-md-7 p-3">
+<div class="me-3">
+<h3 class="text-descs">{{n.data.title}}</h3>
+<p class="text-dark"><small>Publish : <time datetime="{{ n.date | htmlDateString }}">{{ n.date | readableDate }}</time></small></p>
+</div>
+</div>
+<div class="col-md-5 lazy-background brr" data-bg="{{n.data.image or metadata.image}}"></div>
+</a>
+</div>
+{% endfor %}
+</div>
+</div>
+
+</div>
+</section>
+{% endif %}

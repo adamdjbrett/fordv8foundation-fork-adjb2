@@ -1,0 +1,121 @@
+---
+layout: base.njk
+---
+<header class="container-fluid bb">
+<div class="row">
+<div class="col-md-11 p-3 p-md-5 mt-3 position-relative">
+  <div class="header-content mt-5 mb-5">
+    <p class="sub_hero mt-5">
+     {{metadata.title}}
+    </p>
+    <h1 class="hero_text">
+    <a href="{{page.url}}" class="text-white">{{title}}</a>
+    </h1>
+  </div>
+</div>
+</div>
+</header>
+
+<section class="container-fluid trucks lazy-background" data-bg="{{metadata.news.background}}">
+<div class="row mt-5 mb-5">
+<!--
+<div class="col-md-12 p-3 p-md-5">
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/events">Events</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+  </ol>
+</nav>
+</div>
+-->
+<div class="col-md-7 p-3 p-md-5">
+<img class="img-fluid shadow-sm mb-3" alt="{{title}}" width="100%" height="100%" src="{{image or metadata.image}}"/>
+{% if show_gallery %}
+<h3>{{gallery_title}}</h3>
+  <div class="gallery" id="imageGallery"></div>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage">
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+        </div>
+    </div>
+{% include "design/motors/style.njk" %}
+{% include "design/motors/script.njk" %}
+{% endif %}
+</div>
+
+
+<div class="col-md-5 p-3 p-md-5">
+<h2>{{description or title}}</h2>
+{% if author %}
+  {% set authorData = author.split('___') %}
+  <p>By 
+<a href="/staff/{{ authorData[0] }}" class="non">
+<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle"/>
+{{ authorData[1] if authorData[1] else authorData[0] }}</a></p>
+{% endif %}
+<heading-anchors>{{content|safe}}</heading-anchors>
+{% if button.url %}
+<p><a href="{{button.url}}" class="btn btn-primary">{{button.text}}</a></p>
+{% endif %}
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style mt-5" 
+data-a2a-url="{{metadata.url}}{{page.url}}" data-a2a-title="{{title}}">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_whatsapp"></a>
+    <a class="a2a_button_mastodon"></a>
+    <a class="a2a_button_x"></a>
+    <a class="a2a_button_linkedin"></a>
+    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+<script defer src="https://static.addtoany.com/menu/page.js"></script>
+
+</div>
+{%- if collections.fordv %}
+{%- set previousPost = collections.fordv | getPreviousCollectionItem %}
+{%- set nextPost = collections.fordv | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<section class="container-fluid">
+<div class="row mt-5 mb-5">
+<div class="col-md-6 p-3 p-md-5">{%- if previousPost %}
+<h3 class="promo_text mb-3 text-descs"><a href="{{ previousPost.url }}">
+{{ previousPost.data.title }}
+</a></h3>
+<p><a href="{{ previousPost.url }}">
+← Previous
+</a></p>{% endif %}
+</div>
+<div class="col-md-6 p-3 p-md-5 text-end">{%- if nextPost %}
+<h3 class="promo_text mb-3  text-descs"><a href="{{ nextPost.url }}">
+{{ nextPost.data.title }}
+</a></h3>
+<p><a href="{{ nextPost.url }}">
+Next →
+</a></p>
+{% endif %}
+</div>
+</div>
+</section>
+{%- endif %}
+{%- endif %}
+</div>
+</section>
+{% include "partials/motors.njk" %}
+{% if show_post %}
+<section class="container-fluid">
+<div class="row text-center">
+<h3 class="p-3 p-md-5 col-md-12">{{metadata.motors.others}}</h3>
+{% for s in collections.fordv |reverse %}
+<div class="col-md-4 p-3 p-md-5">
+{% if s.data.image %}<a href="{{s.url}}"><img class="img-fluid lazy img-motor mb-3" alt="{{s.data.title}}" width="100%" height="100%" data-src="{{s.data.image or metadata.image}}"></a>{% endif %}
+<h3><a href="{{s.url}}" class="text-dark">{{s.data.title}}</a></h3>
+</div>
+{% endfor %}
+</div>
+</section>{% endif %}
+{% include "partials/event_article.njk" %}
+{% include "partials/ford_store.njk" %}
+{% include "partials/partner.njk" %}
+{% include "partials/nearby.njk" %}

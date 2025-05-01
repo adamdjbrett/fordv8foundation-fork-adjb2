@@ -1,0 +1,10 @@
+user:
+  - key: john-hoham
+    name: John Hoham
+    role: Executive Director
+    bio: bio needed
+  - key: jan-jones
+    name: Jan Jones
+    role: "Communications, Marketing and Events Manger"
+    bio: bio needed
+

@@ -1,0 +1,65 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const fullImage = document.getElementById('fullImage');
+  const imageTitle = document.getElementById('imageTitle');
+  const imageDescription = document.getElementById('imageDescription');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+  let currentIndex = 0;
+
+  // Create grid layout
+  const galleryContainer = document.getElementById('gallery-container');
+  const galleryItems = galleryContainer.querySelectorAll('.gallery-item');
+  
+  for (let i = 0; i < galleryItems.length; i += 3) {
+    const row = document.createElement('div');
+    row.className = 'row mb-4';
+    for (let j = i; j < i + 3 && j < galleryItems.length; j++) {
+      const col = document.createElement('div');
+      col.className = 'col-md-4 mb-3';
+      col.appendChild(galleryItems[j]);
+      row.appendChild(col);
+    }
+    galleryContainer.appendChild(row);
+  }
+
+  // Get all gallery images
+  const galleryImages = document.querySelectorAll('.gallery-image');
+  const images = Array.from(galleryImages).map(img => ({
+    src: img.src,
+    alt: img.alt,
+    title: img.alt,
+    description: img.nextElementSibling.textContent
+  }));
+
+  // Open modal with full-size image
+  galleryContainer.addEventListener('click', function(e) {
+    if (e.target.classList.contains('gallery-image')) {
+      currentIndex = parseInt(e.target.dataset.index);
+      showImage(currentIndex);
+      imageModal.show();
+    }
+  });
+
+  // Previous button
+  prevBtn.addEventListener('click', function() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  // Next button
+  nextBtn.addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
+  function showImage(index) {
+    const image = images[index];
+    fullImage.src = image.src;
+    fullImage.alt = image.alt;
+    imageTitle.textContent = image.title;
+    imageDescription.textContent = image.description;
+  }
+});
+</script>

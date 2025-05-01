@@ -1,0 +1,10 @@
+<div id="gallery-container">
+{% for post in pagination.items %}
+<div class="gallery-item">
+<div class="card h-100">
+<img src="{{ post.data.image or metadata.image }}" width="100%" height="100%" alt="{{ post.data.title }}" class="card-img-top gallery-image" data-index="{{ loop.index0 }}">
+<p class="d-none">{{post.data.description or post.data.title}}</p>
+</div>
+</div>
+{% endfor %}
+</div>

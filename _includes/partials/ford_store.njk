@@ -1,0 +1,23 @@
+{% if show_ford_store %}<section class="container-fluid trucks lazy-background" data-bg="{{metadata.store.background}}">
+<div class="row text-center mt-5">
+<div class="col-md-12 p-3 p-md-5">
+<h3 class="promo_text">{{metadata.store.title}}</h3>
+<p>{{metadata.store.text}}</p>
+<p><a href="{{metadata.store.url}}" class="btn btn-primary">{{metadata.store.button}}</a></p>
+</div>
+{% for shop in metadata.store.item %}
+<div class="col-md-4 col-12 p-3">
+<div class="p-3 lit rounder zoom shadow-sm">
+<div class="p-3 bg-light rounder">
+<a href="{{shop.url}}" class="non">
+<img class="lazy shadow-sm img-shop rounder mb-3" data-src="{{shop.image}}" alt="{{shop.title}}">
+<p><strong>{{shop.title}}<br/>
+<span class="text-dark price-text">{{shop.price}}</span>
+</strong></p>
+</a>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+</section>{% endif %}
