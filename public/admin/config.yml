@@ -1,0 +1,1857 @@
+#local_backend: true
+backend:
+  name: git-gateway
+  repo: adamdjbrett/fordv8foundation.org
+  branch: main 
+media_folder: 'public/img'
+public_folder: '/img'
+
+
+collections:
+  - name: "config"
+    label: "Site Configuration"
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "Site Settings"
+        file: "_data/metadata.yaml"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string"}
+          - {label: "Site Description", name: "description", widget: "string"}
+          - {label: "Language", name: "language", widget: "string"}
+          - {label: "Locale", name: "locale", widget: "string"}
+          - {label: "Site Image", name: "image", widget: "image"}
+          - {label: "Favicon", name: "favicon", widget: "image"}
+          - {label: "Site URL", name: "url", widget: "string"}
+          
+          - label: "Meta Social"
+            name: "metasocial"
+            widget: "object"
+            fields:
+              - {label: "Facebook", name: "facebook", widget: "string"}
+              - {label: "Twitter User", name: "twitteruser", widget: "string"}
+              - {label: "Twitter", name: "twitter", widget: "string"}
+          
+          - {label: "Nav Logo", name: "nav_logo", widget: "image"}
+          
+          - label: "Nav Button"
+            name: "nav_button"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Nav Donate"
+            name: "nav_donate"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Nav1"
+            name: "nav1"
+            widget: "object"
+            fields:
+              - {label: "Nav", name: "nav", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Nav2"
+            name: "nav2"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Nav2_1", name: "nav2_1", widget: "string"}
+              - {label: "Nav2_2", name: "nav2_2", widget: "string"}
+              - label: "Nav2_3"
+                name: "nav2_3"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "item"
+                    widget: "list"
+                    fields:
+                      - {label: "Nav", name: "nav", widget: "string"}
+                      - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Nav3"
+            name: "nav3"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Nav3_1"
+                name: "nav3_1"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "item"
+                    widget: "list"
+                    fields:
+                      - {label: "Nav", name: "nav", widget: "string"}
+                      - {label: "URL", name: "url", widget: "string"}
+                  - {label: "Button", name: "button", widget: "string"}
+                  - {label: "Link URL", name: "link", widget: "string"}
+              - label: "Nav3_2"
+                name: "nav3_2"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Button", name: "button", widget: "string"}
+                  - {label: "Link URL", name: "link", widget: "string"}
+          
+          - label: "Nav4"
+            name: "nav4"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Nav4_1"
+                name: "nav4_1"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Navbar Item"
+                    name: "item"
+                    widget: "list"
+                    fields:
+                      - {label: "Nav Title", name: "nav", widget: "string"}
+                      - {label: "URL Link", name: "url", widget: "string"}
+              - label: "Nav4_2"
+                name: "nav4_2"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Navbar Item"
+                    name: "item"
+                    widget: "list"
+                    fields:
+                      - {label: "Nav Title", name: "nav", widget: "string"}
+                      - {label: "URL Link", name: "url", widget: "string"}
+              - label: "Nav4_3"
+                name: "nav4_3"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Navbar Item"
+                    name: "item"
+                    widget: "list"
+                    fields:
+                      - {label: "Nav Title", name: "nav", widget: "string"}
+                      - {label: "URL Link", name: "url", widget: "string"}
+          
+          - label: "Nav5"
+            name: "nav5"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Items"
+                name: "item"
+                widget: "list"
+                fields:
+                  - {label: "Nav", name: "nav", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Nav6"
+            name: "nav6"
+            widget: "object"
+            fields:
+              - {label: "Nav", name: "nav", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          
+#          - label: "Nav7"
+#            name: "nav7"
+#            widget: "object"
+#            fields:
+#              - {label: "Nav", name: "nav", widget: "string"}
+#              - {label: "URL", name: "url", widget: "string"}
+          
+          - {label: "Search", name: "search", widget: "string"}
+          
+          - label: "Open Hours"
+            name: "open_hours"
+            widget: "object"
+            fields:
+              - {label: "Navbar", name: "nav", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - label: "Info"
+                name: "info"
+                widget: "list"
+                fields:
+                  - {label: "Day", name: "day", widget: "string"}
+                  - {label: "Time", name: "time", widget: "string"}
+          
+          - label: "Event"
+            name: "event"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Button", name: "button", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Nearby Header"
+            name: "nearby_header"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Button", name: "button", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Nearby"
+            name: "nearby"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Text", name: "text", widget: "text"}
+              - {label: "Address", name: "address", widget: "string"}
+              - {label: "Phone", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "News"
+            name: "news"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Background", name: "background", widget: "image"}
+              - {label: "Button", name: "button", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Motors"
+            name: "motors"
+            widget: "object"
+            fields:
+              - {label: "Ford 1930", name: "ford1930", widget: "string"}
+              - {label: "Ford 1940", name: "ford1940", widget: "string"}
+              - {label: "Ford 1950", name: "ford1950", widget: "string"}
+              - {label: "Others", name: "others", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Button", name: "button", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Museum Display"
+            name: "museum_display"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Link", name: "link", widget: "string"}
+          
+          - label: "Collections"
+            name: "collections"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Background", name: "background", widget: "image", required: false}
+              - {label: "Text", name: "text", widget: "text"}
+              - {label: "Button", name: "button", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Store"
+            name: "store"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Background", name: "background", widget: "image"}
+              - {label: "Text", name: "text", widget: "text"}
+              - {label: "Button", name: "button", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+              - label: "Items"
+                name: "item"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image"}
+                  - {label: "Price", name: "price", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Partners"
+            name: "partners"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Items"
+                name: "item"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image"}
+                  - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Logo", name: "logo", widget: "image"}
+              - label: "Menu Items"
+                name: "item"
+                widget: "list"
+                fields:
+                  - {label: "Nav", name: "nav", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - label: "Address"
+                name: "address"
+                widget: "list"
+                field: {label: "Text", name: "text", widget: "string"}
+              - label: "Phone"
+                name: "phone"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "Number", name: "number", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - label: "Email"
+                name: "email"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - label: "Social"
+                name: "social"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Icon", name: "icon", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - label: "Feeds"
+                name: "feed"
+                widget: "list"
+                fields:
+                  - {label: "Nav", name: "nav", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Copyright"
+            name: "copyrights"
+            widget: "object"
+            fields:
+              - {label: "Text 1", name: "text1", widget: "string"}
+              - {label: "Text 2", name: "text2", widget: "string"}
+              - {label: "Text 2 URL", name: "text2_url", widget: "string"}
+          
+          - label: "Author"
+            name: "author"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+
+
+
+  - name: "homepages"
+    label: "Home Page"
+    editor:
+      preview: false
+    files:
+      - label: "Home"
+        name: "home"
+        file: "content/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "start.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Image", name: "image", widget: "image", required: false}
+          
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+              - {label: "Blockquote", name: "blockquote", widget: "string"}
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Slider 1", name: "slider1", widget: "image"}
+                  - {label: "Slider 2", name: "slider2", widget: "image"}
+                  - {label: "Slider 3", name: "slider3", widget: "image"}
+          
+          - label: "Main Article"
+            name: "main_article"
+            widget: "object"
+            fields:
+              - {label: "Background", name: "background", widget: "image"}
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - label: "Info"
+                name: "info"
+                widget: "list"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "Icon", name: "icon", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Ticket"
+            name: "ticket"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Price"
+                name: "price"
+                widget: "list"
+                fields:
+                  - {label: "Info", name: "info", widget: "string"}
+                  - {label: "Price", name: "price", widget: "string"}
+          
+          - label: "Membership"
+            name: "membership"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - label: "Info"
+                name: "info"
+                widget: "list"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+          - {label: "Show Nearby", name: "show_nearby", widget: "boolean", required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}          
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "abouts"
+    label: "About Page"
+    editor:
+      preview: false
+    files:
+      - label: "About"
+        name: "about"
+        file: "content/custom/about.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "about.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Image", name: "image", widget: "image", required: false}
+          - label: "Button"
+            name: "button"
+            widget: "object"
+            fields:
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/about/"}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "adopts_pages"
+    label: "Adopt Ford Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Adopt-A-Ford Setup"
+        name: "adopt_a_ford_setup"
+        file: "content/custom/adopt-a-ford.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/adopts.njk"}
+          - {label: "Image", name: "image", widget: "image", required: false}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - label: "Button"
+            name: "button"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "adopt-a-ford"
+    label: "Adopt-A-Ford"
+    folder: "content/adopt-a-ford"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Car Name", name: "car_name", widget: "string"}
+      - {label: "Status", name: "status", widget: "string"}
+      - {label: "Image", name: "image", widget: "image",required:false}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "staff"
+        search_fields: ["title"]
+        value_field: "{{slug}}___{{title}}___{{image}}"
+        display_fields: ["title"]
+        multiple: false
+        required: false
+      - label: "Button"
+        name: "button"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Text", name: "text", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Nearby", name: "show_nearby", widget: "boolean", required: false}
+      - {
+         label: "Tags",
+         name: "tags",
+         widget: "select",
+         options: ["1930s", "1940s", "1950s", "adopted"],
+         multiple: true,
+         required: false,
+         hint: "Select the tag according to the vehicle year, and if adopted add the adopted tag - you can enter up to 2 options."
+        }
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "collect"
+    label: "Collections Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections Gallery Page"
+        name: "collections_gallery"
+        file: "content/custom/collections.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/collections.njk"}
+          - label: "1930s"
+            name: "f1930"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "URL Link", name: "url", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+          - label: "1940s"
+            name: "f1940"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "URL Link", name: "url", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+          - label: "1950s"
+            name: "f1950"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "URL Link", name: "url", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+          - label: "V8 Engines"
+            name: "v8"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "URL Link", name: "url", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+          - label: "All Collections"
+            name: "all"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "URL Link", name: "url", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+#          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "collect1930"
+    label: "Collections 1930 Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections 1930 Gallery Setup"
+        name: "collections_1930_gallery"
+        file: "content/custom/collections_1930.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "collections_1930"
+    label: "Collections 1930s Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/1930"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collections1930"]
+
+  - name: "collect1940"
+    label: "Collections 1940 Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections 1940 Gallery Setup"
+        name: "collections_1940_gallery"
+        file: "content/custom/collections_1940.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "collections_1940"
+    label: "Collections 1940s Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/1940"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collections1940"]
+
+  - name: "collect1950"
+    label: "Collections 1950 Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections 1950 Gallery Setup"
+        name: "collections_1950_gallery"
+        file: "content/custom/collections_1950.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "collections_1950"
+    label: "Collections 1950s Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/1950"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collections1950"]
+#      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "collectv8"
+    label: "Collections V8 Engines Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections V8 Engines Gallery Setup"
+        name: "collections_v8_gallery"
+        file: "content/custom/collections_v8.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+#          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "collections_v8_post"
+    label: "Collections V8 Engines Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/v8-engines"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collectionsengine"]
+#      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "collectall"
+    label: "Collections All Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections All Gallery Setup"
+        name: "collections_all_gallery"
+        file: "content/custom/collections_all.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "event_center_pages"
+    label: "J. Windle Event Center"
+    editor:
+      preview: false
+    files:
+      - label: "J. Windle Event Center Setup"
+        name: "event_center"
+        file: "content/event-center/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/event-center.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Image", name: "image", widget: "image"}
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - label: "Text"
+                name: "text"
+                widget: "list"
+                field: {label: "Info", name: "info", widget: "text"}
+              - {label: "Button Text", name: "button", widget: "string"}
+              - {label: "Button URL", name: "url", widget: "string"}
+          - label: "Intro"
+            name: "intro"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Text"
+                name: "text"
+                widget: "list"
+                field: {label: "Info", name: "info", widget: "text"}
+          - label: "Info"
+            name: "info"
+            widget: "list"
+            field: {label: "Text", name: "text", widget: "text"}
+          - label: "Contact"
+            name: "contact"
+            widget: "list"
+            field: {label: "Text", name: "text", widget: "text"}
+          - label: "Gallery"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Button Text", name: "button", widget: "string"}
+              - {label: "Button URL", name: "url", widget: "string"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false}
+
+
+  - name: "reservation_pages"
+    label: "Windle Event Center Reservation"
+    editor:
+      preview: false
+    files:
+      - label: "Windle Event Center Reservation Setup"
+        name: "reservation"
+        file: "content/event-center/reservation.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/reservation.njk"}
+          - {label: "Title", name: "title", widget: "string", required: false}
+          - {label: "Description", name: "description", widget: "text", required: false}
+          - {label: "Formspree ID", name: "formspree_id", widget: "string", required: false}
+          - label: "Form Fields"
+            name: "form"
+            widget: "list"
+            required: false
+            field: {label: "Field Info", name: "info", widget: "string"}
+          - {label: "Event Title", name: "event_title", widget: "string", required: false}
+          - {label: "Event Title Form", name: "event_title_form", widget: "string", required: false}
+          - {label: "Event Information", name: "event_information", widget: "string", required: false}
+          - label: "Event"
+            name: "event"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Title", name: "title", widget: "string", required: false}
+              - {label: "Price", name: "price", widget: "string", required: false}
+              - label: "Items"
+                name: "item"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Text", name: "text", widget: "string", required: false}
+                  - {label: "Price", name: "price", widget: "string", required: false}
+          - label: "Note"
+            name: "note"
+            widget: "list"
+            required: false
+            field: {label: "Text", name: "text", widget: "string"}
+          - {label: "Submit Button Text", name: "button", widget: "string", required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+          - {label: "Show Nearby", name: "show_nearby", widget: "boolean", required: false}
+   #       - {label: "Body", name: "body", widget: "markdown", required: false}
+
+
+  - name: "eventcenter"
+    label: "Windle Event Center Galleries"
+    editor:
+      preview: false
+    files:
+      - label: "Windle Event Center Gallery Page Setup"
+        name: "windle_event_center_page"
+        file: "content/event-center/gallery.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "windle_event_galleries"
+    label: "Windle Event Gallery"
+    editor:
+      preview: false
+    folder: "content/event-center/galleries"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "contacts_pages"
+    label: "Contact Pages"
+    editor:
+      preview: false
+    files:
+      - label: "Contact Article"
+        name: "contact"
+        file: "content/custom/contact.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/contact.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Formspree ID", name: "formspree_id", widget: "string"}
+          - {label: "Image", name: "image", widget: "image", required: false}
+          - label: "Form Fields"
+            name: "form"
+            widget: "list"
+            field: {label: "Field Info", name: "info", widget: "string"}
+          - {label: "Submit Button Text", name: "button", widget: "string"}
+          - label: "Visit Section"
+            name: "visit"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "sub_title", widget: "string"}
+              - label: "Address Info"
+                name: "info"
+                widget: "list"
+                field: {label: "Text", name: "text", widget: "string"}
+              - {label: "Open Hours", name: "open", widget: "string"}
+              - label: "Apple Directions Button"
+                name: "apple_button"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - label: "Directions Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - {label: "Embed Map", name: "embed_map", widget: "text"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/contact/"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "donate_pages"
+    label: "Donate Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Donate Page Setup"
+        name: "donateset"
+        file: "content/custom/donate.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/donate.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - label: "Button"
+            name: "button"
+            widget: "object"
+            fields:
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          - {label: "Image", name: "image", widget: "image", required: false}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+          - {label: "Permalink", name: "permalink", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "donate"
+    label: "Donate Article Pages"
+    editor:
+      preview: false
+    folder: "content/donate"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Layout", name: "layout", widget: "select", options: ["donate.njk", "donate2.njk"], default: "donate.njk"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "staff"
+        search_fields: ["title"]
+        value_field: "{{slug}}___{{title}}___{{image}}"
+        display_fields: ["title"]
+        multiple: false
+        required: false
+      - label: "Button"
+        name: "button"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Text", name: "text", widget: "string", required: false}
+          - {label: "URL", name: "url", widget: "string", required: false}
+      - {label: "Show FAQ", name: "show_faq", widget: "boolean", default: false, required: false}
+      - label: "FAQ Active"
+        name: "faq_active"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Question", name: "q", widget: "string", required: false}
+          - {label: "Answer", name: "a", widget: "text", required: false}
+      - label: "FAQ"
+        name: "faq"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Question", name: "q", widget: "string"}
+          - {label: "Sort Order", name: "sort", widget: "number"}
+          - {label: "Answer", name: "a", widget: "text"}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "edu_setup"
+    editor:
+      preview: false
+    label: "Education Page Setup"
+    files:
+      - label: "Education Setup"
+        name: "education"
+        file: "content/custom/education.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/education.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number", default: 6}
+              - {label: "Reverse", name: "reverse", widget: "boolean", default: true, required: false}
+          - {label: "Image", name: "image", widget: "image", required: false}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: true, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "education"
+    editor:
+      preview: false
+    label: "Education Posts"
+    folder: "content/education"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "staff"
+        search_fields: ["title"]
+        value_field: "{{slug}}___{{title}}___{{image}}"
+        display_fields: ["title"]
+        multiple: false
+        required: false
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: true, required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "event_setup_pages"
+    editor:
+      preview: false
+    label: "Event Setup Page"
+    files:
+      - label: "Events Page Setup"
+        name: "events"
+        file: "content/custom/events.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/events.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number", default: 6}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: true, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "events"
+    editor:
+      preview: false
+    label: "Events Article"
+    folder: "content/event"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Start Date", name: "start_date", widget: "string"}
+      - {label: "End Date", name: "end_date", widget: "string"}
+      - {label: "Publication Date", name: "date", widget: "datetime"}
+      - {label: "Time", name: "time", widget: "string"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "staff"
+        search_fields: ["title"]
+        value_field: "{{slug}}___{{title}}___{{image}}"
+        display_fields: ["title"]
+        multiple: false
+        required: false
+      - label: "Cost"
+        name: "cost"
+        widget: "list"
+        fields:
+          - {label: "Info", name: "info", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Venue", name: "venue", widget: "string"}
+      - {label: "Map URL", name: "map", widget: "string"}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "mus_s"
+    label: "Museum Select Motor Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Museum Select Motors Page"
+        name: "museum_select_motors"
+        file: "content/custom/musem-select-motors.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/motors.njk"}
+          - label: "Museum Display"
+            name: "museum_display"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Link", name: "link", widget: "string"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: false, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/museum-select-motors/"}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+
+  - name: "1930_ford_collections"
+    label: "1930s Ford List"
+    editor:
+      preview: false
+    files:
+      - name: "other_ford_collections_1930"
+        label: "Other Ford Collections 1930"
+        file: "content/custom/1930.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "Other Ford Collections"}
+          - {label: "Description", name: "description", widget: "string", default: "Other Ford Vehicle Collections."}
+          - {label: "Featured Image", name: "image", widget: "image", default: "/img/adopt/51-fordor.webp", required: false}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number", default: 9, required: false}
+              - {label: "Reverse", name: "reverse", widget: "boolean", default: true, required: false}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: false, required: false}
+
+  - name: "museum_select_motors_1930"
+    label: "Museum Select Motors 1930s"
+    folder: "content/museum-select-motors/1930"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Show Gallery Image", name: "show_gallery", widget: "boolean", default: true}
+      - {label: "Gallery Title", name: "gallery_title", widget: "string", required: false}
+      - label: "Gallery Image"
+        name: "gallery"
+        required: false
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "staff"
+        search_fields: ["title"]
+        value_field: "{{slug}}___{{title}}___{{image}}"
+        display_fields: ["title"]
+        multiple: false
+        required: false
+      - label: "Button"
+        name: "button"
+        required: false
+        widget: "object"
+        fields:
+          - {label: "Text", name: "text", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+      - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: false, required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+      - {label: "Show Post", name: "show_post", widget: "boolean", default: true, required: false}
+      - label: "Tags"
+        name: "tags"
+        widget: "hidden"
+        default: ["ford1930"]
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "1940_ford_collections"
+    label: "1940s Ford List"
+    editor:
+      preview: false
+    files:
+      - name: "other_ford_collections_1940"
+        label: "Other Ford Collections 1940"
+        file: "content/custom/1940.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "Other Ford Collections"}
+          - {label: "Description", name: "description", widget: "string", default: "Other Ford Vehicle Collections."}
+          - {label: "Featured Image", name: "image", widget: "image", default: "/img/adopt/51-fordor.webp", required: false}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number", default: 9, required: false}
+              - {label: "Reverse", name: "reverse", widget: "boolean", default: true, required: false}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: false, required: false}
+
+  - name: "museum_select_motors_1940"
+    label: "Museum Select Motors 1940s"
+    folder: "content/museum-select-motors/1940"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Show Gallery Image", name: "show_gallery", widget: "boolean", default: true}
+      - {label: "Gallery Title", name: "gallery_title", widget: "string", required: false}
+      - label: "Gallery Image"
+        name: "gallery"
+        required: false
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "staff"
+        search_fields: ["title"]
+        value_field: "{{slug}}___{{title}}___{{image}}"
+        display_fields: ["title"]
+        multiple: false
+        required: false
+      - label: "Button"
+        name: "button"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Text", name: "text", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+      - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: false, required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+      - {label: "Show Post", name: "show_post", widget: "boolean", default: true, required: false}
+      - label: "Tags"
+        name: "tags"
+        widget: "hidden"
+        default: ["ford1940"]
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "1950_ford_collections"
+    label: "1950s Ford List"
+    editor:
+      preview: false
+    files:
+      - name: "other_ford_collections_1950"
+        label: "Other Ford Collections 1950"
+        file: "content/custom/1950.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "Other Ford Collections"}
+          - {label: "Description", name: "description", widget: "string", default: "Other Ford Vehicle Collections."}
+          - {label: "Featured Image", name: "image", widget: "image", default: "/img/adopt/51-fordor.webp", required: false}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number", default: 9, required: false}
+              - {label: "Reverse", name: "reverse", widget: "boolean", default: true, required: false}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: false, required: false}
+
+  - name: "museum_select_motors_1950"
+    label: "Museum Select Motors 1950s"
+    folder: "content/museum-select-motors/1950"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Show Gallery Image", name: "show_gallery", widget: "boolean", default: true}
+      - {label: "Gallery Title", name: "gallery_title", widget: "string", required: false}
+      - label: "Gallery Image"
+        name: "gallery"
+        required: false
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "staff"
+        search_fields: ["title"]
+        value_field: "{{slug}}___{{title}}___{{image}}"
+        display_fields: ["title"]
+        multiple: false
+        required: false
+      - label: "Button"
+        name: "button"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Text", name: "text", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+      - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: false, required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+      - {label: "Show Post", name: "show_post", widget: "boolean", default: true, required: false}
+      - label: "Tags"
+        name: "tags"
+        widget: "hidden"
+        default: ["ford1950"]
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+
+  - name: "other_ford_collections"
+    label: "Other Ford List"
+    editor:
+      preview: false
+    files:
+      - name: "other_ford_collections_1900"
+        label: "Other Ford Collections 1900"
+        file: "content/custom/1900.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "Other Ford Collections"}
+          - {label: "Description", name: "description", widget: "string", default: "Other Ford Vehicle Collections."}
+          - {label: "Featured Image", name: "image", widget: "image", default: "/img/adopt/51-fordor.webp", required: false}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number", default: 9, required: false}
+              - {label: "Reverse", name: "reverse", widget: "boolean", default: true, required: false}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: false, required: false}
+
+  - name: "museum_select_motors_others"
+    label: "Museum Select Motors Others"
+    folder: "content/museum-select-motors/others"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Show Gallery Image", name: "show_gallery", widget: "boolean", default: true}
+      - {label: "Gallery Title", name: "gallery_title", widget: "string", required: false}
+      - label: "Gallery Image"
+        name: "gallery"
+        required: false
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "staff"
+        search_fields: ["title"]
+        value_field: "{{slug}}___{{title}}___{{image}}"
+        display_fields: ["title"]
+        multiple: false
+        required: false
+      - label: "Button"
+        name: "button"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Text", name: "text", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+      - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: false, required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+      - {label: "Show Post", name: "show_post", widget: "boolean", default: true, required: false}
+      - label: "Tags"
+        name: "tags"
+        widget: "hidden"
+        default: ["fordv"]
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "news_setup"
+    label: "News Setup Pages"
+    editor:
+      preview: false
+    files:
+      - label: "News Setup"
+        name: "news"
+        file: "content/custom/news.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/news.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number", default: 8}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: true}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "news"
+    label: "News Article"
+    folder: "content/news"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "staff"
+        search_fields: ["title"]
+        value_field: "{{slug}}___{{title}}___{{image}}"
+        display_fields: ["title"]
+        multiple: false
+        required: false
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: true, required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "pages"
+    label: "Static Pages"
+    folder: "content/page"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page.njk"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "staff_Setup"
+    label: "Staff Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Staff Setup Page"
+        name: "staffs"
+        file: "content/custom/staffs.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/staffs.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number", default: 9}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: true, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+          - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: true, required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "staff"
+    label: "Staff"
+    folder: "content/staff"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+#      - label: "Social"
+#        name: "social"
+#        widget: "list"
+#        fields:
+#          - {label: "Title", name: "title", widget: "string"}
+#          - {label: "Icon", name: "icon", widget: "string"}
+#          - {label: "URL", name: "url", widget: "string"}
+#      - label: "Button"
+#        name: "button"
+#        required: false
+#        widget: "object"
+#       fields:
+#          - {label: "Title", name: "title", widget: "string"}
+#          - {label: "URL", name: "url", widget: "string"}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: true, required: false}
+      - {label: "Show Nearby", name: "show_nearby", widget: "boolean", default: true, required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+#      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "tours_setup"
+    label: "Tours Setup Page"
+    editor:
+      preview: false
+    files:
+      - label: "Video Tours Setup Page"
+        name: "tours"
+        file: "content/custom/tours.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/tours.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number", default: 6}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: true, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "tours"
+    label: "Video Tours"
+    folder: "content/tour"
+    editor:
+      preview: false
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "staff"
+        search_fields: ["title"]
+        value_field: "{{slug}}___{{title}}___{{image}}"
+        display_fields: ["title"]
+        multiple: false
+        required: false
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Video ID", name: "video", widget: "string", hint: "Enter the YouTube video ID"}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", default: true}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "partner_pages"
+    label: "Partner Pages"
+    editor:
+      preview: false
+    files:
+      - label: "Partners Page"
+        name: "partners"
+        file: "content/custom/partners.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "partners.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/partners/"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "nearby_pages"
+    label: "Nearby Page"
+    editor:
+      preview: false
+    files:
+      - label: "Nearby Attractions Page"
+        name: "nearby"
+        file: "content/custom/nearby.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "nearby.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/nearby-attractions/"}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "link_pages"
+    label: "Links Page"
+    editor:
+      preview: false
+    files:
+      - label: "Links Page"
+        name: "links"
+        file: "content/custom/links.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "links.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/links/"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+
+  - name: "membership_pages"
+    label: "Membership Page"
+    editor:
+      preview: false
+    files:
+      - label: "Membership Page"
+        name: "membership"
+        file: "content/custom/members.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/members.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/membership/"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - label: "Info"
+                name: "info"
+                widget: "list"
+                field: {label: "Text", name: "text", widget: "text"}
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          - {label: "Article Image", name: "article_image", widget: "image"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: true}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: true}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: true}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "mermbership_form_pages"
+    label: "Membership Form Page"
+    editor:
+      preview: false
+    files:
+      - label: "Membership Form Page"
+        name: "membership_form"
+        file: "content/custom/membership-form.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/new_member.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Formspree ID", name: "formspree_id", widget: "string"}
+          - {label: "Button Text", name: "button", widget: "string"}
+          - {label: "PDF Link", name: "pdf", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/membership-form/"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "group_form"
+    label: "Group Ticket Form"
+    editor:
+      preview: false
+    files:
+      - label: "Group Ticket Form Page"
+        name: "group_ticket_form"
+        file: "content/custom/group-ticket-form.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/group_ticket.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Formspree ID", name: "formspree_id", widget: "string"}
+          - label: "Form Fields"
+            name: "form"
+            widget: "list"
+            field: {label: "Field Info", name: "info", widget: "string"}
+          - {label: "Button Text", name: "button", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/group-ticket-form/"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "option_newmember_pages"
+    label: "Optional New Member Pages"
+    editor:
+      preview: false
+    files:
+      - label: "New Member Page"
+        name: "new_member"
+        file: "content/custom/new-meber.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/member-shop.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/new-member/"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "custom_shop_pages"
+    label: "Optional Shop Pages"
+    editor:
+      preview: false
+    files:
+      - label: "Shop Page"
+        name: "shop"
+        file: "content/custom/shop.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/shop.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/shop/"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
+          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+
+
+
+# publish_mode: editorial_workflow
+
+# Preview Templates
+#preview_styles: ["/admin/main.css","/admin/bs.css"]
+
+# Editor Components
+#editor:
+#  preview: true

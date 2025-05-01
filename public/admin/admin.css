@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root {
+    --toastify-color-light: #fff;
+    --toastify-color-dark: #121212;
+    --toastify-color-info: #d534db;
+    --toastify-color-success: #07bc0c;
+    --toastify-color-warning: #f1c40f;
+    --toastify-color-error: #e74c3c;
+    --toastify-color-transparent: hsla(0, 0%, 100%, .7);
+    --toastify-icon-color-info: var(--toastify-color-info);
+    --toastify-icon-color-success: var(--toastify-color-success);
+    --toastify-icon-color-warning: var(--toastify-color-warning);
+    --toastify-icon-color-error: var(--toastify-color-error);
+    --toastify-toast-width: 320px;
+    --toastify-toast-background: #fff;
+    --toastify-toast-min-height: 64px;
+    --toastify-toast-max-height: 800px;
+    --toastify-font-family: sans-serif;
+    --toastify-z-index: 9999;
+    --toastify-text-color-light: #757575;
+    --toastify-text-color-dark: #fff;
+    --toastify-text-color-info: #fff;
+    --toastify-text-color-success: #fff;
+    --toastify-text-color-warning: #fff;
+    --toastify-text-color-error: #fff;
+    --toastify-spinner-color: #616161;
+    --toastify-spinner-color-empty-area: #e0e0e0;
+    --toastify-color-progress-light: linear-gradient(90deg, #4cd964, #fa5ab2, #ea00ff, #dc34d4, #b856d6, #ff2d55);
+    --toastify-color-progress-dark: #bb86fc;
+    --toastify-color-progress-info: var(--toastify-color-info);
+    --toastify-color-progress-success: var(--toastify-color-success);
+    --toastify-color-progress-warning: var(--toastify-color-warning);
+    --toastify-color-progress-error: var(--toastify-color-error);
+}
+
+
+:root {
+    --primary-color: #6a1b9a;
+    --secondary-color: #9c27b0;
+    --accent-color: #e1bee7;
+    --text-color: #333;
+    --background-color: #dfcee2;
+  }
+
+  body {
+    font-family: "Lato", serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+
+  html,body {
+    font-family: "Lato", serif;
+  }
+  h1,h2,h3,h4,h5,h6 { font-family: "Oswald", serif;}
+
+  .css-z4tvxy-StyledDropdownButton-button-button-default-default-caret-caret-caretDown-caretDown-AppHeaderQuickNewButton-button-button-medium-gray-gray {
+    display: block;
+    position: relative;
+    border: 0px;
+    cursor: pointer;
+    height: 27px;
+    line-height: 27px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0px 24px 0px 14px;
+    background-color: rgb(144, 23, 168);
+    color: rgb(255, 255, 255);
+    margin-right: 8px;
+}
+
+a,.css-b18hzq-AppHeaderNavLink-AppHeaderButton-button-button-buttonActive-buttonActive-buttonActive-buttonActive-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton-AppHeaderButton.header-link-active .e1jeq5dr0, 
+.css-b18hzq-AppHeaderNavLink-AppHeaderButton-button-button-buttonActive-buttonActive-buttonActive-buttonActive-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton-AppHeaderButton.header-link-active,
+.css-1bbwdvf-ViewControlsButton-button-button 
+{
+    color: rgb(144, 23, 168);
+}
+
+.css-mt2v94-SidebarNavLink-sidebarNavLinkActive-sidebarNavLinkActive-SidebarNavLink-SidebarNavLink:hover, .css-mt2v94-SidebarNavLink-sidebarNavLinkActive-sidebarNavLinkActive-SidebarNavLink-SidebarNavLink:active, .css-mt2v94-SidebarNavLink-sidebarNavLinkActive-sidebarNavLinkActive-SidebarNavLink-SidebarNavLink.sidebar-active {
+    color: rgb(144, 23, 168);
+    background-color: rgb(232, 245, 254);
+    border-left-color: rgb(144, 23, 168);
+}
+.css-1mpi08-InputContainer {
+    border-radius:20px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+.css-lk98m2-SearchContainer {
+    margin: 0px 12px;
+    border-radius:20px;
+    position: relative;
+}
+
+.css-13o1h2c-ButtonRound-button-button-EditorToggle {
+    border: 0px;
+    cursor: pointer;
+    box-shadow: rgba(68, 74, 87, 0.15) 0px 2px 6px 0px, rgba(68, 74, 87, 0.3) 0px 1px 3px 0px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(144, 23, 168);
+    border-radius: 32px;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    margin-bottom: 12px;
+}
+
+.css-f66boz-BackStatus-BackStatusUnchanged-badge-textBadge-textBadge-textBadgeSuccess-textBadgeSuccess {
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(86, 0, 79);
+}
+
+.css-19erytg-CollectionTopNewButton-button-button-default-default-gray-gray {
+    border: 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: rgba(68, 74, 87, 0.15) 0px 4px 12px 0px, rgba(68, 74, 87, 0.25) 0px 1px 3px 0px;
+    height: 36px;
+    line-height: 36px;
+    font-weight: 500;
+    background-color: rgb(121, 27, 121);
+    color: rgb(255, 255, 255);
+    padding: 0px 30px;
+}
+
+.css-1qpwgo3-StyledDropdownButton-button-button-default-default-caret-caret-caretDown-caretDown-DropdownButton-noOverflow-PublishButton {
+    border: 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 36px;
+    line-height: 36px;
+    font-weight: 500;
+    padding: 0px 40px 0px 20px;
+    color: rgb(255, 255, 255);
+    display: block;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: rgb(165, 23, 184);
+}
+
+.css-p8138j-FieldLabel-fieldLabel-fieldLabel {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(111, 93, 106);
+    background-color: rgb(223, 223, 227);
+    display: inline-block;
+    border: 0px;
+    border-radius: 3px 3px 0px 0px;
+    padding: 3px 6px 2px;
+    margin: 0px;
+    transition: 0.2s;
+    position: relative;
+}
+
+
+
+/* icon  */ 
+
+/* Hide the default SVG icons */
+.e1jeq5dr1 svg {
+    display: none;
+  }
+  
+  /* Add custom icons using Font Awesome */
+  .e1jeq5dr1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  .e1jeq5dr1::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  /* Styles for all navigation links */
+  .e1t18l340 {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Contents icon */
+  [href="#/"] .e1jeq5dr1::before {
+    content: '\f15c'; /* fa-file-lines */
+  }
+  
+  /* Media icon */
+  [class*="AppHeaderButton"] .e1jeq5dr1::before {
+    content: '\f03e'; /* fa-image */
+  }
+  
+  /* Quick add icon */
+  .e1rbzf6g1 {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .e1rbzf6g1::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    content: '\f067'; /* fa-plus */
+    margin-right: 5px;
+    font-size: 14px;
+  }
+  
+  /* Avatar placeholder icon */
+  .e1gt62yu2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #1E2532;
+    border-radius: 50%;
+  }
+  
+  .e1gt62yu2::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    content: '\f007'; /* fa-user */
+    font-size: 18px;
+    color: white;
+  }
+  
+  /* Home icon */
+  [data-testid="home"] .e1jeq5dr1::before {
+    content: '\f015';
+  }
+  
+  /* 
+  [data-testid="pages"] .e1jeq5dr1::before {
+    content: '\f15c';
+  }
+  */
+  /* FAQ Pages icon */
+  [data-testid="faqs"] .e1jeq5dr1::before {
+    content: '\f059';
+  }
+  
+  /* Blog List icon */
+  [data-testid="blogs"] .e1jeq5dr1::before {
+    content: '\f781';
+  }
+  
+  /* Blog Posts icon */
+  [data-testid="post"] .e1jeq5dr1::before {
+    content: '\f5ad';
+  }
+  
+  /* Timeline icon */
+  [data-testid="timeline"] .e1jeq5dr1::before {
+    content: '\f783';
+  }
+  
+  /* Site Settings icon */
+  [data-testid="settings"] .e1jeq5dr1::before {
+    content: '\f013';
+  }
+  
+
+  .css-5804dk-ViewControlsSection {
+    display: flex;
+    align-items: center;
+  }
+  
+ 
+/* Style for the button container */
+.css-5804dk-ViewControlsSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the buttons */
+  .evv1i7c0 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+  }
+  
+  /* Add custom icons using Font Awesome */
+  .evv1i7c0 .e1jeq5dr1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+  }
+  
+  .evv1i7c0 .e1jeq5dr1::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1;
+  }
+  
+  /* List view icon (first button) */
+  .evv1i7c0:first-child .e1jeq5dr1::before {
+    content: '\f03a'; /* fa-list */
+  }
+  
+  /* Grid view icon (second button) */
+  .evv1i7c0:last-child .e1jeq5dr1::before {
+    content: '\f00a'; /* fa-th */
+  }
+  
+  /* Active button state */
+  .evv1i7c0.css-6akal5-ViewControlsButton-button-button {
+    background-color: #e6e6e6;
+  }
+  
+  /* Ensure text and icon are vertically centered */
+  .evv1i7c0 span {
+    display: inline-flex;
+    align-items: center;
+  }
+
+
+  .e1nx103k7:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Hide the default SVG icons */
+  .e1nx103k7 .e1jeq5dr1 svg {
+    display: none;
+  }/* Style for the buttons */
+.e1nx103k7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+    padding: 0;
+    background: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .e1nx103k7:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Style for the icon wrapper */
+  .e1nx103k7 .e1jeq5dr1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Add custom icons using Font Awesome */
+  .e1nx103k7 .e1jeq5dr1::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #b52ab9;
+  }
+  
+  /* Toggle preview icon */
+  .e1nx103k7[title="Toggle preview"] .e1jeq5dr1::before {
+    content: '\f06e'; /* fa-eye */
+    padding-left: 5px;
+  }
+  
+  /* Sync scrolling icon */
+  .e1nx103k7[title="Sync scrolling"] .e1jeq5dr1::before {
+    content: '\f021'; /* fa-sync */
+    padding-left: 5px;
+  }
+  
+  /* Active button state */
+  .e1nx103k7.css-13o1h2c-ButtonRound-button-button-EditorToggle {
+    background-color: #e6e6e6;
+  }
+
+/* Hide the default SVG icons */
+.e11ki7in2 .e1jeq5dr1 svg,
+.e11ki7in1 .e1jeq5dr1 svg {
+  display: none;
+}
+
+/* Style for the icon wrapper */
+.e11ki7in2 .e1jeq5dr1,
+.e11ki7in1 .e1jeq5dr1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+/* Add custom icons using Font Awesome */
+.e11ki7in2 .e1jeq5dr1::before,
+.e11ki7in1 .e1jeq5dr1::before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 16px;
+}
+
+/* Edit icon (left side) */
+.e11ki7in2:first-child .e1jeq5dr1::before {
+  content: '\f044'; /* fa-pen-to-square (edit icon) */
+}
+
+/* Drag handle icon (middle) */
+.e11ki7in1 .e1jeq5dr1::before {
+  content: '\f0c9'; /* fa-bars */
+}
+
+/* Delete icon (right side) */
+.e11ki7in2:last-child .e1jeq5dr1::before {
+  content: '\f00d'; /* fa-times */
+}
+
+/* Adjust button styles if needed */
+.e11ki7in2,
+.e11ki7in1 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Hover effect */
+.e11ki7in2:hover,
+.e11ki7in1:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+  
+
+/* icon  */ 
+
+.css-gtrr8n-ListCard-card-card {
+    box-shadow: rgba(68, 74, 87, 0.05) 0px 2px 6px 0px, rgba(68, 74, 87, 0.1) 0px 1px 3px 0px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 682px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+
+
+.css-83wr9v {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    margin: 0px;
+    border: 2px solid rgb(223, 223, 227);
+    border-radius: 0px 5px 5px;
+    outline: 0px;
+    box-shadow: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 17, 32);
+    transition: border-color 0.2s;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.css-8hjyv3-DropdownList-dropdownList-dropdownList-DropdownList-DropdownList {
+    box-shadow: rgba(68, 74, 87, 0.15) 0px 4px 12px 0px, rgba(68, 74, 87, 0.25) 0px 1px 3px 0px;
+    background-color: rgb(248, 245, 245);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0px;
+    position: absolute;
+    min-width: 100%;
+    z-index: 299;
+    width: 160px;
+    top: 30px;
+    left: 0px;
+    right: auto;
+}
+
+  .css-1b9y7ug-CollectionTopContainer-card-card-cardTop-cardTop {
+    box-shadow: rgba(68, 74, 87, 0.05) 0px 2px 6px 0px, rgba(68, 74, 87, 0.1) 0px 1px 3px 0px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 682px;
+    max-width: 100%;
+    padding: 18px 20px;
+    margin-bottom: 22px;
+}
+
+
+.css-1vi2l7h-GridCard-card-card {
+    box-shadow: rgba(68, 74, 87, 0.05) 0px 2px 6px 0px, rgba(68, 74, 87, 0.1) 0px 1px 3px 0px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    flex: 0 0 335px;
+    height: 240px;
+    overflow: hidden;
+    margin-left: 12px;
+    margin-bottom: 16px;
+}
+
+  .css-39fnji-LoginButton-button-button-default-default-gray-gray {
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(68, 74, 87, 0.15) 0px 4px 12px 0px, rgba(68, 74, 87, 0.25) 0px 1px 3px 0px;
+    height: 36px;
+    line-height: 36px;
+    font-weight: 500;
+    background-color: #6a1b9a; 
+    color:#dfcee2;
+    padding: 10px 30px;
+    margin-top: 0px;
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+.css-rdgl1o-IconWrapper-DecapLogoIcon {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Atur lebar maksimum sesuai kebutuhan */
+    margin: 0 auto; /* Posisikan di tengah */
+    padding: 60px 20px 20px; /* Tambahkan padding atas untuk logo */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.css-rdgl1o-IconWrapper-DecapLogoIcon::before {
+    content: "";
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    left: 50%;
+    top: -80px;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+
+.css-rdgl1o-IconWrapper-DecapLogoIcon::after {
+    content: "Early Ford V-8 Foundation Museum CMS";
+    white-space: pre-line;
+    display: block;
+    width: 100%;
+    margin-top: 10px; 
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+    font-size: 32px; 
+    font-family: "Oswald", serif;
+    text-shadow: 
+        1px 1px 0 #fff,
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        2px 2px 5px rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+.css-39fnji-LoginButton-button-button-default-default-gray-gray {
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(213, 216, 223, 0.877) 0px 4px 12px 0px, rgba(68, 74, 87, 0.25) 0px 1px 3px 0px;
+    height: 36px;
+    width: 120px;
+    line-height: 36px;
+    font-weight: 500;
+    text-align: center;
+    background-color: rgb(204, 37, 154);
+    color: rgb(255, 255, 255);
+    padding: 0 30px;
+    margin-top: 40px;
+    font-size: 22px;
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+header {border-radius: 20px; margin:8px;}
+
+.css-102us41-SidebarContainer-card-card {
+    box-shadow: rgba(68, 74, 87, 0.05) 0px 2px 6px 0px, rgba(68, 74, 87, 0.1) 0px 1px 3px 0px;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    padding: 8px 0px 12px;
+    position: fixed;
+    max-height: calc(-112px + 100vh);
+    display: flex
+;
+    flex-direction: column;
+}
+
+
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }
