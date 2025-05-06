@@ -3,7 +3,7 @@ title: German Glaser
 description: 1936 Custom German Glaser Cabriolet
 date: 2025-03-08
 image: /img/news/German-Glaser-Cabriolet-info1.webp
-author: jan-jones___Jan Jones___/img/staff/me-2.jpg
+author: jan-jones___Jan Jones___/img/staff/jan-jones-sq.jpg
 show_event_article: true
 show_ford_store: true
 show_partner: true

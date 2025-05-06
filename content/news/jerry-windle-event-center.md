@@ -2,7 +2,7 @@
 title: Jerry Windle Event Center
 description: "Our newly completed Jerry Windle Event Center is now open for events!"
 date: 2024-02-04
-author: jan-jones___Jan Jones___/img/staff/me-2.jpg
+author: jan-jones___Jan Jones___/img/staff/jan-jones-sq.jpg
 image: /img/news/Event-Page-for-Website-4.webp
 show_event_article: true
 show_ford_store: true

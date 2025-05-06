@@ -1,7 +1,7 @@
 ---
 title: Monthly Meeting
 description: "The Blue Ovals RG #169 of the Early Ford V-8 Club of America, Auburn, Indiana, holds monthly meetings on the Second Tuesday of each month at the Early Ford V-8 Foundation Museum."
-author: jan-jones___Jan Jones___/img/staff/me-2.jpg
+author: jan-jones___Jan Jones___/img/staff/jan-jones-sq.jpg
 start_date: 2023-03-07
 end_date: 2023-03-07
 date: 2025-02-24

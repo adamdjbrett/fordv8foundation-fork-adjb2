@@ -1,7 +1,7 @@
 ---
 title: 2024 Early Ford V-8 Club of America Central National Meet
 description: "The Early Ford V-8 Club of America is having their Central National Meet at the Early Ford V-8 Museum on June 17th-21st, 2024."
-author: jan-jones___Jan Jones___/img/staff/me-2.jpg
+author: jan-jones___Jan Jones___/img/staff/jan-jones-sq.jpg
 start_date: 2024-07-17
 end_date: 2024-07-21
 date: 2025-03-01
