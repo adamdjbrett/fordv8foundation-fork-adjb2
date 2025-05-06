@@ -3,7 +3,8 @@
 <div class="col-md-6 p-3 p-md-5">
 <h3 class="promo_text mb-3"><a href="{{metadata.url}}">{{membership.title}}</a></h3>
 <p>{% for t in membership.info %}{{t.text}}{% endfor %}</p>
-<p><a href="{{membership.button.url}}" class="btn btn-primary">{{membership.button.text}}</a></p>
+<p><a href="{{membership.button.url}}" class="btn btn-primary me-3">{{membership.button.text}}</a>
+<a href="{{membership.renew_button.url}}" class="btn btn-primary">{{membership.renew_button.text}}</a></p>
 </div>
 <div class="col-md-6 bl shadow lazy-background" data-bg="{{membership.image}}"></div>
 </div>

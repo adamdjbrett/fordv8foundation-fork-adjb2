@@ -54,6 +54,9 @@ membership:
  button: 
   text: Become a Member
   url: /
+ renew_button: 
+  text: Renew Membership
+  url: /new-member/
 
 show_motors: true
 show_nearby: true
