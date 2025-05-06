@@ -2,7 +2,7 @@
 layout: design/event-center.njk
 title: "J. Windle Event Center"
 description: "Add A Unique Elegnat to Your Celebration"
-image: "/img/event-center/westwall.jpg"
+image: "/img/event-center/night.jpg"
 
 about: 
  title: "About Us"
