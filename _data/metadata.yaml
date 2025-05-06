@@ -68,10 +68,10 @@ nav3:
         url: /donate/capital-campaign-2/
    button: Visit Donate Page
    link: /donate/
-  nav3_2:
-   title: Museum Select Motors
-   button: Visit Museum Select Motors
-   link: https://www.museumselectmotors.com/
+#  nav3_2:
+#   title: Museum Select Motors
+#   button: Visit Museum Select Motors
+#   link: https://www.museumselectmotors.com/
 
 nav4:
   title: About
