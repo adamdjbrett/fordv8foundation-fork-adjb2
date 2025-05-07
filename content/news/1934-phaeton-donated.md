@@ -2,7 +2,7 @@
 title: 1934 Phaeton Donated
 description: This beautiful 1934 Phaeton was donated to the museum by the estate of the late Jay Hertz of New Mexico.
 date: 2022-02-09
-author: jan-jones___Jan Jones___/img/staff/jan-jones-sq.jpg
+author: jan-jones___Jan Jones___/img/staff/me-2.jpg
 image: /img/news/34phaeton-hertz-web.webp
 show_event_article: true
 show_ford_store: true

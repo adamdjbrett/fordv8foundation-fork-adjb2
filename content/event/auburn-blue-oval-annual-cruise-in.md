@@ -1,7 +1,7 @@
 ---
 title: Auburn Blue Oval Annual Cruise-in
 description: "All makes and models are welcome!"
-author: jan-jones___Jan Jones___/img/staff/jan-jones-sq.jpg
+author: jan-jones___Jan Jones___/img/staff/me-2.jpg
 start_date: 2023-09-09
 end_date: 2023-09-09
 date: 2025-02-25

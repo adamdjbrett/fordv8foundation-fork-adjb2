@@ -1,7 +1,7 @@
 ---
 layout: about.njk
 title: About
-description: Learn more about our staff, our partners, and the latest museum news.
+description: "Museum Select Motors – take off the ‘30’s ‘40’s and 50’s stuff"
 image: /img/page/photo-1.webp
 button: 
  text: Contact Us
