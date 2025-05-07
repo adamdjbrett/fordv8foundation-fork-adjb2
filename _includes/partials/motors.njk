@@ -1,7 +1,11 @@
 {% if show_motors %}<section class="container-fluid">
-<div class="row justify-content-center text-center">
-<div  class="col-md-12">
+<div class="row">
+<div class="col-md-6 p-3 br shadow lazy-background" data-bg="{{metadata.motors.image or metadata.image}}">
+<img class="img-fluid" alt="{{metadata.motors.title}}" width="120" height="120" src="{{metadata.motors.logo}}"/>
+</div>
+<div  class="col-md-6 p-3 p-md-5">
 <h3>{{metadata.motors.title}}</h3>
+<p>{{metadata.motors.info}}</p>
 <p><a href="{{metadata.motors.url}}" class="btn btn-primary">{{metadata.motors.button}} →</a></p>
 </div>
 </div>

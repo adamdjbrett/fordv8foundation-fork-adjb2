@@ -1,7 +1,7 @@
 ---
 title: 1939 Ford Standard Tudor Sedan
 description: 1939 Ford Standard Tudor Sedan Donated by Marv Shetler of Oregon
-author: jan-jones___Jan Jones___/img/staff/jan-jones-sq.jpg
+author: jan-jones___Jan Jones___/img/staff/me-2.jpg
 date: 2023-01-26
 image: /img/news/IMG-9602.webp
 show_event_article: true

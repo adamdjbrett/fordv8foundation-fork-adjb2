@@ -1,7 +1,7 @@
 ---
 title: Jerry Windle Event Center
 description: "Our newly completed Jerry Windle Event Center is now open for events! "
-author: jan-jones___Jan Jones___/img/staff/jan-jones-sq.jpg
+author: jan-jones___Jan Jones___/img/staff/me-2.jpg
 start_date:
 end_date:
 date: 2025-02-28

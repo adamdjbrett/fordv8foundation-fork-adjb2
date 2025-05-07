@@ -232,6 +232,8 @@ collections:
               - {label: "Ford 1940", name: "ford1940", widget: "string"}
               - {label: "Ford 1950", name: "ford1950", widget: "string"}
               - {label: "Others", name: "others", widget: "string"}
+              - {label: "Image", name: "image", widget: "string"}
+              - {label: "Logo", name: "logo", widget: "string"}
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Button", name: "button", widget: "string"}
               - {label: "URL", name: "url", widget: "string"}
@@ -382,12 +384,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Background", name: "background", widget: "image"}
-              - label: "Button"
-                name: "button"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "string"}
-                  - {label: "URL", name: "url", widget: "string"}
               - label: "Info"
                 name: "info"
                 widget: "list"
@@ -421,6 +417,12 @@ collections:
                   - {label: "Text", name: "text", widget: "text"}
               - label: "Button"
                 name: "button"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - label: "Renew Button"
+                name: "renew_button"
                 widget: "object"
                 fields:
                   - {label: "Text", name: "text", widget: "string"}

@@ -11,7 +11,7 @@
 <div class="col-md-5 lazy-background blr" data-bg="{{e.data.image or metadata.image}}"></div>
 <div class="col-md-7 col-12 p-3">
 <div class="ms-3">
-<h3 class="text-descs">{{e.data.title}}</h3>
+<h3 class="text-descs"><a href="{{e.url}}">{{e.data.title}}</a></h3>
 <p><small>{% if e.data.start_date %}Start : {{e.data.start_date| readableDate}}<br/>
 End : {{e.data.end_date| readableDate}}<br/>{% endif %}
 Venue Location : 

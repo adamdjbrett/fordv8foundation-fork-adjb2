@@ -5,7 +5,7 @@ locale: en_US
 image: /img/logofull.webp
 favicon: /img/logofull.webp
 #url: "http://localhost:8080"
-url: "https://fordv8foundation.org"
+url: "https://fv8f.fyi"
 
 metasocial: 
  facebook: "https://www.facebook.com/earlyfordv8museum"
@@ -14,8 +14,8 @@ metasocial:
 
 nav_logo: "/img/logofull.webp"
 nav_button: 
- title: Shop
- url: https://early-ford-v-8-foundation.square.site/s/shop
+ title: Tickets
+ url: /
 nav_donate: 
  title: Donate
  url: https://www.paypal.com/donate/?hosted_button_id=NP2EGFG5NSJA4
@@ -31,7 +31,7 @@ nav1:
 nav2:
   title: News & Events
   nav2_1: Events
-  nav2_2: What News
+  nav2_2: News
   nav2_3:
     title: Others
     item: 
@@ -68,13 +68,14 @@ nav3:
         url: /donate/capital-campaign-2/
    button: Visit Donate Page
    link: /donate/
-#  nav3_2:
-#   title: Museum Select Motors
-#   button: Visit Museum Select Motors
-#   link: https://www.museumselectmotors.com/
+  nav3_2:
+   title: Museum Select Motors
+   button: Visit Museum Select Motors
+   link: https://www.museumselectmotors.com/
 
 nav4:
   title: About
+  sub_title: "Museum Select Motors – take off the ‘30’s ‘40’s and 50’s stuff"
   nav4_1:
    title: About Us
    item: 
@@ -228,7 +229,14 @@ motors:
     ford1940: Ford 1940 Motors
     ford1950: Ford 1950 Motors
     others: Others Motors
+    image: /img/fored.jpg
+    logo: /img/logos.jpg
     title: Museum Select Motors
+    info: "Museum Select Motors is a service garage and an auto dealership on our campus
+that will help you sell your vehicle for an 8% consignment rate! We sell any make,
+model or year, although we do typically have more classic cars in our inventory.
+Click the link to the official MSM website to view current inventory, read how
+consignments work, and even make appointments with the service garage!"
     button: Visit Museum Select Motors
     url: https://www.museumselectmotors.com/
 
@@ -253,8 +261,14 @@ museum_display:
 
 collections:
     title: Our Collections
-    bakcground: "/img/ford7.webp"
-    text: "As a member of the Early Ford V-8 Foundation Museum, you will contribute to expanding exhibits and programs highlighting the history of the Ford Flathead V-8 era. As well as the people who designed, built & promoted this great American legacy."
+    bakcground: "/img/collectionsa.jpg"
+    text: "We have a gorgeous collection of flathead V-8’s from 1932-1953, including 3
+tractors, a speed shop, a replica 1936 car dealership featuring the stainless steel
+sedan, and a great variety of commercial trucks! Over 65 automobiles in all! Most
+of these have been donated, with a few on loan. There are no ropes around the
+car, so you can get closer to peek inside- although please do not touch them. Take
+all the photos you would like! Plan on at least 45 minutes to truly enjoy these
+automobiles."
     button: Visit Collections
     url: /collections/
 

@@ -157,7 +157,7 @@ export default async function(eleventyConfig) {
       language: "en",
       title: "Blog Title",
       subtitle: "This is a longer description about your blog.",
-      base: "https://fordv8foundation.org/",
+      base: "https://fv8f.fyi/",
       author: {
         name: "Your Name"
       }
@@ -177,7 +177,7 @@ export default async function(eleventyConfig) {
       language: "en",
       title: "Events Feed",
       subtitle: "Latest events from our blog",
-      base: "https://fordv8foundation.org/",
+      base: "https://fv8f.fyi/",
       author: {
         name: "Your Name"
       }
@@ -197,7 +197,7 @@ export default async function(eleventyConfig) {
       language: "en",
       title: "News Feed",
       subtitle: "Latest news from our blog",
-      base: "https://fordv8foundation.org/",
+      base: "https://fv8f.fyi/",
       author: {
         name: "Your Name"
       }

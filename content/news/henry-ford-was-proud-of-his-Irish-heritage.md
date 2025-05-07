@@ -1,7 +1,7 @@
 ---
 title: Henry Ford Irish
 description: Henry Ford was proud of his Irish Heritage !
-author: jan-jones___Jan Jones___/img/staff/jan-jones-sq.jpg
+author: jan-jones___Jan Jones___/img/staff/me-2.jpg
 date: 2025-03-08
 image: /img/news/cover-henry-ford.png
 show_event_article: true
