@@ -5,8 +5,7 @@ description: "Add A Unique Elegance to Your Celebration"
 image: "/img/event-center/westwall.jpg"
 
 about: 
- title: "THE J.WINDLE EVENT CENTER OFFERS A STYLISH ATMOSPHERE FOR
-ALL OCCASIONS"
+ title: "THE J.WINDLE EVENT CENTER OFFERS A STYLISH ATMOSPHERE FOR ALL OCCASIONS"
  image: "/img/event-center/exterior.jpg"
  text: 
     - info: "The Early Ford V-8 Founcation built an amazing museum that features Henry Ford's V-8 Flathead years of 1952-1953. These cars are a stunning collection in a beaturiful facility."
