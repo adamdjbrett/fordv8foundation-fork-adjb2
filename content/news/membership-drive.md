@@ -4,7 +4,7 @@ description: "Become a member of the Early Ford V-8 Foundation and support the
   history of these beautiful automobiles, inspire and educate future generations
   in keeping the car hobby alive, and enjoy being part of a great group of car
   enthusiasts - all for $25 a year! "
-date: 2025-05-08T16:32:00.000Z
+date: 2025-05-08T16:34:00.000Z
 image: /img/newsletter.jpg
 show_event_article: true
 show_ford_store: true
