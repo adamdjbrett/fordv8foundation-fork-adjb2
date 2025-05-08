@@ -12,7 +12,7 @@ description: >+
 start_date: "Friday May 9 "
 end_date: "Friday May 9 "
 date: 2025-05-08T15:50:00.000Z
-time: 10-2:00
+time: "10:00 -2:00 "
 author: jan-jones___Jan Jones___/img/staff/jan-jones-sq.jpg
 image: /img/vet-fair-poster-3-.jpg
 venue: "J. Windle Event Center on Early Ford V-8 Museum Campus "
