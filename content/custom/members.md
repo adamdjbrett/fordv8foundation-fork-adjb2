@@ -1,21 +1,28 @@
 ---
 layout: design/members.njk
 title: Membership
-description: Become a member of the Early Ford V-8 Foundation Museum and help us preserve history.
+description: "Become a member of The Early Ford V-8 Foundation for just $25 a year!"
 permalink: /membership/
 
 header: 
- title: The Early Ford V-8 Museum Memorabilia
- image: /img/photo-1.webp
+ title: Become a member of The Early Ford V-8 Foundation for just $25 a year!
+ image: /img/members.jpg
  info: 
-  - text: "The Early Ford V-8 Foundation's vast collection of Early Ford V-8 memorabilia, parts, tools, reference literature, and even cars and trucks, has successfully been moved to our new Phase I building in Auburn, Indiana. Now that the building is up, we're getting donation offers of a lot more items! Every day we're getting closer to needing the construction of our main Museum facility, which is awaiting funding."
-  - text: "To help us achieve the funding we need to expand and grow, we need a strong membership base. The larger an organization we are, the easier it will be to attract corporate sponsorship and funding."
-  - text: "There are about 10,000 members of the Early Ford V-8 Club of America. The EFV8CA is NOT associated with our Foundation, although many members of the Foundation also belong to the V-8 Club. We'd like to see ALL the V-8 Club members become Foundation members."
+  - text: "Membership supports preserving the beautiful flathead V-8 era automobiles and
+memorabilia, educating the next generations to appreciate and repair these
+classic automobiles in our no-cost-to-them Youth Mechanics Class, and museum
+events throughout the year."
+  - text: "Benefits include: unlimited free admission for member and a guest, newsletter
+magazine, discounted swap meet space at our huge Fall Swap Meet, access to our
+archival library,"
+  - text: "3- year membership is $60, Lifetime membership is $600."
+  - text: "What a great UNIQUE gift this would make for the car enthusiast in your family!
+Christmas - Father’s Day – Birthday – Thank You – Just Because"
  button: 
   text: Become A Member
   url: /new-member/
 
-article_image: /img/41-merc-fordor.webp
+article_image: /img/membership.jpg
 
 show_event_article: true
 show_ford_store: true
