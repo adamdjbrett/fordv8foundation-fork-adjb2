@@ -1,11 +1,12 @@
 ---
 layout: design/event-center.njk
 title: "J. Windle Event Center"
-description: "Add A Unique Elegnat to Your Celebration"
+description: "Add A Unique Elegance to Your Celebration"
 image: "/img/event-center/westwall.jpg"
 
 about: 
- title: "About Us"
+ title: "THE J.WINDLE EVENT CENTER OFFERS A STYLISH ATMOSPHERE FOR
+ALL OCCASIONS"
  image: "/img/event-center/exterior.jpg"
  text: 
     - info: "The Early Ford V-8 Founcation built an amazing museum that features Henry Ford's V-8 Flathead years of 1952-1953. These cars are a stunning collection in a beaturiful facility."
@@ -17,7 +18,7 @@ about:
 intro: 
  - title: "Attractive Classroom"
    text: 
-    - info: "This large extra room is perfect for meetings, profesional development training,baby showers , off-site team building, clud activities, workshops."
+    - info: "This large extra room is perfect for meetings, professional development training, baby showers, off-site team building, clud activities, workshops."
     - info: "AND VERY AFFORDABLE!"
  - title: "Extra Room Available"
    text: 
@@ -28,7 +29,12 @@ info:
  - text: "Daytime rate applies to hours the museum is open. 9-5:00 M-Sat. and Sun. 11-3:00."
  - text: "Evening hour rate applies to occupation from 5:00 pm on. If a party were scheduled 2:00-6:00 pm, it would be an evening rate."
  - text: "Weekend evenings, Friday, Saturday and Sunday, are base rated at $450."
- - text: "Cash bar is allowed only if the caterer used has the proper state license. We can provide a list of such caterers. At no point is alcohol allowed to be brought in by anyone but the caterer."
+ - text: "Cash bar is allowed ONLY if the caterer used has the proper CATERING License for
+alcohol. Just because a restaurant can serve alcohol on their property, does NOT
+mean they have a catering license to serve alcohol off their property. We can
+provide a list of area caterers that have the proper license. At NO POINT is alcohol
+allowed to be brought in by anyone other than the licensed caterer. A bar
+tender’s license is not the same as a catering license."
  - text: "The kitchen is a catering kitchen, meaning there is not a stove/oven. There are warming ovens, warming plate, under counter refrigerators,microwave, coffee pot, and ice machine."
  - text: "With permission, food may be brought in,however it is expected kitchen will be left in clean condition, as found."
  - text: "We take care of setting up and taking down tables/chairs."
@@ -52,11 +58,19 @@ show_partner: false
 ---
 ### THE J.WINDLE EVENT CENTER OFFERS A STYLISH ATMOSPHERE FOR ALL OCCASIONS
 
-Main Event Area Capaity up to 100 guests for table seating. Classroom Space Capaity 25 or fewer it is the perfect size for most events!
+The main event area has a comfortable capacity for up to 125 guests for table seating. The Classroom is perfect for intimate gatherings of 25 or less.
 
 ### INCLUDED AMENITIES
 
-Table set up round or rectangle Linen Rental Large Catering Kitchen, Ice Machine ,Stand Cooler, Big Creen Projector to use with your laptop , Bluetooth capcability for Music, Microphone , Podium , Grown Moulding Lighting in colors of your choice , Free Guest Museum entrance during open hours.
-
-Available entrance in evenings for reduced fee Extra Preparation Room available for small fee Conveninet Parking , Easy Access off 169.
++ round or 6’ long tables – both seat 6 to a table
++ linen rental
++ Large catering/warming kitchen
++ Ice machine and stand cooler
++ Large screen projector to use with your laptop
++ Blue-tooth capability for music through our sound system
++ Microphone, podium, stage
++ Unique art deco crown molding lighting in colors of your choice
++ Free museum entrance for your guests during 9-5 hours, group rate for
+after 5:00.
++ We do table set up and take down
 
