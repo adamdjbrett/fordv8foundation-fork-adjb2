@@ -2,7 +2,7 @@
 title: Planned Giving
 description: Opportunities With The Early Ford V-8 Foundation Museum
 date: 2023-07-28
-image: /img/news/IMG-1799.webp
+image: /img/donate/planed-giving.jpg
 show_faq: true
 faq_active: 
   q: "What is Planned Giving?"

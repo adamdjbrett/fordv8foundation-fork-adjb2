@@ -5,19 +5,20 @@ description: "Become a member of The Early Ford V-8 Foundation for just $25 a ye
 permalink: /membership/
 
 header: 
- title: Become a member of The Early Ford V-8 Foundation for just $25 a year!
- image: /img/members.jpg
+ title: Become a Member Today!
+ image: /img/members/membership.jpg
  info: 
-  - text: "Membership supports preserving the beautiful flathead V-8 era automobiles and
-memorabilia, educating the next generations to appreciate and repair these
-classic automobiles in our no-cost-to-them Youth Mechanics Class, and museum
-events throughout the year."
-  - text: "Benefits include: unlimited free admission for member and a guest, newsletter
-magazine, discounted swap meet space at our huge Fall Swap Meet, access to our
-archival library,"
-  - text: "3- year membership is $60, Lifetime membership is $600."
-  - text: "What a great UNIQUE gift this would make for the car enthusiast in your family!
-Christmas - Father’s Day – Birthday – Thank You – Just Because"
+  - text: "Being a member of The Early Ford V-8 Foundation is a great way to make a difference! For $25 a year, it’s an affordable way to contribute to the education and preservation of an important part of history! "
+  - text: "Join over 1,800 other like-minded members across the country and world!"
+  - text: "You don’t have to own a Ford! Or a classic Ford! Just appreciate them!"
+  - text: "Your $25 yearly membership helps support the museum and education programs"
+  - text: "Free admission, unlimited, for you and your guest!"
+  - text: "Keep in touch with 6 issues of our newsletter magazine"
+  - text: "Meet new friends and take advantage of opportunities to get together at events throughout the year! This is a great group of people!"
+  - text: "Access to our archival library"
+  - text: "Volunteer opportunities are ways to share your time, skills, strengths"
+  - text: "We need YOU! Your membership is important to us!"
+  - text: "Consider gifting a membership to a car enthusiast in your circle, too!"
  button: 
   text: Become A Member
   url: /new-member/

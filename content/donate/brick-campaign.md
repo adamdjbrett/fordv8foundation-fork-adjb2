@@ -1,5 +1,5 @@
 ---
-title: Brick Campaign
+title: Honor Someone In Our Brick Courtyard
 description: The Early Ford V-8 Foundation Museum is a one-of-a-kind car museum
   dedicated to preserving 1932-1953 Ford history. Come visit us in Auburn,
   Indiana.
