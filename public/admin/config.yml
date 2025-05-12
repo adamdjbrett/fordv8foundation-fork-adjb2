@@ -4,7 +4,7 @@ backend:
   repo: adamdjbrett/fordv8foundation.org
   branch: main 
 media_folder: 'public/img'
-public_folder: '/img'
+public_folder: '/img/'
 
 
 collections:
@@ -100,6 +100,16 @@ collections:
                   - {label: "Title", name: "title", widget: "string"}
                   - {label: "Button", name: "button", widget: "string"}
                   - {label: "Link URL", name: "link", widget: "string"}
+              - label: "Nav3_3"
+                name: "nav3_3"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - label: "Info"
+                    name: "info"
+                    widget: "list"
+                    fields:
+                      - {label: "Text", name: "text", widget: "string"}
           
           - label: "Nav4"
             name: "nav4"
@@ -1134,7 +1144,7 @@ collections:
           - {label: "Show Motors", name: "show_motors", widget: "boolean", default: true, required: false}
           - {label: "Body", name: "body", widget: "markdown", required: false}
 
-  - name: "events"
+  - name: "event"
     editor:
       preview: false
     label: "Events Article"

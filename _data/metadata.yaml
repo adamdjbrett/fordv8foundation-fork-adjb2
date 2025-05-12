@@ -4,8 +4,8 @@ language: "en"
 locale: en_US
 image: /img/logofull.webp
 favicon: /img/logofull.webp
-#url: "http://localhost:8080"
-url: "https://fordv8foundation.org"
+url: "http://localhost:8080"
+#url: "https://fordv8foundation.org"
 
 metasocial: 
  facebook: "https://www.facebook.com/earlyfordv8museum"
@@ -72,6 +72,11 @@ nav3:
    title: Museum Select Motors
    button: Visit Museum Select Motors
    link: https://www.museumselectmotors.com/
+  nav3_3:
+   title: Donate a vehicle to sell
+   info: 
+    - text: "If you have an automobile or tractor that is not a Ford V-8 of museum quality, or not even a Ford, it can still be donated and sold through Museum Select Motors and the purchase price be donated to the foundation."
+    - text: "Call 260-570-0146 for more information."
 
 nav4:
   title: About
