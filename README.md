@@ -14,6 +14,9 @@ Desktop Peformance
 
 ### Change Log: 
 
+May 13 2025
++ Update from Change Part 5 Docs
+
 May 09 2025
 + Update from Change Part 4 Docs
 
