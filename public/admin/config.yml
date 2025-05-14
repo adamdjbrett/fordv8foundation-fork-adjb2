@@ -1562,7 +1562,7 @@ collections:
       preview: false
     files:
       - label: "Staff Setup Page"
-        name: "staffs"
+        name: "Staff"
         file: "content/custom/staffs.md"
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: "design/staffs.njk"}

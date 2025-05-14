@@ -2,7 +2,7 @@
 layout: design/event-center.njk
 title: "J. Windle Event Center"
 description: "Add A Unique Elegance to Your Celebration"
-image: "/img/event-center/westwall.jpg"
+image: "/img/event-center/panorama.jpg"
 
 about: 
  title: "THE J.WINDLE EVENT CENTER OFFERS A STYLISH ATMOSPHERE FOR ALL OCCASIONS"

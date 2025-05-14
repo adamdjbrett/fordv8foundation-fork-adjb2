@@ -1,7 +1,7 @@
 ---
 layout: design/staffs.njk
-title: Staffs
-description: Staffs Description here...
+title: Staff
+description: "we are passionate about education and Ford's contributions to American automative and innovation histories."
 pagination:
   data: collections.staffs
   size: 9

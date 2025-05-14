@@ -1,7 +1,7 @@
 ---
 layout: about.njk
 title: About
-description: "Museum Select Motors – take off the ‘30’s ‘40’s and 50’s stuff"
+description: "Sharing the historical impact of Henry Ford and The Ford Motor Company"
 image: /img/page/photo-1.webp
 button: 
  text: Contact Us
