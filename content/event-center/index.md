@@ -17,7 +17,7 @@ about:
 intro: 
  - title: "Attractive Classroom"
    text: 
-    - info: "This large extra room is perfect for meetings, professional development training, baby showers, off-site team building, clud activities, workshops."
+    - info: "This large extra room is perfect for meetings, professional development training, baby showers, off-site team building, club activities, workshops."
     - info: "AND VERY AFFORDABLE!"
  - title: "Extra Room Available"
    text: 
@@ -28,12 +28,7 @@ info:
  - text: "Daytime rate applies to hours the museum is open. 9-5:00 M-Sat. and Sun. 11-3:00."
  - text: "Evening hour rate applies to occupation from 5:00 pm on. If a party were scheduled 2:00-6:00 pm, it would be an evening rate."
  - text: "Weekend evenings, Friday, Saturday and Sunday, are base rated at $450."
- - text: "Cash bar is allowed ONLY if the caterer used has the proper CATERING License for
-alcohol. Just because a restaurant can serve alcohol on their property, does NOT
-mean they have a catering license to serve alcohol off their property. We can
-provide a list of area caterers that have the proper license. At NO POINT is alcohol
-allowed to be brought in by anyone other than the licensed caterer. A bar
-tender’s license is not the same as a catering license."
+ - text: "Cash bar is allowed ONLY if the caterer used has the proper CATERING License for alcohol. Just because a restaurant can serve alcohol on their property, does NOT mean they have a catering license to serve alcohol off their property. We can provide a list of area caterers that have the proper license. At NO POINT is alcohol allowed to be brought in by anyone other than the licensed caterer. A bartender’s license is not the same as a catering license."
  - text: "The kitchen is a catering kitchen, meaning there is not a stove/oven. There are warming ovens, warming plate, under counter refrigerators,microwave, coffee pot, and ice machine."
  - text: "With permission, food may be brought in,however it is expected kitchen will be left in clean condition, as found."
  - text: "We take care of setting up and taking down tables/chairs."
