@@ -1,7 +1,7 @@
 ---
 layout: design/contact.njk
 title: Contact Form
-description: Contact Early Ford V-8 Foundation Museum
+description: "We would love to hear from you!"
 formspree_id: https://formspree.io/f/xoveqaka
 image: /img/contact.png
 form: 
