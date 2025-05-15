@@ -1,7 +1,7 @@
 ---
 title: Ford Simca Vedetta V-8 Engine
 description: 
-author: jan-jones___Jan Jones___/img/staff/me.webp
+author: jan-jones___Jan Jones___/img/staff/jan-jones.jpg
 image: /img/collections/Ford-Simca-Vedette-V8-Engine-A003.webp
 show_gallery: true
 gallery_title: Gallery
