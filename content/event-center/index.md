@@ -8,9 +8,9 @@ about:
  title: "THE J.WINDLE EVENT CENTER OFFERS A STYLISH ATMOSPHERE FOR ALL OCCASIONS"
  image: "/img/event-center/exterior.jpg"
  text: 
-    - info: "The Early Ford V-8 Founcation built an amazing museum that features Henry Ford's V-8 Flathead years of 1952-1953. These cars are a stunning collection in a beaturiful facility."
-    - info: "The J.Windle Event Center is the newset part of the foundation's campus , offerin a unique venue"
-    - info: "Our beuatifull Art Deco venue is conveniently located right of 169 in Kruse Plaza and has plenty of close in front of the building!"
+    - info: "The J. Windle Event Center is a beautiful art deco building with architectural details inside that add a distinct look to your event. The large open space is ideal for family and friends to gather for any celebration, or your business to host professional development activities or luncheons and dinners."
+    - info: "Conveniently located right off I-69, with close parking your guests will appreciate!"
+    - info: "Call today and ask for a tour of this beautiful facility!"
  button: "Make a Reservation"
  url: "/event-center/reservation/"
 
