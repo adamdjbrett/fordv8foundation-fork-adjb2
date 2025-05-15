@@ -75,7 +75,7 @@ show_partner: true
 ---
 ### About Us
 
-The Early Ford V-8 Foundation and Museum is a 501c educational organization dedicated to
+The Early Ford V-8 Foundation and Museum is a 501(c)(3) educational organization dedicated to
 sharing the historical impact Henry Ford and his company, The Ford Motor Company, had on
 the United States, and indeed, the world, with a focus on the Flathead years of 1932-1953. We
 do this by creating educational and engaging displays and activities in the Early Ford V-8

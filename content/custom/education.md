@@ -1,6 +1,6 @@
 ---
 title: Education
-description: Education description here...
+description: "Education is what we are about"
 layout: design/education.njk
 pagination:
   data: collections.educations
