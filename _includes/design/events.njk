@@ -18,8 +18,8 @@ layout: base.njk
 {{ authorData[1] if authorData[1] else authorData[0] }}</p>
 {% endif %}
 <p class="text-dark small"><small>
-{% if post.data.start_date %}<i class="fas fa-calendar-day me-1"></i> Start: <time datetime="{{ post.data.start_date | htmlDateString }}">{{ post.data.start_date | readableDate }}</time><br/>{% endif %}
-{% if post.data.end_date %}<i class="fas fa-calendar-check me-1"></i> End: <time datetime="{{ post.data.end_date | htmlDateString }}">{{ post.data.end_date | readableDate }}</time><br/>{% endif %}
+{% if post.data.start_date %}<i class="fas fa-calendar-day me-1"></i> Start: <time datetime="{{ post.data.start_date  }}">{{ post.data.start_date  }}</time><br/>{% endif %}
+{% if post.data.end_date %}<i class="fas fa-calendar-check me-1"></i> End: <time datetime="{{ post.data.end_date }}">{{ post.data.end_date  }}</time><br/>{% endif %}
 {% if post.data.time %}<i class="fas fa-clock me-1"></i>  Time: {{post.data.time}}<br/>{% endif %}
 {% if post.data.venue %}<i class="fas fa-location-dot me-1"></i> Venue: {{post.data.venue}}
 </small></p>{% endif %}
