@@ -1,7 +1,7 @@
 ---
 layout: design/staffs.njk
-title: Staffs
-description: Staffs Description here...
+title: Staff
+description: Staff Description here...
 pagination:
   data: collections.staffs
   size: 9
