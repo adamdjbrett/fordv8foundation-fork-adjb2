@@ -6,7 +6,6 @@ description: The Early Ford V-8 Foundation Museum is a one-of-a-kind car museum
 layout: donate2.njk
 date: 2023-07-24
 image: /img/donate/Screen-Shot-2022-03-31-at-10.28.33-AM_2022-03-31-142959_mfnl.webp
-author: greg-grim___Greg Grim___/img/staff/Greg.webp
 button:
   text: Download Brick Order Form
   url: /pdf/Brick-Form.pdf

@@ -3,7 +3,6 @@ title: 1936 Mullins Trailer Donated
 description: Bob and Judy Parmelee donated this genuine 1936 Mullins Red Cap Utility Trailer to the Museum.
 date: 2022-02-09
 image: /img/news/Bob-Judy-Parmalee-Mullins-web.webp
-author: jan-jones___Jan Jones___/img/staff/me-2.jpg
 show_event_article: true
 show_ford_store: true
 show_partner: true

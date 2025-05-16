@@ -2,7 +2,6 @@
 title: Education Is What We Are About!
 description: "As an educational foundation, our purpose is to educate young and old about the great history of Henry Ford’s flathead V-8 era, and inspire an interest to learn more!"
 date: 2022-05-10
-author: jan-jones___Jan Jones___/img/staff/me.webp
 image: /img/education/what-we-do.jpg
 show_event_article: true
 show_ford_store: true

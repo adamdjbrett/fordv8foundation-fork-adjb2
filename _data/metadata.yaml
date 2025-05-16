@@ -78,6 +78,7 @@ nav3:
     - text: "If you have an automobile or tractor that is not a Ford V-8 of museum quality, or not even a Ford, it can still be donated and sold through Museum Select Motors and the purchase price be donated to the foundation."
     - text: "Call 260-570-0146 for more information."
 
+
 nav4:
   title: About
   sub_title: "Museum Select Motors – take off the ‘30’s ‘40’s and 50’s stuff"
@@ -372,6 +373,9 @@ footer:
   - icon: fab fa-instagram
     title: Ford Museum Instagram
     url: https://www.instagram.com/earlyfordv8museum/
+  - icon: fab fa-youtube
+    title: Ford Museum Youtube
+    url: https://www.youtube.com/channel/UC75Lx_QwJSWyEqijiQ8uOFQ
   - icon: fas fa-location-dot
     title: Ford Museum Maps
     url: https://www.google.com/maps/place/Early+Ford+V-8+Foundation+Museum/@41.3352698,-85.0892508,15z/data=!4m2!3m1!1s0x0:0xd407c527d5ed08cb?sa=X&ved=2ahUKEwiXie2Zp_P1AhXrjokEHZmXAl0Q_BJ6BAgyEAU
@@ -395,6 +399,6 @@ copyrights:
 
 author: 
  name: "Jan Jones"
- image: "/img/staff/me.webp"
+ image: "/img/staff/jan-jones.jpg"
  email: "jan@fordv8foundation.org"
  url: "/staff/jan-jones/"

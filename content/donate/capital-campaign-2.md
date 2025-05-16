@@ -1,6 +1,6 @@
 ---
 title: 'Capital Campaign "Building the Future"'
-description: Opportunities With The Early Ford V-8 Foundation Museum - Capital Campagin
+description: Opportunities With The Early Ford V-8 Foundation Museum - Capital Campaign
 date: 2023-07-22
 image: /img/donate/IMG_6584.webp
 show_faq: true
