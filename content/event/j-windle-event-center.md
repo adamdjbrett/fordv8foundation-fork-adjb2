@@ -2,7 +2,7 @@
 title: "J. Windle Event Center "
 description: "Consider the J. Windle Event Center for your next gathering or meeting! "
 start_date: "Friday May 9 "
-end_date: Dec.2025
+end_date: "Dec.2025"
 date: 2025-05-08T16:02:00.000Z
 time: "9:00 "
 image: /img/ec-mtg-set-up.jpg

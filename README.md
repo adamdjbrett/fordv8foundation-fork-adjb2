@@ -14,6 +14,13 @@ Desktop Peformance
 
 ### Change Log: 
 
+May 16 2025
++ Fix start/end event date switch to string
++ Change staffs to be staff
+
+May 13 2025
++ Update from Change Part 5 Docs
+
 May 09 2025
 + Update from Change Part 4 Docs
 

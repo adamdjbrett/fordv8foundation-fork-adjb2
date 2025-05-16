@@ -83,10 +83,9 @@
               </div>
               <div class="col-md-6 col-12">
                 <h5>{{metadata.nav3.nav3_2.title}}</h5><hr class="col-md-3"/>
-                <ul class="list-unstyled">{% for e in metadata.museum_display|limit(4) %}
-                  <li class="text-desc"><a class="dropdown-item meg" href="{{e.link}}"><small>{{e.description}}</small></a></li>
-                {% endfor %}</ul>
                 <p><a href="{{metadata.nav3.nav3_2.link}}" class="btn btn-primary col-12 mt-1 small btn-sm"><small>{{metadata.nav3.nav3_2.button}}</small></a></p>
+                <h5>{{metadata.nav3.nav3_3.title}}</h5><hr class="col-md-3"/>
+                <p class="small">{% for ts in metadata.nav3.nav3_3.info %}<small>{{ts.text}}</small><br/>{% endfor %}</p>
               </div>
             </div>
           </div>
