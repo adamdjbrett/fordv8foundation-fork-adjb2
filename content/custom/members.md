@@ -6,7 +6,7 @@ permalink: /membership/
 
 header: 
  title: Become a Member Today!
- image: /img/members/membership.jpg
+ image: /img/fordesa.jpg
  info: 
   - text: "Being a member of The Early Ford V-8 Foundation is a great way to make a difference! For $25 a year, it’s an affordable way to contribute to the education and preservation of an important part of history! "
   - text: "Join over 1,800 other like-minded members across the country and world!"
