@@ -6,7 +6,7 @@ start_date: Friday May 23
 end_date: Monday May 26
 date: 2025-05-22T15:46:00.000Z
 time: 9:00
-image: /img/memorial-day-sign-.jpg
+image: /img/members.jpg
 venue: "The Early Ford V-8 Museum "
 map: https://www.mapquest.com/us/indiana/early-ford-v-8-museum-305834909
 show_event_article: false
