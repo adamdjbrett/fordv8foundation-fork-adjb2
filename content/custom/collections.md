@@ -2,7 +2,7 @@
 layout: design/collections.njk
 
 title: Collections Gallery
-description: Image Collections Gallery page
+description: Sneak Peek at Our Collections
 
 f1930: 
  title: 1930s

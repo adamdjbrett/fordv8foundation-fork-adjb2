@@ -1,6 +1,6 @@
 ---
 title: All Collections Gallery
-description: All Image Collections Gallery page
+description: Sneak Peek at Our Collections
 layout: design/gallery.njk
 pagination:
   data: collections.galleries

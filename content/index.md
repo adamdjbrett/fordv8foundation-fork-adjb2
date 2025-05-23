@@ -18,7 +18,7 @@ Plan on at least 45 minutes to enjoy over 65 autos."
  blockquote: '"Flatheads Forever"....Preserving 1932 -1953 Ford V-8 History!'
  image: 
   slider1: "/img/ford1.webp"
-  slider2: "/img/ford2.webp"
+  slider2: "/img/fordfondationmuseum1.jpg"
   slider3: "/img/ford3.webp"
 
 main_article:
