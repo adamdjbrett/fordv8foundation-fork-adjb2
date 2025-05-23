@@ -727,6 +727,261 @@ collections:
         default: ["collections1950"]
 #      - {label: "Body", name: "body", widget: "markdown", required: false}
 
+  - name: "collectfloyd"
+    label: "Collections Floy Motors Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections Floyd Motors Gallery Setup"
+        name: "collections_floydmotors_gallery"
+        file: "content/custom/collections_floydmotors.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "collections_floyd"
+    label: "Collections Floyd Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/floyd-motors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collectionsfloyd"]
+
+
+  - name: "collectspeedshop"
+    label: "Collections Speed Shop Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections Speed Shop Gallery Setup"
+        name: "collections_speedshop_gallery"
+        file: "content/custom/collections_speed_shop.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "collections_speed_shop"
+    label: "Collections Speed Shop Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/speed-shop"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collectionsspeedshop"]
+
+  - name: "collecttractors"
+    label: "Collections Tractors Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections Tractors Gallery Setup"
+        name: "collections_tractors"
+        file: "content/custom/collections_tractors.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "collections_tractors"
+    label: "Collections Tractors Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/tractors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collectionstractors"]
+
+
+  - name: "collecttrucks"
+    label: "Collections Trucks Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections Trucks Gallery Setup"
+        name: "collections_trucks"
+        file: "content/custom/collections_trucks.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "collections_trucks"
+    label: "Collections Trucks Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/commercial-truck"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collectionstrucks"]
+
+  - name: "collectgarage"
+    label: "Collections Garage Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections Garage Gallery Setup"
+        name: "collections_garage"
+        file: "content/custom/collections_garage.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "collections_garage"
+    label: "Collections Garage Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/mechanics-garage"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collectionsgarage"]
+
+
+  - name: "collectengines"
+    label: "Collections Engines Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections Engines Gallery Setup"
+        name: "collections_engines"
+        file: "content/custom/collections_engines.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "collections_engines"
+    label: "Collections Engines Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/engines"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collectionsengines"]
+
   - name: "collectv8"
     label: "Collections V8 Engines Setup"
     editor:
@@ -770,6 +1025,49 @@ collections:
         widget: "hidden"
         default: ["collectionsengine"]
 #      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+
+  - name: "collecttoys"
+    label: "Collections Toys Page Setup"
+    editor:
+      preview: false
+    files:
+      - label: "Collections Toys Gallery Setup"
+        name: "collections_toys"
+        file: "content/custom/collections_toys.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Size", name: "size", widget: "number"}
+          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+          - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+
+  - name: "collections_toys"
+    label: "Collections Toys Gallery"
+    editor:
+      preview: false
+    folder: "content/galleries/toys"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
+      - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
+      - {label: "Show Partner", name: "show_partner", widget: "boolean", required: false}
+      - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
+      - name: "tags"
+        label: "Tags"
+        widget: "hidden"
+        default: ["collectionstoys"]
 
   - name: "collectall"
     label: "Collections All Page Setup"
