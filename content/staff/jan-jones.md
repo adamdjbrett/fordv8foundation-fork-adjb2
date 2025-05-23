@@ -2,7 +2,7 @@
 title: Jan Jones
 description: "Marketing and Events Director"
 date: 2022-02-07
-image: /img/staff/jan-jones-sq.jpg
+image: /img/staff/jan-jones.jpg
 social: 
  - title: jan Facebook
    icon: fa-solid fa-envelope

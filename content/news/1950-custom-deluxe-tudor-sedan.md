@@ -3,7 +3,7 @@ title: 1950 Custom Deluxe Tudor Sedan
 description: 1939 Ford Standard Tudor Sedan Donated by Marv Shetler of Oregon
 date: 2023-01-26
 image: /img/news/IMG-0395.webp
-author: jan-jones___Jan Jones___/img/staff/me-2.jpg
+author: jan-jones___Jan Jones___/img/staff/jan-jones.jpg
 show_event_article: true
 show_ford_store: true
 show_partner: true

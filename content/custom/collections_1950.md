@@ -1,6 +1,6 @@
 ---
 title: 1950s Collections Gallery
-description: All 1950s Image Collections Gallery page
+description: All 1950s - Sneak Peek at Our Collections
 layout: design/gallery.njk
 pagination:
   data: collections.collections1950

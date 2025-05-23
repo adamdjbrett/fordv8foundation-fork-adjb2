@@ -1,6 +1,6 @@
 ---
 title: 1930s Collections Gallery
-description: All 1930s Image Collections Gallery page
+description: All 1930s - Sneak Peek at Our Collections
 layout: design/gallery.njk
 pagination:
   data: collections.collections1930
