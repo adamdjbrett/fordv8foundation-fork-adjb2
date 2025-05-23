@@ -14,6 +14,31 @@ Desktop Peformance
 
 ### Change Log: 
 
+May 23 2025
++ Fix Jan Photo
++ Home page Photos in gallery that rotate – take out bus photo and replace with other image
++ Add new photo in gallery
++ Change and update 1930s collections photo
++ Change and update 1940s collections photo
++ Change and update 1950s collections photo
++ Add new collections Floyd Motors 1936 Ford Dealership
++ Add page for Floyd Motors 1936 Ford Dealership list
++ Add new collections Speed shop
++ Add page for speedshop list
++ Add new collections tractors
++ Add page for tractors list
++ Add new collections Commercial Trucks
++ Add page for Commercial Trucks list
++ Add new collections Mechanics Garage 
++ Add page for Mechanics Garage  list
++ Add new collections engines
++ Add page for engines list
++ Add new collections toys
++ Add page for toys list
++ Update Collections Page with new collections
++ Update Collections All with new collections data
++ Update Backend Headless CMS with new features
+
 May 16 2025
 + Fix start/end event date switch to string
 + Change staffs to be staff
