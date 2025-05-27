@@ -24,6 +24,7 @@ nav_museum:
   nav: Museum Select Motors
   url: https://www.museumselectmotors.com/
 
+# Navigation
 nav1:
   nav: Home
   url: /
@@ -129,8 +130,8 @@ nav5:
      url: /membership-form/
    - nav: Group Ticket Form
      url: /group-ticket-form/
-#   - nav: Become a Member
-#     url: /new-member/
+   - nav: Renew Membership
+     url: https://early-ford-v-8-foundation.square.site/product/renew-your-membership/266?cp=true&sa=true&sbp=false&q=false
 
 #nav6:
 #  title: About
