@@ -4,8 +4,8 @@ language: "en"
 locale: en_US
 image: /img/logofull.webp
 favicon: /img/logofull.webp
-url: "http://localhost:8080"
-#url: "https://fordv8foundation.org"
+#url: "http://localhost:8080"
+url: "https://fordv8foundation.org"
 
 metasocial: 
  facebook: "https://www.facebook.com/earlyfordv8museum"
