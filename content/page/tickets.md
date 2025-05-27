@@ -1,6 +1,7 @@
 ---
 layout: page.njk
 title: Tickets
+image: /img/ford-v8-square.png
 description: Ticketing
 permalink: /tickets/
 ---
