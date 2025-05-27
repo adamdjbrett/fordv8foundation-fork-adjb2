@@ -2,7 +2,7 @@
 layout: design/reservation.njk
 title: J. Windle Event Center
 description: J. Windle Event Center Contact Page
-formspree_id: https://formspree.io/f/mgvaewne
+formspree_id: https://formspree.io/f/xqaqrkwq
 form: 
  - info: Full Name
  - info: Address

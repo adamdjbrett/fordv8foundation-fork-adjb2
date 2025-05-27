@@ -2,7 +2,7 @@
 layout: design/contact.njk
 title: Contact Form
 description: "We would love to hear from you!"
-formspree_id: https://formspree.io/f/xoveqaka
+formspree_id: https://formspree.io/f/mblonjpl
 image: /img/contact.png
 form: 
  - info: Full Name
