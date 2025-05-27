@@ -15,7 +15,7 @@ metasocial:
 nav_logo: "/img/logofull.webp"
 nav_button: 
  title: Tickets
- url: /
+ url: /tickets/
 nav_donate: 
  title: Donate
  url: https://www.paypal.com/donate/?hosted_button_id=NP2EGFG5NSJA4
