@@ -15,6 +15,7 @@ Desktop Peformance
 ### Change Log: 
 
 June 03 2025
++ Fix pagefind conflict
 + Redirect URL
 + Change museum-select-motors to be vehicles
 + Update Backend CMS
