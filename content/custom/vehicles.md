@@ -1,6 +1,6 @@
 ---
-title: Museum Select Motors
-description: Museum Select Motors Page Description
+title: Vehicles
+description: Our Vehicles Collections
 layout: design/motors.njk
 museum_display: 
  - title: 1930s
