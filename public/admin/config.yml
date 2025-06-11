@@ -739,6 +739,14 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "text"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "design/gallery.njk"}
+          - {label: "Show Intro", name: "show_intro", widget: "boolean", default: false, required: false}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "string", required: false}
+              - {label: "Image", name: "image", widget: "image", required: false}
           - label: "Pagination"
             name: "pagination"
             widget: "object"
