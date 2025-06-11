@@ -32,7 +32,7 @@ font-size: 24px;
 .img-staffs {width:150px; height:150px; border-radius:80px; object-fit:cover;margin-top:-60px;}
 .img_post_profile{width:30px; height:30px; object-fit:cover;}
 .img-ev {width:100%; height:220px; object-fit:cover;}
-.img-floyd {max-width:321px; max-height:400px; }
+.img-floyd {width:321px; height:400px; }
 .text-desc {
   display: -webkit-box;
   -webkit-line-clamp: 2;
