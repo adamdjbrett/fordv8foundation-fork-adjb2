@@ -1,7 +1,7 @@
 ---
 title: Floyd Motors Collections Gallery
 description: All Floyd Motors 1936 Ford Dealership - Sneak Peek at Our Collections
-layout: design/gallery.njk
+layout: design/galleryfloyd.njk
 pagination:
   data: collections.collectionsfloyd
   size: 50
@@ -13,6 +13,11 @@ testdata:
  - item4
  - item5
  - item6
+intro:
+ title: Floyd Motors 1936
+ description: Lorep Ipsum Dolor siamet..
+ image: /img/collections/floyd1.jpg
+show_intro: true
 show_event_article: false
 show_ford_store: false
 show_partner: false
