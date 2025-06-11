@@ -14,6 +14,10 @@ Desktop Peformance
 
 ### Change Log: 
 
+June 11 2025
++ Update collections intro
++ Integration Backend CMS
+
 June 03 2025
 + Fix pagefind conflict
 + Redirect URL
