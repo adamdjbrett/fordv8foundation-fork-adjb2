@@ -14,6 +14,9 @@ Desktop Peformance
 
 ### Change Log: 
 
+June 11 2025
++ Test Push from new devices
+
 June 03 2025
 + Fix pagefind conflict
 + Redirect URL
