@@ -8,7 +8,7 @@ header:
  title: "Early Ford V-8 Foundation Museum"
  text: "We are a one of a kind museum featuring Henry Ford’s flathead engine era 1932-
 1953. You will find a great variety of automobiles, from woodies to Lincoln
-Zyphers, from panel delivery trucks to large commercial trucks, from 1932
+Zephyrs, from panel delivery trucks to large commercial trucks, from 1932
 cabriolets to 1953 two-toned sedans. Other special attractions include Ford
 tractors, a speed shop, mechanics garage, and a replica 1936 Ford dealership
 featuring every model Henry put out that year, including the beautiful stainless
