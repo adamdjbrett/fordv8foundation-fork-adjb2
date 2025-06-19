@@ -438,6 +438,33 @@ collections:
                   - {label: "Text", name: "text", widget: "string"}
                   - {label: "URL", name: "url", widget: "string"}
           
+          - label: "Location"
+            name: "location"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Info"
+                name: "info"
+                widget: "list"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Map1"
+                name: "map1"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image"}
+                  - {label: "Icon", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+              - label: "Map2"
+                name: "map2"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image"}
+                  - {label: "Icon", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          
           - {label: "Show Motors", name: "show_motors", widget: "boolean", required: false}
           - {label: "Show Nearby", name: "show_nearby", widget: "boolean", required: false}
           - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", required: false}
