@@ -14,6 +14,10 @@ Desktop Peformance
 
 ### Change Log: 
 
+June 19 2025
++ Update Add Location Home page
++ Integration Backend CMS
+
 June 11 2025
 + Update collections intro
 + Integration Backend CMS

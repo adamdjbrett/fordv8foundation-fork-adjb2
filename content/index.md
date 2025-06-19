@@ -67,6 +67,24 @@ serve and engage with like-minded car enthusiasts! Click here to join today!"
   text: Renew Membership
   url: /new-member/
 
+location:
+ title: "The Best Way to Find Us"
+ info: 
+   - text: "We are off I-69, Exit 326 west"
+   - text: "Less than 1 mile,second drive on right is the Kruse Plaza,Opportunity Drive where we are located."
+   - text: "Take the winding drive all the way to the end, and look for our tall Ford sign and two beautiful art deco buildings"
+   - text: "The museum is on the right and our event center / mechanics garages and Museum Select Motors are in the building on the left."
+ map1: 
+  icon: "fas fa-street-view"
+  url: "https://maps.apple.com/?address=2181%20Rotunda%20Dr,%20Auburn,%20IN%20%2046706,%20United%20States&auid=2400004346339794474&ll=41.334899,-85.089519&lsp=9902&q=Early%20Ford%20V-8%20Foundation%20%26%20Museum&t=m"
+  title: "Apple Map"
+  image: "/img/map.png"
+ map2: 
+  icon: "fas fa-map-location-dot"
+  url: "https://www.google.com/maps/place/Early+Ford+V-8+Foundation+Museum/@41.3352698,-85.0892508,15z/data=!4m2!3m1!1s0x0:0xd407c527d5ed08cb?sa=X&ved=2ahUKEwiXie2Zp_P1AhXrjokEHZmXAl0Q_BJ6BAgyEAU"
+  title: "Google Map"
+  image: "/img/gmap.png"
+
 show_motors: true
 show_nearby: true
 show_ford_store: true
