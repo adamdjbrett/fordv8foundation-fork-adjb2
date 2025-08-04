@@ -5,7 +5,7 @@ description: "Become a member of the Early Ford V-8 Foundation and support the
   in keeping the car hobby alive, and enjoy being part of a great group of car
   enthusiasts - all for $25 a year! "
 date: 2025-05-08T16:34:00.000Z
-image: /img/newsletter.jpg
+image: /img/logo-output.png
 show_event_article: true
 show_ford_store: true
 show_motors: true
@@ -17,7 +17,7 @@ We are an educational foundation, with a goal of inspiring future generations to
 
 For $25 a year, a member gets unlimited visits to the museum with a guest, the newsletter magazine 6 times a year, a discounted swap meet space at our large Fall Swap Meet, access to our archival library, and opportunities to participate in fun events throughout the year with other great car enthusiasts! 
 
-$60 gets a 3 year membership, and Lifetime membership is $600. 
+$60 gets a 3 year membership, and Lifetime membership is $625. 
 
 This makes a fun, unique gift that they can enjoy and be connected to like-minded people.  
 
