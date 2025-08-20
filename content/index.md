@@ -1,6 +1,6 @@
 ---
 layout: start.njk
-title: Early Ford v8 Foundation Museum
+title: Early Ford V-8 Foundation Museum
 description: Preserving Ford Motor History
 image: /img/logo.png
 
