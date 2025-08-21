@@ -1,6 +1,6 @@
 {
 	"name": "ford-museum",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "Ford Museum Website develop by Adam Dj Brett.",
 	"type": "module",
 	"scripts": {
@@ -25,15 +25,15 @@
 		"node": ">=20"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^3.1.0",
-		"@11ty/eleventy-navigation": "^0.3.5",
-		"@11ty/eleventy-plugin-rss": "^2.0.2",
-		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+		"@11ty/eleventy": "^3.1.2",
+		"@11ty/eleventy-navigation": "^1.0.4",
+		"@11ty/eleventy-plugin-rss": "^2.0.4",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
 		"cross-env": "^7.0.3",
-		"luxon": "^3.5.0",
+		"luxon": "^3.6.1",
 		"markdown-it": "^14.1.0",
-		"zod": "^3.23.8",
-		"zod-validation-error": "^3.3.1"
+		"zod": "^3.25.67",
+		"zod-validation-error": "^3.5.2"
 	},
 	"dependencies": {
 		"@zachleat/heading-anchors": "^1.0.1",

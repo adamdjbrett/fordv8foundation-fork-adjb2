@@ -2171,27 +2171,6 @@ collections:
           - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
           - {label: "Body", name: "body", widget: "markdown", required: false}
 
-  - name: "custom_shop_pages"
-    label: "Optional Shop Pages"
-    editor:
-      preview: false
-    files:
-      - label: "Shop Page"
-        name: "shop"
-        file: "content/custom/shop.md"
-        fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "design/shop.njk"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
-          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/shop/"}
-          - {label: "Show Event Article", name: "show_event_article", widget: "boolean", default: false, required: false}
-          - {label: "Show Ford Store", name: "show_ford_store", widget: "boolean", default: false, required: false}
-          - {label: "Show Motors", name: "show_motors", widget: "boolean", default: false, required: false}
-          - {label: "Show Partner", name: "show_partner", widget: "boolean", default: false, required: false}
-          - {label: "Body", name: "body", widget: "markdown", required: false}
-
-
-
 # publish_mode: editorial_workflow
 
 # Preview Templates
