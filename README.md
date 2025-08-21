@@ -14,6 +14,13 @@ Desktop Peformance
 
 ### Change Log: 
 
+August 21 2025
++ Remove Shop Page
++ Switch url link for all `/shop/` to `https://early-ford-v-8-foundation.square.site/`
++ Update all Store Products Link in to square.site, example `Beanie Skull Cap` , `Logo Magnet`
++ Update Backend CMS integration remove - shop page - use `https://early-ford-v-8-foundation.square.site/`
++ Update Eleventy and Dependencies Versioning
+
 June 19 2025
 + Update Add Location Home page
 + Integration Backend CMS

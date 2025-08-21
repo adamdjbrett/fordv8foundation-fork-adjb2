@@ -286,20 +286,20 @@ store:
     background: /img/lim.webp
     text: "Featuring museum branded apparel, automobilia, books, automotive literature, archives, and much more!"
     button: Visit Store
-    url: /shop/
+    url: https://early-ford-v-8-foundation.square.site/
     item: 
       - title: Beanie Skull Cap, Sock Hat V-8 Logo
         image: /img/shop1.webp
         price: $10
-        url: /shop/
+        url: https://early-ford-v-8-foundation.square.site/product/beanie-skull-cap-sock-hat-logo/252?cp=true&sa=false&sbp=false&q=true
       - title: Logo Magnet
         image: /img/shop2.webp
         price: $6
-        url: /shop/
+        url: https://early-ford-v-8-foundation.square.site/product/museum-logo-magnet/211?cp=true&sa=false&sbp=false&q=true
       - title: "It's Ford for '40 Restoration Manual"
         image: /img/shop3.webp
         price: $50
-        url: /shop/
+        url: https://early-ford-v-8-foundation.square.site/product/1940-ford-restoration-book/250?cp=true&sa=false&sbp=false&q=true
 
 partners:
   title: Our Partners
@@ -355,7 +355,7 @@ footer:
   - nav: Donation
     url: /donate/
   - nav: Shop
-    url: /shop/
+    url: https://early-ford-v-8-foundation.square.site/
   - nav: Ebay
     url: https://www.ebay.com/str/fordv8foundation
   - nav: Paypal
