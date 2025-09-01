@@ -8,7 +8,7 @@ start_date: "Saturday October 11 "
 end_date: "Saturday October 11 "
 date: 2025-09-01T14:51:00.000-04:00
 time: "11:00 am - 4:00 pm "
-image: /img/hot-wheels-ad-1-.png
+image: /img/hot-wheels-ad-oct-.jpg
 venue: J. Windle Event Center on the Early Ford V-8 Campus
 map: https://www.google.com/maps/place/Early+Ford+V-8+Museum/@41.335217,-85.0895428,18z/data=!3m1!4b1!4m6!3m5!1s0x8816054b16a772b9:0xd407c527d5ed08cb!8m2!3d41.335217!4d-85.0895428!16s%2Fg%2F1vgw96zf?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D
 show_event_article: true
