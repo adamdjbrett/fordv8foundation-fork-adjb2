@@ -21,7 +21,7 @@ header:
   - text: "Consider gifting a membership to a car enthusiast in your circle, too!"
  button: 
   text: Become A Member
-  url: https://early-ford-v-8-foundation.square.site/
+  url: /new-member/
 
 article_image: /img/membership.jpg
 
