@@ -14,6 +14,10 @@ Desktop Peformance
 
 ### Change Log: 
 
+October 04 2025
++ Redirect new form
++ Handle form to square.site
+
 June 19 2025
 + Update Add Location Home page
 + Integration Backend CMS
