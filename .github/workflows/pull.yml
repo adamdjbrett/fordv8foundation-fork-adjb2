@@ -1,0 +1,8 @@
+name: Pull Main
+
+version: "1"
+rules:
+  - base: main
+    upstream: Early-Ford-V8-Foundation/fordv8foundation.org:main # change `wei` to the owner of upstream repo
+    mergeMethod: hardreset
+    mergeUnstable: true
