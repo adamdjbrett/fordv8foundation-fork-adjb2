@@ -15,6 +15,12 @@ show_ford_store: false
 show_motors: false
 show_partner: false
 ---
-Do something different this holiday season! Come out to the Christmas Through the Decades...with Cars on Sat. Dec. 6th from 1:00-5:00! Listen to beautiful live Christmas music by the Auburn Community Band and the Dekalb County Orchestra as you stroll down the decades of Christmas past during the 1930's, 40's and 50's! See the beautiful trees decorated as they would have been in those eras...take your photo in the living room setting of each era..  See Santa when he arrives and sits in the 1936 replica car dealership to hear the wishes of all the boys and girls! This is a relaxed and fun way to see Santa! Take a family photo in the cream colored 1927 Model T decorated with a Christmas wreath! The kids will love hunting for all the Ford Elves that are hiding among the cars! 
+Do something different this holiday season! Come out to the Christmas Through the Decades...with Cars on Sat. Dec. 6th from 1:00-5:00! 
+
+Listen to beautiful live Christmas music by the Auburn Community Band, the Dekalb County Orchestra and Dekalb High School's choir as you stroll down the decades of Christmas past during the 1930's, 40's and 50's! 
+
+See the beautiful trees decorated as they would have been in those eras...take your photo in the living room setting of each era. See Santa when he arrives and sits in the 1936 replica car dealership to hear the wishes of all the boys and girls! This is a relaxed and fun way to see Santa! 
+
+Take a family photo in the cream colored 1927 Model T decorated with a Christmas wreath! The kids will love hunting for all the Ford Elves that are hiding among the cars! 
 
 This event is free to the public! Plan on attending this unique holiday event!
