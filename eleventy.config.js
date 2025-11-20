@@ -44,11 +44,14 @@ function getImagesRecursively(dir) {
   return results;
 }
 export default async function(eleventyConfig) {
-	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
-			return false;
-		}
-	});
+  // Draft handling: treat `draft: true` OR `published: false` as drafts.
+  // Drafts are included in serve/watch mode and excluded only during production build.
+  eleventyConfig.addPreprocessor("drafts", "*", (data) => {
+    const isDraft = data.draft === true || data.published === false;
+    if(isDraft && process.env.ELEVENTY_RUN_MODE === "build") {
+      return false; // Skip generating output for drafts on production build
+    }
+  });
 
 	// Handle redirect_to front matter
 	eleventyConfig.addGlobalData("eleventyComputed", {
