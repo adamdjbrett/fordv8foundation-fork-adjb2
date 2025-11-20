@@ -49,6 +49,78 @@ export default async function(eleventyConfig) {
 			return false;
 		}
 	});
+
+	// Handle redirect_to front matter
+	eleventyConfig.addGlobalData("eleventyComputed", {
+		permalink: (data) => {
+			if (data.redirect_to) {
+				return false; // Don't generate a page
+			}
+			return data.permalink;
+		}
+	});
+
+	// Generate redirect HTML files for redirect_to and redirect_from
+	eleventyConfig.on('eleventy.after', async ({ dir, results, runMode, outputMode }) => {
+		const redirects = [];
+		
+		// Collect all pages with redirect_to or redirect_from
+		for (const result of results) {
+			if (result.content && result.inputPath && result.outputPath) {
+				const data = result.content._data || {};
+				
+				// Handle redirect_to: source page redirects to target
+				if (data.redirect_to) {
+					const sourcePath = result.url || result.outputPath.replace(dir.output, '').replace(/index\.html$/, '');
+					redirects.push({
+						from: sourcePath,
+						to: data.redirect_to
+					});
+				}
+				
+				// Handle redirect_from: create redirects FROM old URLs TO this page
+				if (data.redirect_from) {
+					const targetUrl = result.url || result.outputPath.replace(dir.output, '').replace(/index\.html$/, '');
+					const fromUrls = Array.isArray(data.redirect_from) ? data.redirect_from : [data.redirect_from];
+					
+					for (const fromUrl of fromUrls) {
+						redirects.push({
+							from: fromUrl,
+							to: targetUrl
+						});
+					}
+				}
+			}
+		}
+		
+		// Create redirect HTML files
+		for (const redirect of redirects) {
+			const fromPath = path.join(dir.output, redirect.from.replace(/^\//, ''));
+			const redirectHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Redirecting...</title>
+	<meta http-equiv="refresh" content="0; url=${redirect.to}">
+	<link rel="canonical" href="${redirect.to}">
+</head>
+<body>
+	<p>Redirecting to <a href="${redirect.to}">${redirect.to}</a>...</p>
+</body>
+</html>`;
+			
+			// Ensure directory exists
+			const dir = path.dirname(fromPath);
+			if (!fs.existsSync(dir)) {
+				fs.mkdirSync(dir, { recursive: true });
+			}
+			
+			// Write redirect file
+			const outputFile = fromPath.endsWith('.html') ? fromPath : path.join(fromPath, 'index.html');
+			fs.writeFileSync(outputFile, redirectHtml);
+		}
+	});
+
 	eleventyConfig
 		.addPassthroughCopy({
 			"./public/": "/"
