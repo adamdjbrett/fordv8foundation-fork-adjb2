@@ -32,7 +32,7 @@ permalink: /contact/
     + 2181 Rotunda Drive
     + Auburn, IN 46706
 + Phone : [260-927-8022](tel:+12609278022)
-+ [Info@earlyfordv8foundation.org](mailto:Info@earlyfordv8foundation.org)
++ [Info@fordv8foundation.org](mailto:Info@fordv8foundation.org)
 + Facebook : [https://www.facebook.com/earlyfordv8museum](https://www.facebook.com/earlyfordv8museum)
 + Instagram: [https://www.instagram.com/earlyfordv8museum/](https://www.instagram.com/earlyfordv8museum/)
 
