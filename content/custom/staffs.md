@@ -1,7 +1,7 @@
 ---
 layout: design/staffs.njk
 title: Staff
-description: "we are passionate about education and Ford's contributions to American automative and innovation histories."
+description: "we are passionate about education and Ford's contributions to American automotive and innovation histories."
 pagination:
   data: collections.staffs
   size: 9
