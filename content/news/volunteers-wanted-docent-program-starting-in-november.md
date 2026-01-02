@@ -1,8 +1,8 @@
 ---
-title: "Volunteers Wanted! "
+title: Volunteers Wanted! Next Information Meeting Sunday January 11 at noon
 description: "Do you love a classic car atmosphere? Do you have some spare time
   you are willing to spend helping at the museum? Come to our meeting Sunday
-  Dec. 7 at noon to learn more about the program! You will be given an in-depth
+  Jan. 11 at noon to learn more about the program! You will be given an in-depth
   tour of the museum and have a Q & A session. "
 date: 2025-11-10T15:51:00.000-05:00
 image: /img/scott.jpg
@@ -19,7 +19,7 @@ Other ways to volunteer include utilizing skills and experiences you already hav
 
 There is no minimum time required. You volunteer when you want! It's a great way to meet new people and make new friends in a beautiful and calm environment. 
 
-If you are interested in learning more, please plan to attend our Introduction Meeting/Coffee on Sunday Dec. 7 at noon in the museum library. You will meet Scott Campbell, one of our board members, and Jan Jones, our marketing and events manager.  
+If you are interested in learning more, please plan to attend our Introduction Meeting/Coffee on Sunday Jan. 11 at noon in the museum library. You will meet Scott Campbell, one of our board members, and Jan Jones, our marketing and events manager.  
 
 You do not have to RSVP, but if you know you would like to come, you can let Jan know at jan@fordv8foundation.org or call the office at 260-927-8022. 
 
