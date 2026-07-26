@@ -1,9 +1,9 @@
 ---
-title: 1950 Mercury Tudor
-description:  donated by Charles Cochran
-image: /img/adopt/IMG_6099.jpeg
+title: 1952 Ford Crestline Victoria
+description:  donated by Thomas Lamar Hart, GA 
+image: /img/adopt/crestliner-victoria.webp
 status: has been adopted
-date: 2025-04-16
+date: 2026-06-26
 button: 
  text: Download The Adopt-A-Ford Form
  url: /pdf/Adopt-A-Ford.pdf
@@ -14,4 +14,4 @@ tags:
  - 1950s
 ---
 
-Adopted by Curtis and Lyndsey Emerick in honor of George Elbel ,IN
+Adopted by  Quinton and Sheryl Smith, IN 
