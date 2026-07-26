@@ -1,5 +1,5 @@
 ---
-title: 1952 Ford Crestline Victoria
+title: 1952 Ford Crestliner Victoria
 description:  donated by Thomas Lamar Hart, GA 
 image: /img/adopt/crestliner-victoria.webp
 status: has been adopted
