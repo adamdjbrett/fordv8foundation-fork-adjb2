@@ -3,7 +3,7 @@ title: 1934 Ford DeLuxe Roadster
 model_year: 1934
 description: " donated by Bill Fox, MD"
 image: /img/adopt/IMG_6089.jpeg
-status: Available for Adoption
+status: Available
 date: 2026-04-18
 button: 
  text: Download The Adopt-A-Ford Form

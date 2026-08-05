@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const dotsContainer = document.querySelector('.slider-dots');
+    const sliderContainer = document.querySelector('.slider-container');
+    if (!sliderContainer) return;
+
+    const slides = sliderContainer.querySelectorAll('.slide');
+    const prevBtn = sliderContainer.querySelector('#prevBtn');
+    const nextBtn = sliderContainer.querySelector('#nextBtn');
+    const dotsContainer = sliderContainer.querySelector('.slider-dots');
     let currentSlide = 0;
 
     function showSlide(n) {
@@ -33,13 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
         dotsContainer.appendChild(dot);
     });
 
-    const dots = document.querySelectorAll('.dot');
+    const dots = sliderContainer.querySelectorAll('.dot');
 
     // Auto slide
     let slideInterval = setInterval(nextSlide, 5000);
 
     // Pause auto-slide on hover
-    const sliderContainer = document.querySelector('.slider-container');
     sliderContainer.addEventListener('mouseenter', () => {
         clearInterval(slideInterval);
     });
@@ -90,45 +92,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
-function updateTime() {
-  const now = new Date();
-  const options = { 
-    timeZone: 'America/Indiana/Indianapolis',
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true
-  };
-  const dateTimeString = now.toLocaleString('en-US', options);
-  document.getElementById('time').textContent = dateTimeString + " | Auburn, IN";
-//  document.getElementById('time').textContent = dateTimeString + " - Auburn, IN 46706";
-}
-
-function updateTimer() {
-  const now = new Date();
-  const options = { 
-    timeZone: 'America/Indiana/Indianapolis',
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true
-  };
-  const dateTimeString = now.toLocaleString('en-US', options);
-  document.getElementById('timer').textContent = dateTimeString + " | Auburn, IN";
-//  document.getElementById('timer').textContent = dateTimeString + " - Auburn, IN 46706";
-}
-
-updateTimer();
-setInterval(updateTimer, 1000);
-updateTime();
-setInterval(updateTime, 1000);
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();

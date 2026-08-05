@@ -69,7 +69,8 @@ layout: base.njk
 
 <div class="tab-pane fade show active" id="pills-1920" role="tabpanel" aria-labelledby="pills-1920-tab" tabindex="0">
 <div class="row">
-{% for post in collections.1920s | sort(false, false, "data.model_year") %}
+{% for post in collections.adopts | sort(false, false, "data.model_year") %}
+{% if post.data.status | lower == "available" and post.data.model_year >= 1920 and post.data.model_year < 1930 %}
 <div class="p-3 col-md-4 text-center">
 <div class="bg-light rounder shadow-sm opacity-95 row zoom non">
 <a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
@@ -86,13 +87,15 @@ layout: base.njk
 </div>
 </div>
 </div>
+{% endif %}
 {% endfor %}
 </div>
 </div>
 
 <div class="tab-pane fade show" id="pills-1930" role="tabpanel" aria-labelledby="pills-1930-tab" tabindex="0">
 <div class="row">
-{% for post in collections.1930s | sort(false, false, "data.model_year") %}
+{% for post in collections.adopts | sort(false, false, "data.model_year") %}
+{% if post.data.status | lower == "available" and post.data.model_year >= 1930 and post.data.model_year < 1940 %}
 <div class="p-3 col-md-4 text-center">
 <div class="bg-light rounder shadow-sm opacity-95 row zoom non">
 <a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
@@ -109,6 +112,7 @@ layout: base.njk
 </div>
 </div>
 </div>
+{% endif %}
 {% endfor %}
 </div>
 </div>
@@ -117,7 +121,8 @@ layout: base.njk
 
 <div class="tab-pane fade show" id="pills-1940" role="tabpanel" aria-labelledby="pills-1940-tab" tabindex="0">
 <div class="row">
-{% for post in collections.1940s | sort(false, false, "data.model_year") %}
+{% for post in collections.adopts | sort(false, false, "data.model_year") %}
+{% if post.data.status | lower == "available" and post.data.model_year >= 1940 and post.data.model_year < 1950 %}
 <div class="p-3 col-md-4 text-center">
 <div class="bg-light rounder shadow-sm opacity-95 row zoom non">
 <a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
@@ -134,6 +139,7 @@ layout: base.njk
 </div>
 </div>
 </div>
+{% endif %}
 {% endfor %}
 </div>
 </div>
@@ -141,7 +147,8 @@ layout: base.njk
 
 <div class="tab-pane fade show" id="pills-1950" role="tabpanel" aria-labelledby="pills-1950-tab" tabindex="0">
 <div class="row">
-{% for post in collections.1950s | sort(false, false, "data.model_year") %}
+{% for post in collections.adopts | sort(false, false, "data.model_year") %}
+{% if post.data.status | lower == "available" and post.data.model_year >= 1950 and post.data.model_year < 1960 %}
 <div class="p-3 col-md-4 text-center">
 <div class="bg-light rounder shadow-sm opacity-95 row zoom non">
 <a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
@@ -158,6 +165,7 @@ layout: base.njk
 </div>
 </div>
 </div>
+{% endif %}
 {% endfor %}
 </div>
 </div>

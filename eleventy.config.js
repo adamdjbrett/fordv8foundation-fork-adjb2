@@ -1,12 +1,11 @@
-import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
+import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@awesome.me/buildawesome";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import yaml from "js-yaml";
-import { execSync } from 'child_process';
+import { execFileSync } from 'node:child_process';
 import markdownIt from 'markdown-it';
 import markdownItAnchor from "markdown-it-anchor";
-import { stripHtml } from "string-strip-html";
 import pluginFilters from "./_config/filters.js";
 import pluginCodes from "./_config/codes.js";
 import embedEverything from "eleventy-plugin-embed-everything";
@@ -15,34 +14,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-function getImagesRecursively(dir) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      results.push({
-        type: 'directory',
-        name: file,
-        children: getImagesRecursively(filePath)
-      });
-    } else {
-      const ext = path.extname(file).toLowerCase();
-      if (['.jpg', '.jpeg', '.png', '.gif'].includes(ext)) {
-        results.push({
-          type: 'file',
-          name: file,
-          path: path.relative(__dirname, filePath).replace(/\\/g, '/')
-        });
-      }
-    }
-  });
-  
-  return results;
-}
 export default async function(eleventyConfig) {
   // Draft handling: treat `draft: true` OR `published: false` as drafts.
   // Drafts are included in serve/watch mode and excluded only during production build.
@@ -121,7 +92,7 @@ export default async function(eleventyConfig) {
 		}
 	  });
     eleventyConfig.on('eleventy.after', () => {
-		execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+		execFileSync('pagefind', ['--site', '_site', '--glob', '**/*.html'], { stdio: 'inherit' });
 	  })
 	  eleventyConfig.amendLibrary("md", mdLib => {
 		mdLib.use(markdownItAnchor, {
@@ -135,13 +106,7 @@ export default async function(eleventyConfig) {
 			slugify: eleventyConfig.getFilter("slugify")
 		});
 	});
-    eleventyConfig.addPlugin(embedEverything);
-	eleventyConfig.addPlugin(IdAttributePlugin, {
-		slugify: (text) => {
-		  const slug = eleventyConfig.getFilter("slugify")(text);
-		  return `print-${slug}`;
-		}
-	  });
+	eleventyConfig.addPlugin(embedEverything);
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
@@ -233,8 +198,6 @@ eleventyConfig.addCollection("news", function(collectionApi) {
 
 	eleventyConfig.addPlugin(pluginFilters);
 	eleventyConfig.addPlugin(pluginCodes);
-	eleventyConfig.addPlugin(IdAttributePlugin, {
-	});
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
 	});

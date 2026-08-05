@@ -4,12 +4,13 @@
   "description": "Ford Museum Website develop by Adam Dj Brett.",
   "type": "module",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve --quiet",
-    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
-    "debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
-    "benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+    "test": "node --test",
+    "build": "buildawesome",
+    "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 buildawesome",
+    "start": "buildawesome --serve --quiet",
+    "debug": "cross-env DEBUG=BuildAwesome* buildawesome",
+    "debugstart": "cross-env DEBUG=BuildAwesome* buildawesome --serve --quiet",
+    "benchmark": "cross-env DEBUG=BuildAwesome:Benchmark* buildawesome"
   },
   "repository": {
     "type": "git",
@@ -26,22 +27,24 @@
     "npm": ">=11.14.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@awesome.me/buildawesome": "4.0.0-alpha.10",
     "cross-env": "^7.0.3",
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
+    "pagefind": "1.5.2",
     "zod": "^3.23.8",
     "zod-validation-error": "^3.3.1"
   },
   "dependencies": {
     "@zachleat/heading-anchors": "^1.0.1",
     "eleventy-plugin-embed-everything": "^1.20.0",
-    "markdown-it": "^14.1.0",
-    "markdown-it-anchor": "^9.2.0",
-    "string-strip-html": "^13.4.8"
+    "markdown-it-anchor": "^9.2.0"
   },
-  "packageManager": "npm@11.14.0"
+  "packageManager": "npm@11.14.0",
+  "allowScripts": {
+    "fsevents@2.3.3": true
+  }
 }

@@ -3,7 +3,7 @@ title: 1932 Ford 5-Window Coupe
 model_year: 1932
 description: Donated by Jimmy & Connie Gibson
 image: /img/adopt/002-32-5w.webp
-status: Available for Adoption
+status: Available
 date: 2025-03-01
 button: 
  text: Download The Adopt-A-Ford Form
