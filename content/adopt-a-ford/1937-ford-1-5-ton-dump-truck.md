@@ -1,7 +1,7 @@
 ---
 title: 1937 Ford 1 ½ Ton V-8 Dump Truck 
 model_year: 1937
-description: donated by Henry Otto , MI 
+description: "Donated by Henry Otto , MI . Adopted by Steve Otto, NC"
 image: /img/adopt/IMG_6066.jpeg
 status: adopted
 date: 2026-04-16
