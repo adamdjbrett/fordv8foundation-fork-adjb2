@@ -1,8 +1,9 @@
 ---
 title: 1950 Mercury Tudor
-description:  donated by Charles Cochran
+model_year: 1950
+description: "Adopted by Curtis and Lyndsey Emerick in honor of George Elbel ,IN"
 image: /img/adopt/IMG_6099.jpeg
-status: has been adopted
+status: Adopted
 date: 2025-04-16
 button: 
  text: Download The Adopt-A-Ford Form
@@ -14,4 +15,3 @@ tags:
  - 1950s
 ---
 
-Adopted by Curtis and Lyndsey Emerick in honor of George Elbel ,IN

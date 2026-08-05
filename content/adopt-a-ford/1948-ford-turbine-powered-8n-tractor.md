@@ -1,8 +1,9 @@
 ---
 title: 1948 Ford Turbine Powered 8N Tractor
-description: Donated by Marvin Baumann, MI Adopted by Dave & Debbie Sharp, IN
+model_year: 1948
+description: "Donated by Marvin Baumann, MI Adopted by Dave & Debbie Sharp, IN"
 image: /img/adopt/IMG_6106.jpeg
-status: has been adopted
+status: adopted
 date: 2025-02-24
 button: 
  text: Download The Adopt-A-Ford Form

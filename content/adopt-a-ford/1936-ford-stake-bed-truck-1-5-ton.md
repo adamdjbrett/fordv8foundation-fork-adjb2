@@ -1,8 +1,9 @@
 ---
 title: 1936 Ford Stake Bed Truck 1 ½ Ton
+model_year: 1936
 description: "Donated by Charles Cochran "
 image: /img/adopt/IMG_6068.jpeg
-status: Available for adoption
+status: Available for Adoption
 date: 2026-04-16
 button: 
  text: Download The Adopt-A-Ford Form

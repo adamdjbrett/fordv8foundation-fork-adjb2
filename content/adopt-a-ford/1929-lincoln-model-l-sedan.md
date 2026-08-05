@@ -1,8 +1,9 @@
 ---
 title: 1929 Lincoln Model L Sedan
+model_year: 1929
 description: On loan from Keith and Beth Flesher, IN
 image: /img/adopt/1929 Lincoln .webp
-status: Available for adoption
+status: Available for Adoption
 date: 2026-06-26
 button: 
  text: Download The Adopt-A-Ford Form

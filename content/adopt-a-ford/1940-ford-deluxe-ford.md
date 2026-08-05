@@ -1,8 +1,9 @@
 ---
 title: 1940 Ford Deluxe Sedan
+model_year: 1940
 description: Donated by Albert Schultz TX, Adopted by the Schultz Family
 image: /img/adopt/IMG_6098.jpeg
-status: has been adopted
+status: adopted
 date: 2025-02-24
 button: 
  text: Download The Adopt-A-Ford Form

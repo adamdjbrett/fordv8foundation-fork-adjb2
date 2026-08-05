@@ -1,8 +1,9 @@
 ---
 title: 1952 Ford Crestliner Victoria
-description:  donated by Thomas Lamar Hart, GA 
+model_year: 1952
+description: "Donated by Thomas Lamar Hart, GA. Adopted by  Quinton and Sheryl Smith, IN."  
 image: /img/adopt/crestliner-victoria.webp
-status: has been adopted
+status: adopted
 date: 2026-06-26
 button: 
  text: Download The Adopt-A-Ford Form
@@ -14,4 +15,4 @@ tags:
  - 1950s
 ---
 
-Adopted by  Quinton and Sheryl Smith, IN 
+

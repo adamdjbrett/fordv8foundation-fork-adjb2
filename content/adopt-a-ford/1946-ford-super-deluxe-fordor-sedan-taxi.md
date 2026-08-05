@@ -1,8 +1,9 @@
 ---
 title: 1946 Ford Super DeLuxe Fordor Sedan Taxi
-description:  donated by Whitney Rydbeck, CA
+model_year: 1946
+description:  Donated by Whitney Rydbeck, CA
 image: /img/adopt/IMG_6071.jpeg
-status: Available for adoption
+status: Available for Adoption
 date: 2025-04-16
 button: 
  text: Download The Adopt-A-Ford Form

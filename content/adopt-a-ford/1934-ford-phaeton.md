@@ -1,8 +1,9 @@
 ---
 title: 1934 Ford Phaeton
+model_year: 1934
 description: "Donated by Jay Hertz, NM. Adopted by Jim and Anne Brown, IN"
 image: /img/adopt/34-Ford-Phaeton.webp
-status: has been adopted
+status: adopted
 date: 2025-02-27
 button: 
  text: Download The Adopt-A-Ford Form

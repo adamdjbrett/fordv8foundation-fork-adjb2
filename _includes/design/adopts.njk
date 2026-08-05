@@ -69,7 +69,7 @@ layout: base.njk
 
 <div class="tab-pane fade show active" id="pills-1920" role="tabpanel" aria-labelledby="pills-1920-tab" tabindex="0">
 <div class="row">
-{% for post in collections.1920s %}
+{% for post in collections.1920s | sort(false, false, "data.model_year") %}
 <div class="p-3 col-md-4 text-center">
 <div class="bg-light rounder shadow-sm opacity-95 row zoom non">
 <a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
@@ -92,7 +92,7 @@ layout: base.njk
 
 <div class="tab-pane fade show" id="pills-1930" role="tabpanel" aria-labelledby="pills-1930-tab" tabindex="0">
 <div class="row">
-{% for post in collections.1930s %}
+{% for post in collections.1930s | sort(false, false, "data.model_year") %}
 <div class="p-3 col-md-4 text-center">
 <div class="bg-light rounder shadow-sm opacity-95 row zoom non">
 <a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
@@ -117,7 +117,7 @@ layout: base.njk
 
 <div class="tab-pane fade show" id="pills-1940" role="tabpanel" aria-labelledby="pills-1940-tab" tabindex="0">
 <div class="row">
-{% for post in collections.1940s %}
+{% for post in collections.1940s | sort(false, false, "data.model_year") %}
 <div class="p-3 col-md-4 text-center">
 <div class="bg-light rounder shadow-sm opacity-95 row zoom non">
 <a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
@@ -141,7 +141,7 @@ layout: base.njk
 
 <div class="tab-pane fade show" id="pills-1950" role="tabpanel" aria-labelledby="pills-1950-tab" tabindex="0">
 <div class="row">
-{% for post in collections.1950s %}
+{% for post in collections.1950s | sort(false, false, "data.model_year") %}
 <div class="p-3 col-md-4 text-center">
 <div class="bg-light rounder shadow-sm opacity-95 row zoom non">
 <a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
@@ -164,7 +164,7 @@ layout: base.njk
 
 <div class="tab-pane fade show" id="pills-adopted" role="tabpanel" aria-labelledby="pills-adopted-tab" tabindex="0">
 <div class="row">
-{% for post in collections.adopted %}
+{% for post in collections.adopted | sort(false, false, "data.model_year") %}
 <div class="p-3 col-md-4 text-center">
 <div class="bg-light rounder shadow-sm opacity-95 row zoom non">
 <a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>

@@ -537,6 +537,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Model Year", name: "model_year", widget: "number", value_type: "int"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Car Name", name: "car_name", widget: "string"}
       - {label: "Status", name: "status", widget: "string"}

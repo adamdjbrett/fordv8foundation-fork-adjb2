@@ -1,9 +1,10 @@
 ---
 title: 1951 Mercury Sport Sedan
-description: Donated by Frank Corey-NM
+model_year: 1951
+description: "Donated by Frank Corey-NM"
 image: /img/adopt/IMG_6093.jpeg
 date: 2025-02-25
-status: has been adopted
+status: adopted
 button: 
  text: Download The Adopt-A-Ford Form
  url: /pdf/Adopt-A-Ford.pdf

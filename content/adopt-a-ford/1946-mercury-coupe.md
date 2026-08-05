@@ -1,8 +1,9 @@
 ---
 title: 1946 Mercury Coupe
+model_year: 1946
 description: Donated by Frank Corey-NM
 image: /img/adopt/IMG_6097.jpeg
-status: has been adopted
+status: adopted
 date: 2025-02-26
 button: 
  text: Download The Adopt-A-Ford Form

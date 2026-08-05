@@ -1,8 +1,9 @@
 ---
 title: 1941 School Bus
-description: Donated by Peter McLaughlin-NH Adopted by Bill Randolph-OH
+model_year: 1941
+description: "Donated by Peter McLaughlin-NH. Adopted by Bill Randolph-OH."
 image: /img/adopt/IMG_6102.jpeg
-status: has been adopted
+status: adopted
 date: 2025-02-24
 button: 
  text: Download The Adopt-A-Ford Form
