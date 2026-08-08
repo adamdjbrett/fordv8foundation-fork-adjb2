@@ -42,4 +42,34 @@ export default function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "news", "events", "educations" , "tours","donations" , "motors","fordthree","fordfour","fordfive","fordv", "galleries" , "eventgalleries"].indexOf(tag) === -1);
 	});
 
+	// Adopt-A-Ford pills.
+	// Decade comes from `model_year` and availability from `status` — never from
+	// `tags` — so a vehicle can't land in a decade that disagrees with its year.
+	const adoptDecade = post => {
+		const year = Number(post && post.data && post.data.model_year);
+		return Number.isFinite(year) ? `${Math.floor(year / 10) * 10}s` : null;
+	};
+
+	// Anything that isn't explicitly "adopted" counts as available, so a typo in
+	// the status field shows the vehicle rather than hiding it from every pill.
+	const adoptIsAdopted = post => String(post && post.data && post.data.status || "").trim().toLowerCase() === "adopted";
+
+	eleventyConfig.addFilter("adoptIsAdopted", adoptIsAdopted);
+
+	// `pane` is "all", "adopted", or a decade such as "1930s".
+	// Available vehicles sort ahead of adopted ones, then by model year, then title.
+	eleventyConfig.addFilter("adoptPane", function adoptPane(posts, pane) {
+		return (posts || [])
+			.filter(post => {
+				if (pane === "all") return true;
+				if (pane === "adopted") return adoptIsAdopted(post);
+				return adoptDecade(post) === pane;
+			})
+			.sort((a, b) =>
+				(adoptIsAdopted(a) - adoptIsAdopted(b))
+				|| ((Number(a.data.model_year) || 0) - (Number(b.data.model_year) || 0))
+				|| String(a.data.title || "").localeCompare(String(b.data.title || ""))
+			);
+	});
+
 };

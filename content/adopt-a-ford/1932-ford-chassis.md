@@ -12,7 +12,8 @@ show_event_article: true
 show_ford_store: true
 show_partner: false
 show_motors: false
-tags: 
+tags:
+ - adopted 
  - 1930s
 ---
 

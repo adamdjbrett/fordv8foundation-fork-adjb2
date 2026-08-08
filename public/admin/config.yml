@@ -540,7 +540,14 @@ collections:
       - {label: "Model Year", name: "model_year", widget: "number", value_type: "int"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Car Name", name: "car_name", widget: "string"}
-      - {label: "Status", name: "status", widget: "string"}
+      - {
+         label: "Status",
+         name: "status",
+         widget: "select",
+         options: ["Available", "Adopted"],
+         default: "Available",
+         hint: "Drives which pill the vehicle appears under. Anything other than Adopted is treated as available."
+        }
       - {label: "Image", name: "image", widget: "image",required:false}
       - {label: "Date", name: "date", widget: "datetime"}
       - label: "Author"
@@ -568,10 +575,10 @@ collections:
          label: "Tags",
          name: "tags",
          widget: "select",
-         options: ["1930s", "1940s", "1950s", "adopted"],
+         options: ["1920s", "1930s", "1940s", "1950s", "available", "adopted"],
          multiple: true,
          required: false,
-         hint: "Select the tag according to the vehicle year, and if adopted add the adopted tag - you can enter up to 2 options."
+         hint: "Tags feed the tag archive pages only - the Adopt-A-Ford pills are driven by Model Year and Status. Pick the decade that matches the model year, plus available or adopted."
         }
       - {label: "Body", name: "body", widget: "markdown", required: false}
 

@@ -2,7 +2,7 @@
 title: 1941 Ford Super Deluxe
 model_year: 1941
 description: "Donated by Joe Floyd Estate, SD , Adopted by Douglas J. Skinner, SC"
-image: /img/adopt/1941 Mercury super deluxe.webp
+image: /img/adopt/1941-Mercury-super-deluxe.webp
 status: adopted
 date: 2025-02-24
 button: 

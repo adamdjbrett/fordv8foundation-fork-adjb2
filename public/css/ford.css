@@ -470,6 +470,7 @@ margin-left:5px;
     justify-content: center;
   }
 }
+}
 
 @media (max-width: 600px) {
   .mobile-scroll {
@@ -482,3 +483,28 @@ margin-left:5px;
 
 
 
+
+/* Adopt-A-Ford cards.
+   The grid column already stretches to the tallest card in its row, but the
+   card inside it was only as tall as its own text - that is why a vehicle with
+   a one-line credit (e.g. the 1934 DeLuxe Roadster) rendered as a stub next to
+   a taller neighbour. Fill the column, then let the body absorb the slack. */
+.adopt-card {
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.adopt-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+/* Two lines of the h3, so the status badges line up across a row. */
+.adopt-card-title {
+  min-height: 2.4em;
+}
+/* Pin the donor/adopter credit to the bottom edge of every card. */
+.adopt-card-desc {
+  margin-top: auto;
+  margin-bottom: 0;
+}

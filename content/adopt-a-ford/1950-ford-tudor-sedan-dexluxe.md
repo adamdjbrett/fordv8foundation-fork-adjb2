@@ -1,8 +1,8 @@
 ---
-title: 1950 Ford Crestliner
-model_year: 1950
+title: 1949 Ford Tudor Deluxe Sedan
+model_year: 1949
 description: "On loan from Jeannette Hall, Adopted by Jeannette Hall"
-image: /img/adopt/1949 Ford Tudor Deluxe Sedan.webp
+image: /img/adopt/1949-Ford-Tudor-Deluxe-Sedan.webp
 status: adopted
 date: 2025-02-24
 button: 
@@ -13,6 +13,6 @@ show_ford_store: true
 show_partner: false
 tags: 
  - adopted
- - 1950s
+ - 1940s
 ---
 

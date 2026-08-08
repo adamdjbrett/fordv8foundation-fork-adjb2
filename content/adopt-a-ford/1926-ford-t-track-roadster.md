@@ -13,6 +13,7 @@ show_motors: false
 show_ford_store: true
 show_partner: false
 tags: 
+ - adopted
  - 1920s
 ---
 

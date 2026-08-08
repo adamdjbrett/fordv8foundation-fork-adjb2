@@ -1,6 +1,52 @@
 ---
 layout: base.njk
 ---
+{#
+  Adopt-A-Ford pills.
+
+  Membership and ordering come from `model_year` (decade) and `status`
+  (available vs adopted) via the `adoptPane` filter in _config/filters.js.
+  Front matter `tags` are not read here, so they can never put a vehicle in a
+  decade that disagrees with its own year.
+
+  Every decade pill lists all of that decade's vehicles, available ones first,
+  then by model year, then by title.
+#}
+{% macro vehicleCard(post, fallbackImage) %}
+<div class="p-3 col-md-4 text-center">
+<div class="bg-light rounder shadow-sm opacity-95 row zoom non adopt-card">
+<a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or fallbackImage}}"/></a>
+<div class="p-3 adopt-card-body">
+<h3 class="adopt-card-title"><a href="{{post.url}}" class="text-dark">{{post.data.title}}</a></h3>
+{% if post | adoptIsAdopted %}
+<p><span class="badge bg-secondary">Adopted</span></p>
+{% else %}
+<p><span class="badge bg-success">Available</span></p>
+{% endif %}
+{% if post.data.author %}
+  {% set authorData = post.data.author.split('___') %}
+  <p>By
+<a href="/staff/{{ authorData[0] }}" class="non">
+<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
+{{ authorData[1] if authorData[1] else authorData[0] }}</a></p>
+{% endif %}
+<p class="text-secondary small adopt-card-desc"><small>{{post.data.description}}</small></p>
+</div>
+</div>
+</div>
+{% endmacro %}
+
+{% macro vehiclePane(id, items, fallbackImage, isActive) %}
+<div class="tab-pane fade{% if isActive %} show active{% endif %}" id="pills-{{id}}" role="tabpanel" aria-labelledby="pills-{{id}}-tab" tabindex="0">
+<div class="row">
+{% if items.length %}
+{% for post in items %}{{ vehicleCard(post, fallbackImage) }}{% endfor %}
+{% else %}
+<p class="p-3 text-secondary">No vehicles in this group right now.</p>
+{% endif %}
+</div>
+</div>
+{% endmacro %}
 {% include "partials/header.njk" %}
 <section class="container-fluid">
 <div class="row justify-content-center">
@@ -19,16 +65,14 @@ layout: base.njk
 <div class="row">
 <div class="col-md-12 p-3 p-md-5">
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-  <!--
   <li class="nav-item me-3" role="presentation">
     <button class="nav-link btn btn-primary active" id="pills-adopts-tab" data-bs-toggle="pill" data-bs-target="#pills-adopts" type="button" role="tab" aria-controls="pills-adopts" aria-selected="true">All Vehicles</button>
   </li>
--->
   <li class="nav-item me-3" role="presentation">
-    <button class="nav-link btn btn-primary active" id="pills-1920-tab" data-bs-toggle="pill" data-bs-target="#pills-1920" type="button" role="tab" aria-controls="pills-1920" aria-selected="true">1920s</button>
+    <button class="nav-link btn btn-primary" id="pills-1920-tab" data-bs-toggle="pill" data-bs-target="#pills-1920" type="button" role="tab" aria-controls="pills-1920" aria-selected="false">1920s</button>
   </li>
   <li class="nav-item me-3" role="presentation">
-    <button class="nav-link btn btn-primary" id="pills-1930-tab" data-bs-toggle="pill" data-bs-target="#pills-1930" type="button" role="tab" aria-controls="pills-1930" aria-selected="true">1930s</button>
+    <button class="nav-link btn btn-primary" id="pills-1930-tab" data-bs-toggle="pill" data-bs-target="#pills-1930" type="button" role="tab" aria-controls="pills-1930" aria-selected="false">1930s</button>
   </li>
   <li class="nav-item me-3" role="presentation">
     <button class="nav-link btn btn-primary" id="pills-1940-tab" data-bs-toggle="pill" data-bs-target="#pills-1940" type="button" role="tab" aria-controls="pills-1940" aria-selected="false">1940s</button>
@@ -41,162 +85,12 @@ layout: base.njk
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
-
-<!--
-<div class="tab-pane fade show active" id="pills-adopts" role="tabpanel" aria-labelledby="pills-adopts-tab" tabindex="0">
-<div class="row">
-{% for post in collections.adopts %}
-<div class="p-3 col-md-4 text-center">
-<div class="bg-light rounder shadow-sm opacity-95 row zoom non">
-<a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
-<div class="p-3">
-<h3><a href="{{post.url}}" class="text-dark">{{post.data.title}}</a></h3>
-{% if post.data.author %}
-  {% set authorData = post.data.author.split('___') %}
-  <p>By 
-<a href="/staff/{{ authorData[0] }}" class="non">
-<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
-{{ authorData[1] if authorData[1] else authorData[0] }}</a></p>
-{% endif %}
-<p class="text-secondary small"><small>{{post.data.description}}</small></p>
-</div>
-</div>
-</div>
-{% endfor %}
-</div>
-</div>
--->
-
-<div class="tab-pane fade show active" id="pills-1920" role="tabpanel" aria-labelledby="pills-1920-tab" tabindex="0">
-<div class="row">
-{% for post in collections.adopts | sort(false, false, "data.model_year") %}
-{% if post.data.status | lower == "available" and post.data.model_year >= 1920 and post.data.model_year < 1930 %}
-<div class="p-3 col-md-4 text-center">
-<div class="bg-light rounder shadow-sm opacity-95 row zoom non">
-<a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
-<div class="p-3">
-<h3><a href="{{post.url}}" class="text-dark">{{post.data.title}}</a></h3>
-{% if post.data.author %}
-  {% set authorData = post.data.author.split('___') %}
-  <p>By 
-<a href="/staff/{{ authorData[0] }}" class="non">
-<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
-{{ authorData[1] if authorData[1] else authorData[0] }}</a></p>
-{% endif %}
-<p class="text-secondary small"><small>{{post.data.description}}</small></p>
-</div>
-</div>
-</div>
-{% endif %}
-{% endfor %}
-</div>
-</div>
-
-<div class="tab-pane fade show" id="pills-1930" role="tabpanel" aria-labelledby="pills-1930-tab" tabindex="0">
-<div class="row">
-{% for post in collections.adopts | sort(false, false, "data.model_year") %}
-{% if post.data.status | lower == "available" and post.data.model_year >= 1930 and post.data.model_year < 1940 %}
-<div class="p-3 col-md-4 text-center">
-<div class="bg-light rounder shadow-sm opacity-95 row zoom non">
-<a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
-<div class="p-3">
-<h3><a href="{{post.url}}" class="text-dark">{{post.data.title}}</a></h3>
-{% if post.data.author %}
-  {% set authorData = post.data.author.split('___') %}
-  <p>By 
-<a href="/staff/{{ authorData[0] }}" class="non">
-<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
-{{ authorData[1] if authorData[1] else authorData[0] }}</a></p>
-{% endif %}
-<p class="text-secondary small"><small>{{post.data.description}}</small></p>
-</div>
-</div>
-</div>
-{% endif %}
-{% endfor %}
-</div>
-</div>
-
-
-
-<div class="tab-pane fade show" id="pills-1940" role="tabpanel" aria-labelledby="pills-1940-tab" tabindex="0">
-<div class="row">
-{% for post in collections.adopts | sort(false, false, "data.model_year") %}
-{% if post.data.status | lower == "available" and post.data.model_year >= 1940 and post.data.model_year < 1950 %}
-<div class="p-3 col-md-4 text-center">
-<div class="bg-light rounder shadow-sm opacity-95 row zoom non">
-<a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
-<div class="p-3">
-<h3><a href="{{post.url}}" class="text-dark">{{post.data.title}}</a></h3>
-{% if post.data.author %}
-  {% set authorData = post.data.author.split('___') %}
-  <p>By 
-<a href="/staff/{{ authorData[0] }}" class="non">
-<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
-{{ authorData[1] if authorData[1] else authorData[0] }}</a></p>
-{% endif %}
-<p class="text-secondary small"><small>{{post.data.description}}</small></p>
-</div>
-</div>
-</div>
-{% endif %}
-{% endfor %}
-</div>
-</div>
-
-
-<div class="tab-pane fade show" id="pills-1950" role="tabpanel" aria-labelledby="pills-1950-tab" tabindex="0">
-<div class="row">
-{% for post in collections.adopts | sort(false, false, "data.model_year") %}
-{% if post.data.status | lower == "available" and post.data.model_year >= 1950 and post.data.model_year < 1960 %}
-<div class="p-3 col-md-4 text-center">
-<div class="bg-light rounder shadow-sm opacity-95 row zoom non">
-<a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
-<div class="p-3">
-<h3><a href="{{post.url}}" class="text-dark">{{post.data.title}}</a></h3>
-{% if post.data.author %}
-  {% set authorData = post.data.author.split('___') %}
-  <p>By 
-<a href="/staff/{{ authorData[0] }}" class="non">
-<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
-{{ authorData[1] if authorData[1] else authorData[0] }}</a></p>
-{% endif %}
-<p class="text-secondary small"><small>{{post.data.description}}</small></p>
-</div>
-</div>
-</div>
-{% endif %}
-{% endfor %}
-</div>
-</div>
-
-<div class="tab-pane fade show" id="pills-adopted" role="tabpanel" aria-labelledby="pills-adopted-tab" tabindex="0">
-<div class="row">
-{% for post in collections.adopts | sort(false, false, "data.model_year") %}
-{% if post.data.status | lower == "adopted" %}
-<div class="p-3 col-md-4 text-center">
-<div class="bg-light rounder shadow-sm opacity-95 row zoom non">
-<a href="{{post.url}}" title="{{post.data.title}}"><img class="img-fluid lazy img-ev" alt="{{post.data.title}}" data-src="{{post.data.image or metadata.image}}"/></a>
-<div class="p-3">
-<h3><a href="{{post.url}}" class="text-dark">{{post.data.title}}</a></h3>
-{% if post.data.author %}
-  {% set authorData = post.data.author.split('___') %}
-  <p>By 
-<a href="/staff/{{ authorData[0] }}" class="non">
-<img src="{{ authorData[2] }}" class="img_post_profile img-fluid rounded-circle ms-1 me-1"/>
-{{ authorData[1] if authorData[1] else authorData[0] }}</a></p>
-{% endif %}
-<p class="text-secondary small"><small>{{post.data.description}}</small></p>
-</div>
-</div>
-</div>
-{% endif %}
-{% endfor %}
-</div>
-</div>
-
-
-
+{{ vehiclePane("adopts", collections.adopts | adoptPane("all"), metadata.image, true) }}
+{{ vehiclePane("1920", collections.adopts | adoptPane("1920s"), metadata.image, false) }}
+{{ vehiclePane("1930", collections.adopts | adoptPane("1930s"), metadata.image, false) }}
+{{ vehiclePane("1940", collections.adopts | adoptPane("1940s"), metadata.image, false) }}
+{{ vehiclePane("1950", collections.adopts | adoptPane("1950s"), metadata.image, false) }}
+{{ vehiclePane("adopted", collections.adopts | adoptPane("adopted"), metadata.image, false) }}
 </div>
 </div>
 </div>
