@@ -3,7 +3,7 @@ title: 1932 Ford Chassis
 model_year: 1932
 description: Donated by Joe Floyd - SD
 image: /img/adopt/32chassis.webp
-status: adopted
+status: available
 date: 2025-03-01
 button: 
  text: Download The Adopt-A-Ford Form
@@ -13,7 +13,7 @@ show_ford_store: true
 show_partner: false
 show_motors: false
 tags:
- - adopted 
+ - available 
  - 1930s
 ---
 
