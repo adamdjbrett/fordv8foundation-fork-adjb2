@@ -1,7 +1,7 @@
 ---
 title: August Sunday Cruise-in Highlights
 description: "This month's activity was a fun set of auto-related challenges
-  with a change to win a cool custom mechanical sculpture trophy crafted by Jeff
+  with a chance to win a cool custom mechanical sculpture trophy crafted by Jeff
   Suttle. "
 date: 2026-08-12T17:47:00.000-04:00
 image: /img/trophies-ad-.jpg
