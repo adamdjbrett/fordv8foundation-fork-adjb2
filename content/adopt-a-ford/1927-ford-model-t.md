@@ -1,6 +1,6 @@
 ---
-title: 1927 Ford Model T
-model_year: 1927
+title: 1920 Ford Model T
+model_year: 1920
 description: Donated by Greg and Susan Eaton 
 image: /img/adopt/IMG_6108.jpeg
 status: Available
