@@ -2,7 +2,7 @@
 title: "Sunday Cruise-ins at the EFV8 Museum! "
 description: "Sunday Sept. 13 Come out to the Annual Blue Ovals' Cruise-in at
   the museum from 2-5:00! "
-start_date: Sunday July 12
+start_date: Sunday July 13
 end_date: October 25
 date: 2026-03-24T17:00:00.000-04:00
 time: "12:00 - 3:00 "
@@ -14,7 +14,7 @@ show_ford_store: false
 show_motors: false
 show_partner: false
 ---
-Come out Sunday, Sept. 13, 2-5:00 to see all makes and models of cars, enjoy a hot dog and snacks, and a variety of sodas, shake-ups and other wonderful, refreshing drinks from Dirty Splash Retreat beverage trailer!  Enjoy visiting with other car enthusiasts and tour the museum! 
+Come out Sunday, Sept. 13, 12-3:00 to see all makes and models of cars, enjoy a hot dog and snacks, and a variety of sodas, shake-ups and other wonderful, refreshing drinks from Dirty Splash Retreat beverage trailer!  Enjoy visiting with other car enthusiasts and tour the museum! 
 
 A special Sunday Talk will be presented by our own Ford Historian, David Sprowl, who will surprise you with interesting history on the Ford Tractors branch of the Ford Motor Company!  This presentation is included with your price of admission to the museum! A lot going on that Sunday! 
 
